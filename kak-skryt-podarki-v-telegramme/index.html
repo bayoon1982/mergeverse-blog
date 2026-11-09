@@ -23,7 +23,7 @@
 <link rel="preload" href="/fonts/geologica-cyr.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/geologica.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
-<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>document.addEventListener("DOMContentLoaded",function(){var p=location.pathname;document.querySelectorAll("[data-goatcounter-click]").forEach(function(a){a.setAttribute("data-goatcounter-referrer",p)});var m=document.querySelector("[data-read-end]");if(!m||!("IntersectionObserver" in window))return;var o=new IntersectionObserver(function(e){if(!e[0].isIntersecting)return;o.disconnect();(function s(n){var g=window.goatcounter;if(g&&g.count)g.count({path:"read-end"+p,title:document.title,event:true});else if(n<40)setTimeout(function(){s(n+1)},500)})(0)});o.observe(m)});</script>
 <meta name="google-site-verification" content="hHBGjlz6LvtyxdP3x3sWT5arWOdvQq0RpVLMBuHod_0">
 <meta name="google-site-verification" content="Qz24Xj1TYyAs-2BEPHub1zrr9jbexSUFW1zroT093qw">
 <meta name="msvalidate.01" content="74194B63F367EB355F843A035E6E6554">
@@ -277,6 +277,13 @@ footer.site .small{color:var(--on-plate-2)}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media print{header.site .tabs,header.site .top,.button,footer.site,.margin,.theme,.game-everywhere{display:none}header.site{background:none;color:#000;border:0}.running h1,.running-name,.running-name a,.running .lead{color:#000}body{background:#fff;color:#000}}
+/* «Add this table to your site» after bigger article tables (scripts/embed.mjs, config/embed.json) */
+.embed{margin:12px 0 4px;max-width:var(--measure)}
+.embed summary{cursor:pointer;font:600 var(--t-label)/1.4 var(--frame);color:var(--ink-2);padding:12px 0;min-height:44px;box-sizing:border-box}
+.embed summary:hover{color:var(--ink)}
+.embed label{display:block;margin:8px 0 6px}
+.embed-code{display:block;width:100%;box-sizing:border-box;font:400 .8125rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;resize:vertical}
+.embed-code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/#website","url":"https://blog.merge-verse.com/","name":"MergeVerse — блог","inLanguage":"ru","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://blog.merge-verse.com/"},{"@type":"ListItem","position":2,"name":"Как скрыть подарки в телеграмме: один, все и от кого"}]},{"@type":"BlogPosting","@id":"https://blog.merge-verse.com/kak-skryt-podarki-v-telegramme/#article","headline":"Как скрыть подарки в телеграмме: один, все и от кого","description":"Один подарок скрывают в профиле, во вкладке «Подарки». Какие подарки появятся сами, задают в «Конфиденциальности». Скрыть только от некоторых людей нельзя.","inLanguage":"ru","url":"https://blog.merge-verse.com/kak-skryt-podarki-v-telegramme/","mainEntityOfPage":"https://blog.merge-verse.com/kak-skryt-podarki-v-telegramme/","datePublished":"2026-11-03","dateModified":"2026-11-03","wordCount":1074,"author":{"@id":"https://blog.merge-verse.com/#org"},"publisher":{"@id":"https://blog.merge-verse.com/#org"},"citation":["https://telegram.org/blog/group-calls-made-easy/ru","https://telegram.org/blog/gifts-verification-platform/ru","https://telegram.org/blog/comments-in-video-chats-threads-for-bots/ru","https://telegram.org/blog/profile-music-gift-themes/ru","https://core.telegram.org/api/gifts","https://core.telegram.org/constructor/disallowedGiftsSettings"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Можно ли скрыть подарки только от некоторых людей?","acceptedAnswer":{"@type":"Answer","text":"Нет. На 30 октября 2026 года официальные страницы Telegram не описывают такой настройки. Подарок либо виден в профиле всем, кто его открывает, либо скрыт от всех, кроме вас. Раздел «Конфиденциальность > Подарки» решает, чьи подарки появляются в профиле сами, а не кто их видит."}},{"@type":"Question","name":"Увидит ли отправитель, что я скрыл его подарок?","acceptedAnswer":{"@type":"Answer","text":"Официальные страницы Telegram об уведомлении отправителя ничего не говорят. Скрытый подарок пропадает с вашей страницы, поэтому, открыв ваш профиль, отправитель его там не найдёт."}},{"@type":"Question","name":"Пропадёт ли скрытый подарок?","acceptedAnswer":{"@type":"Answer","text":"Нет. Он остаётся у вас и виден вам во вкладке «Подарки». Его можно снова показать в профиле, улучшить, обменять или передать, если для этого подарка такие действия доступны."}},{"@type":"Question","name":"Как скрыть своё имя, когда я дарю подарок?","acceptedAnswer":{"@type":"Answer","text":"При отправке включите скрытие имени. Получатель всё равно узнает, кто ему подарил, но другие люди вашего имени не увидят, даже если подарок висит у него в профиле."}}]}]}</script>
 </head>
@@ -384,10 +391,57 @@ footer.site .small{color:var(--on-plate-2)}
 <td>Нет</td>
 </tr>
 </tbody></table>
-</div><p>Подарки — не единственное, что чужие видят в профиле. Рядом с именем может стоять <a href="/emodzi-status-tg/">эмодзи-статус</a>, на обложке — узор из фоновых эмодзи, а в профиле остаются истории, которые можно выкладывать и без Premium. По публичному имени вас находит поиск: что это за имя, рассказано в статье телеграм юзернейм, как его поставить или убрать — в статье как сделать ник в тг, а как по нему ищут людей — в статье как найти в тг по нику.</p>
+</div><details class="embed">
+<summary>Добавить эту таблицу на свой сайт</summary>
+<p class="small">Таблицу можно бесплатно поставить на свой сайт, в блог или рассылку. Скопируйте код и вставьте его на страницу как HTML: получится такая же таблица, а под ней ссылка на эту страницу как на источник.</p>
+<label class="small" for="embed-t1">Код HTML</label>
+<textarea id="embed-t1" class="embed-code" readonly rows="6" spellcheck="false">&lt;figure style=&quot;margin:1.5em 0;max-width:640px&quot;&gt;
+&lt;figcaption style=&quot;font-weight:bold;margin:0 0 .5em&quot;&gt;Что выбрать: короткая таблица&lt;/figcaption&gt;
+&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:15px&quot;&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Что нужно&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Что сделать&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Подарок остаётся у вас&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Убрать один подарок с глаз&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Вкладка «Подарки» → подарок → отключить показ&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Да&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Чтобы новые подарки не вставали в профиль сами&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Настройки → Конфиденциальность → Подарки&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Да&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Не получать подарки определённого вида&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Тот же раздел, нужен Telegram Premium&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Новые не придут&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Убрать имя отправителя и его текст&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Удалить подпись за звёзды&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Да, без подписи&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Скрыть от одних и показать другим&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Такой настройки нет&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Избавиться от подарка&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Обмен на звёзды, продажа, передача&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Нет&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p style=&quot;font-size:13px;margin:.5em 0 0&quot;&gt;Источник: &lt;a href=&quot;https://blog.merge-verse.com/kak-skryt-podarki-v-telegramme/&quot; style=&quot;color:inherit;text-decoration:underline&quot;&gt;MergeVerse — блог&lt;/a&gt;. Откуда эти данные, сказано на странице.&lt;/p&gt;
+&lt;/figure&gt;</textarea>
+<p><button type="button" class="button embed-copy" data-for="embed-t1" data-done="Скопировано" hidden>Скопировать код</button></p>
+</details><p>Подарки — не единственное, что чужие видят в профиле. Рядом с именем может стоять <a href="/emodzi-status-tg/">эмодзи-статус</a>, на обложке — узор из фоновых эмодзи, а в профиле остаются истории, которые можно выкладывать и без Premium. По публичному имени вас находит поиск: что это за имя, рассказано в статье телеграм юзернейм, как его поставить или убрать — в статье как сделать ник в тг, а как по нему ищут людей — в статье как найти в тг по нику.</p>
 <p>Если подарок хочется превратить в звёзды, а не просто спрятать, загляните в статью <a href="/kak-obmenyat-podarki-na-zvezdy/">как обменять подарки на звёзды</a>. Для коллекционных подарков есть продажа, про неё — <a href="/kak-prodat-podarok-v-tg/">как продать подарок в тг</a>. А что вообще такое подарки и чем обычный отличается от коллекционного, объясняет статья <a href="/podarki-v-telegram-chto-eto/">подарки в Telegram: что это</a>.</p>
 <p>Профиль — это ещё и переписка. Если кто-то мешает, его можно заблокировать, а лишние чаты убрать в архив. Кто решил уйти из Telegram совсем, найдёт шаги в статье как удалить аккаунт в телеграмме. Что после этого видят собеседники, мы описали отдельно: удалённый аккаунт телеграм. А как выделить слово жирным, зачеркнуть его или спрятать под спойлер, рассказано в статье как писать в телеграмме.</p>
-</div></div></div>
+<script>document.querySelectorAll(".embed-copy").forEach(function(b){var t=document.getElementById(b.getAttribute("data-for"));if(!t)return;b.hidden=false;var label=b.textContent;b.addEventListener("click",function(){function done(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=label},2500)}t.select();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(done,function(){document.execCommand("copy");done()})}else{document.execCommand("copy");done()}})});</script></div><div data-read-end aria-hidden="true" style="height:1px"></div></div></div>
 
 <section class="faq"><h2 id="questions">Частые вопросы</h2><details><summary>Можно ли скрыть подарки только от некоторых людей?</summary><p>Нет. На 30 октября 2026 года официальные страницы Telegram не описывают такой настройки. Подарок либо виден в профиле всем, кто его открывает, либо скрыт от всех, кроме вас. Раздел «Конфиденциальность &gt; Подарки» решает, чьи подарки появляются в профиле сами, а не кто их видит.</p></details><details><summary>Увидит ли отправитель, что я скрыл его подарок?</summary><p>Официальные страницы Telegram об уведомлении отправителя ничего не говорят. Скрытый подарок пропадает с вашей страницы, поэтому, открыв ваш профиль, отправитель его там не найдёт.</p></details><details><summary>Пропадёт ли скрытый подарок?</summary><p>Нет. Он остаётся у вас и виден вам во вкладке «Подарки». Его можно снова показать в профиле, улучшить, обменять или передать, если для этого подарка такие действия доступны.</p></details><details><summary>Как скрыть своё имя, когда я дарю подарок?</summary><p>При отправке включите скрытие имени. Получатель всё равно узнает, кто ему подарил, но другие люди вашего имени не увидят, даже если подарок висит у него в профиле.</p></details></section>
 <section class="sources"><h2 id="sources">Источники</h2><ol><li><a href="https://telegram.org/blog/group-calls-made-easy/ru" rel="noopener">Extra-Secure Group Calls, Automated Accounts, and More (раздел о настройках подарков)</a>, Telegram</li><li><a href="https://telegram.org/blog/gifts-verification-platform/ru" rel="noopener">Gifts, Verification Platform and More</a>, Telegram</li><li><a href="https://telegram.org/blog/comments-in-video-chats-threads-for-bots/ru" rel="noopener">Comments in Group Calls, Notes for Contacts… (удаление подписей к подаркам)</a>, Telegram</li><li><a href="https://telegram.org/blog/profile-music-gift-themes/ru" rel="noopener">Music on Profiles… (вкладка профиля по умолчанию)</a>, Telegram</li><li><a href="https://core.telegram.org/api/gifts" rel="noopener">Telegram Gifts — документация для разработчиков</a>, Telegram</li><li><a href="https://core.telegram.org/constructor/disallowedGiftsSettings" rel="noopener">disallowedGiftsSettings — какие подарки можно запретить</a>, Telegram</li></ol></section>

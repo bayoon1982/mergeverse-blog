@@ -20,7 +20,7 @@
 <link rel="preload" href="/fonts/piazzolla.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/geologica.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
-<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>document.addEventListener("DOMContentLoaded",function(){var p=location.pathname;document.querySelectorAll("[data-goatcounter-click]").forEach(function(a){a.setAttribute("data-goatcounter-referrer",p)});var m=document.querySelector("[data-read-end]");if(!m||!("IntersectionObserver" in window))return;var o=new IntersectionObserver(function(e){if(!e[0].isIntersecting)return;o.disconnect();(function s(n){var g=window.goatcounter;if(g&&g.count)g.count({path:"read-end"+p,title:document.title,event:true});else if(n<40)setTimeout(function(){s(n+1)},500)})(0)});o.observe(m)});</script>
 <meta name="google-site-verification" content="hHBGjlz6LvtyxdP3x3sWT5arWOdvQq0RpVLMBuHod_0">
 <meta name="google-site-verification" content="Qz24Xj1TYyAs-2BEPHub1zrr9jbexSUFW1zroT093qw">
 <meta name="msvalidate.01" content="74194B63F367EB355F843A035E6E6554">
@@ -274,6 +274,13 @@ footer.site .small{color:var(--on-plate-2)}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media print{header.site .tabs,header.site .top,.button,footer.site,.margin,.theme,.game-everywhere{display:none}header.site{background:none;color:#000;border:0}.running h1,.running-name,.running-name a,.running .lead{color:#000}body{background:#fff;color:#000}}
+/* «Add this table to your site» after bigger article tables (scripts/embed.mjs, config/embed.json) */
+.embed{margin:12px 0 4px;max-width:var(--measure)}
+.embed summary{cursor:pointer;font:600 var(--t-label)/1.4 var(--frame);color:var(--ink-2);padding:12px 0;min-height:44px;box-sizing:border-box}
+.embed summary:hover{color:var(--ink)}
+.embed label{display:block;margin:8px 0 6px}
+.embed-code{display:block;width:100%;box-sizing:border-box;font:400 .8125rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;resize:vertical}
+.embed-code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/en/#website","url":"https://blog.merge-verse.com/en/","name":"MergeVerse Blog","inLanguage":"en","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blog.merge-verse.com/en/"},{"@type":"ListItem","position":2,"name":"Telegram stickers: kinds, adding, making, removing"}]},{"@type":"BlogPosting","@id":"https://blog.merge-verse.com/en/telegram-stickers/#article","headline":"Telegram stickers: kinds, adding, making, removing","description":"Telegram stickers are static images, Lottie animations or short WEBM videos, grouped in free sets. How to add a set, make your own and remove one.","inLanguage":"en","url":"https://blog.merge-verse.com/en/telegram-stickers/","mainEntityOfPage":"https://blog.merge-verse.com/en/telegram-stickers/","datePublished":"2026-11-01","dateModified":"2026-11-01","wordCount":1202,"author":{"@id":"https://blog.merge-verse.com/#org"},"publisher":{"@id":"https://blog.merge-verse.com/#org"},"citation":["https://core.telegram.org/stickers","https://core.telegram.org/api/stickers","https://core.telegram.org/api/config","https://telegram.org/blog/sticker-maker","https://telegram.org/blog/video-stickers-better-reactions","https://telegram.org/blog/animated-stickers","https://telegram.org/blog/stickers-revolution","https://telegram.org/blog/700-million-and-premium","https://telegram.org/blog/custom-emoji","https://telegram.org/faq_premium","https://telegram.org/blog/ai-bot-revolution-11-new-features","https://telegram.org/blog/profile-music-gift-themes","https://telegram.org/blog/telegram-business"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are Telegram stickers free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Telegram's Premium FAQ lists tens of thousands of stickers among the features that stay free. Premium adds a set of stickers with full-screen effects and custom emoji sets, but nobody pays to send ordinary stickers."}},{"@type":"Question","name":"How do I add a sticker set on Telegram?","acceptedAnswer":{"@type":"Answer","text":"Tap any sticker from that set in a chat and Telegram offers to add the whole set. Every set also has its own t.me link that opens it."}},{"@type":"Question","name":"How do I make my own Telegram stickers?","acceptedAnswer":{"@type":"Answer","text":"Open the sticker panel in any chat and tap (+) to start the built-in sticker editor, then turn a photo into a sticker. For video or animated stickers, prepare a file that meets Telegram's requirements and upload it with the @Stickers mini app."}},{"@type":"Question","name":"Can people without Premium see Premium stickers?","acceptedAnswer":{"@type":"Answer","text":"Yes. Telegram says the full-screen animations of Premium stickers play for all users; only sending them needs a subscription."}},{"@type":"Question","name":"How many favorite stickers can I save?","acceptedAnswer":{"@type":"Answer","text":"As of 31 October 2026, Telegram's client configuration allows 5 favorite stickers without Premium and 10 with it."}}]}]}</script>
 </head>
@@ -330,7 +337,44 @@ footer.site .small{color:var(--on-plate-2)}
 <td>Exactly 100×100 px</td>
 </tr>
 </tbody></table>
-</div><p>Animated stickers arrived in July 2019. Telegram built the .TGS format so that each one weighs about 20–30 KB, six times smaller than an average photo, and plays at 60 frames per second. Making them takes Adobe After Effects and Telegram&#39;s Bodymovin-TG plugin.</p>
+</div><details class="embed">
+<summary>Add this table to your site</summary>
+<p class="small">Free to use on your site, blog or newsletter. Copy the code below and paste it into your page as HTML. It shows the same table with a link back to this page as the source.</p>
+<label class="small" for="embed-t1">HTML code</label>
+<textarea id="embed-t1" class="embed-code" readonly rows="6" spellcheck="false">&lt;figure style=&quot;margin:1.5em 0;max-width:640px&quot;&gt;
+&lt;figcaption style=&quot;font-weight:bold;margin:0 0 .5em&quot;&gt;The kinds of Telegram stickers&lt;/figcaption&gt;
+&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:15px&quot;&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Kind&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;File&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Main requirements&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Static&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;.PNG or .WEBP&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;One side exactly 512 px, the other 512 px or less&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Animated&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;.TGS (Lottie vector animation)&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;512×512 canvas, up to 3 seconds, looped, 60 FPS, up to 64 KB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Video&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;.WEBM with the VP9 codec&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;One side exactly 512 px, up to 3 seconds, up to 30 FPS, up to 256 KB, no audio&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Custom emoji&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Any of the three formats&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Exactly 100×100 px&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p style=&quot;font-size:13px;margin:.5em 0 0&quot;&gt;Source: &lt;a href=&quot;https://blog.merge-verse.com/en/telegram-stickers/&quot; style=&quot;color:inherit;text-decoration:underline&quot;&gt;MergeVerse Blog&lt;/a&gt;. The page lists the sources of these figures.&lt;/p&gt;
+&lt;/figure&gt;</textarea>
+<p><button type="button" class="button embed-copy" data-for="embed-t1" data-done="Copied" hidden>Copy code</button></p>
+</details><p>Animated stickers arrived in July 2019. Telegram built the .TGS format so that each one weighs about 20–30 KB, six times smaller than an average photo, and plays at 60 frames per second. Making them takes Adobe After Effects and Telegram&#39;s Bodymovin-TG plugin.</p>
 <p>Video stickers came in January 2022 as the easier route. Any video editor that exports .WEBM will do, and showing them needs Telegram 8.5 or later.</p>
 <h2 id="premium-stickers">Premium stickers</h2>
 <p>When Telegram Premium launched in June 2022, it brought dozens of stickers with full-screen animations. Premium users can send them in any chat, and the effect plays for everyone who sees the message, subscribed or not. Telegram said its artists would add to this collection every month.</p>
@@ -369,7 +413,7 @@ footer.site .small{color:var(--on-plate-2)}
 <p>When someone opens a private chat with you and you have never talked, Telegram shows them a greeting sticker and an invitation to say hello. By default that sticker is picked at random. Telegram Business, which Telegram&#39;s developer documentation says is currently included with Premium, lets you set your own text and sticker for that empty chat instead. You find it under Settings &gt; Telegram Business, according to Telegram&#39;s March 2024 post.</p>
 <h2 id="stickers-and-telegram-gifts">Stickers and Telegram gifts</h2>
 <p>People often mix up stickers and gifts, since both are bits of animated art you send to someone. They are separate features, and this page covers only stickers. Gifts have their own rules, which we explain in our guide to <a href="/en/what-are-telegram-gifts/">what Telegram gifts are</a>. The currency used inside Telegram is covered in <a href="/en/what-are-telegram-stars/">what Telegram Stars are</a>. If you want gifts off your profile, read <a href="/en/how-to-hide-telegram-gifts/">how to hide Telegram gifts</a>, and for the collectible kind, see our page on <a href="/en/telegram-nft-gifts/">Telegram NFT gifts</a>.</p>
-</div></div></div>
+<script>document.querySelectorAll(".embed-copy").forEach(function(b){var t=document.getElementById(b.getAttribute("data-for"));if(!t)return;b.hidden=false;var label=b.textContent;b.addEventListener("click",function(){function done(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=label},2500)}t.select();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(done,function(){document.execCommand("copy");done()})}else{document.execCommand("copy");done()}})});</script></div><div data-read-end aria-hidden="true" style="height:1px"></div></div></div>
 
 <section class="faq"><h2 id="questions">Questions people ask</h2><details><summary>Are Telegram stickers free?</summary><p>Yes. Telegram's Premium FAQ lists tens of thousands of stickers among the features that stay free. Premium adds a set of stickers with full-screen effects and custom emoji sets, but nobody pays to send ordinary stickers.</p></details><details><summary>How do I add a sticker set on Telegram?</summary><p>Tap any sticker from that set in a chat and Telegram offers to add the whole set. Every set also has its own t.me link that opens it.</p></details><details><summary>How do I make my own Telegram stickers?</summary><p>Open the sticker panel in any chat and tap (+) to start the built-in sticker editor, then turn a photo into a sticker. For video or animated stickers, prepare a file that meets Telegram's requirements and upload it with the @Stickers mini app.</p></details><details><summary>Can people without Premium see Premium stickers?</summary><p>Yes. Telegram says the full-screen animations of Premium stickers play for all users; only sending them needs a subscription.</p></details><details><summary>How many favorite stickers can I save?</summary><p>As of 31 October 2026, Telegram's client configuration allows 5 favorite stickers without Premium and 10 with it.</p></details></section>
 <section class="sources"><h2 id="sources">Sources</h2><ol><li><a href="https://core.telegram.org/stickers" rel="noopener">Telegram Stickers</a>, Telegram</li><li><a href="https://core.telegram.org/api/stickers" rel="noopener">Stickers and masks (API documentation)</a>, Telegram</li><li><a href="https://core.telegram.org/api/config" rel="noopener">Client configuration (API documentation)</a>, Telegram</li><li><a href="https://telegram.org/blog/sticker-maker" rel="noopener">Sticker Editor — Create Your Own Stickers</a>, Telegram</li><li><a href="https://telegram.org/blog/video-stickers-better-reactions" rel="noopener">Video Stickers, Better Reactions and More</a>, Telegram</li><li><a href="https://telegram.org/blog/animated-stickers" rel="noopener">Animated Stickers Done Right</a>, Telegram</li><li><a href="https://telegram.org/blog/stickers-revolution" rel="noopener">Custom Sticker Sets</a>, Telegram</li><li><a href="https://telegram.org/blog/700-million-and-premium" rel="noopener">700 Million Users and Telegram Premium</a>, Telegram</li><li><a href="https://telegram.org/blog/custom-emoji" rel="noopener">Telegram Emoji Platform, Custom Animated Emoji Packs…</a>, Telegram</li><li><a href="https://telegram.org/faq_premium" rel="noopener">Telegram Premium FAQ</a>, Telegram</li><li><a href="https://telegram.org/blog/ai-bot-revolution-11-new-features" rel="noopener">Guest AI Bots, … 100M+ Emoji &amp; Sticker Search and Much More</a>, Telegram</li><li><a href="https://telegram.org/blog/profile-music-gift-themes" rel="noopener">Music on Profiles, Stickers Mini App, New Profiles, and More</a>, Telegram</li><li><a href="https://telegram.org/blog/telegram-business" rel="noopener">Introducing Telegram Business</a>, Telegram</li></ol></section>

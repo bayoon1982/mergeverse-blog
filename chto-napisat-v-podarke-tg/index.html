@@ -21,7 +21,7 @@
 <link rel="preload" href="/fonts/geologica-cyr.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/geologica.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
-<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>document.addEventListener("DOMContentLoaded",function(){var p=location.pathname;document.querySelectorAll("[data-goatcounter-click]").forEach(function(a){a.setAttribute("data-goatcounter-referrer",p)});var m=document.querySelector("[data-read-end]");if(!m||!("IntersectionObserver" in window))return;var o=new IntersectionObserver(function(e){if(!e[0].isIntersecting)return;o.disconnect();(function s(n){var g=window.goatcounter;if(g&&g.count)g.count({path:"read-end"+p,title:document.title,event:true});else if(n<40)setTimeout(function(){s(n+1)},500)})(0)});o.observe(m)});</script>
 <meta name="google-site-verification" content="hHBGjlz6LvtyxdP3x3sWT5arWOdvQq0RpVLMBuHod_0">
 <meta name="google-site-verification" content="Qz24Xj1TYyAs-2BEPHub1zrr9jbexSUFW1zroT093qw">
 <meta name="msvalidate.01" content="74194B63F367EB355F843A035E6E6554">
@@ -275,6 +275,13 @@ footer.site .small{color:var(--on-plate-2)}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media print{header.site .tabs,header.site .top,.button,footer.site,.margin,.theme,.game-everywhere{display:none}header.site{background:none;color:#000;border:0}.running h1,.running-name,.running-name a,.running .lead{color:#000}body{background:#fff;color:#000}}
+/* «Add this table to your site» after bigger article tables (scripts/embed.mjs, config/embed.json) */
+.embed{margin:12px 0 4px;max-width:var(--measure)}
+.embed summary{cursor:pointer;font:600 var(--t-label)/1.4 var(--frame);color:var(--ink-2);padding:12px 0;min-height:44px;box-sizing:border-box}
+.embed summary:hover{color:var(--ink)}
+.embed label{display:block;margin:8px 0 6px}
+.embed-code{display:block;width:100%;box-sizing:border-box;font:400 .8125rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;resize:vertical}
+.embed-code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/#website","url":"https://blog.merge-verse.com/","name":"MergeVerse — блог","inLanguage":"ru","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://blog.merge-verse.com/"},{"@type":"ListItem","position":2,"name":"Что написать в подарке в тг: правила подписи и примеры"}]},{"@type":"BlogPosting","@id":"https://blog.merge-verse.com/chto-napisat-v-podarke-tg/#article","headline":"Что написать в подарке в тг: правила подписи и примеры","description":"Подпись к подарку пишут при отправке, до 128 знаков по документации Telegram. Где поле, кто увидит текст, как скрыть имя — и примеры коротких подписей.","inLanguage":"ru","url":"https://blog.merge-verse.com/chto-napisat-v-podarke-tg/","mainEntityOfPage":"https://blog.merge-verse.com/chto-napisat-v-podarke-tg/","datePublished":"2026-11-01","dateModified":"2026-11-01","wordCount":807,"author":{"@id":"https://blog.merge-verse.com/#org"},"publisher":{"@id":"https://blog.merge-verse.com/#org"},"citation":["https://telegram.org/blog/gifts-verification-platform/ru","https://core.telegram.org/api/gifts","https://core.telegram.org/api/config","https://telegram.org/blog/comments-in-video-chats-threads-for-bots/ru","https://telegram.org/blog/welcome-messages-buttons-TG-13/ru","https://telegram.org/blog/group-calls-made-easy/ru"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Сколько символов можно написать в подарке в тг?","acceptedAnswer":{"@type":"Answer","text":"В документации Telegram для разработчиков длину задаёт параметр stargifts_message_length_max, его значение по умолчанию — 128 (проверено 31 октября 2026 года). Приложение получает это число с сервера, поэтому Telegram может его поменять."}},{"@type":"Question","name":"Можно ли отправить подарок без подписи?","acceptedAnswer":{"@type":"Answer","text":"Да. В документации сообщение к подарку помечено как необязательное."}},{"@type":"Question","name":"Видят ли другие люди текст подарка?","acceptedAnswer":{"@type":"Answer","text":"Если получатель оставил подарок в профиле, подпись с именем отправителя и сообщением видна вместе с подарком. Поэтому с октября 2025 года Telegram даёт получателю удалить подпись за звёзды."}},{"@type":"Question","name":"Можно ли подписать подарок анонимно?","acceptedAnswer":{"@type":"Answer","text":"Можно скрыть своё имя при отправке. Посторонние его не увидят, даже если подарок висит в профиле, а получатель всё равно будет знать, кто его поздравил."}},{"@type":"Question","name":"Можно ли изменить подпись после отправки?","acceptedAnswer":{"@type":"Answer","text":"На официальных страницах Telegram такой возможности нет. Описано только удаление подписи получателем, поэтому проверьте текст до оплаты."}}]}]}</script>
 </head>
@@ -372,7 +379,55 @@ footer.site .small{color:var(--on-plate-2)}
 <td>«Это не намёк. Хотя, может, и намёк»</td>
 </tr>
 </tbody></table>
-</div><p>Пара советов к ним:</p>
+</div><details class="embed">
+<summary>Добавить эту таблицу на свой сайт</summary>
+<p class="small">Таблицу можно бесплатно поставить на свой сайт, в блог или рассылку. Скопируйте код и вставьте его на страницу как HTML: получится такая же таблица, а под ней ссылка на эту страницу как на источник.</p>
+<label class="small" for="embed-t1">Код HTML</label>
+<textarea id="embed-t1" class="embed-code" readonly rows="6" spellcheck="false">&lt;figure style=&quot;margin:1.5em 0;max-width:640px&quot;&gt;
+&lt;figcaption style=&quot;font-weight:bold;margin:0 0 .5em&quot;&gt;Что написать: примеры коротких подписей&lt;/figcaption&gt;
+&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:15px&quot;&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Повод&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Подпись&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;День рождения&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;«С днём рождения! Пусть этот год будет лучше прошлого»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Без повода&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;«Просто так. Увидел и подумал о тебе»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Спасибо&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;«Спасибо, что выручил. Должен буду»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Близкому человеку&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;«Чтобы в профиле было что-то от меня»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Новый год&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;«С Новым годом! Пусть сбудется хотя бы половина задуманного»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Коллеге&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;«Спасибо за проект. Без тебя бы не успели»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Каналу&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;«Спасибо за посты, читаю каждое утро»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Шуточный&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;«Это не намёк. Хотя, может, и намёк»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p style=&quot;font-size:13px;margin:.5em 0 0&quot;&gt;Источник: &lt;a href=&quot;https://blog.merge-verse.com/chto-napisat-v-podarke-tg/&quot; style=&quot;color:inherit;text-decoration:underline&quot;&gt;MergeVerse — блог&lt;/a&gt;. Откуда эти данные, сказано на странице.&lt;/p&gt;
+&lt;/figure&gt;</textarea>
+<p><button type="button" class="button embed-copy" data-for="embed-t1" data-done="Скопировано" hidden>Скопировать код</button></p>
+</details><p>Пара советов к ним:</p>
 <ul>
 <li>называйте повод: через полгода подарок в профиле без даты и повода выглядит загадкой;</li>
 <li>одно эмодзи в конце лучше пяти подряд;</li>
@@ -382,7 +437,7 @@ footer.site .small{color:var(--on-plate-2)}
 <h2 id="esli-pole-dlya-teksta-ne-poyavilos">Если поле для текста не появилось</h2>
 <p>Официальные страницы Telegram не перечисляют случаев, когда подпись недоступна. Начните с обновления приложения: подписи к подаркам с маркетплейса появились только в августе 2026 года. Если подарок не отправляется совсем, проверьте, принимает ли человек такие подарки: с апреля 2025 года пользователи Premium могут сами выбрать, какие подарки готовы получать.</p>
 <p>С чего начинались подарки и чем обычный отличается от коллекционного, мы собрали в статье <a href="/podarki-v-telegram-chto-eto/">подарки в Telegram: что это</a>. Где потом искать полученные подарки, подскажет статья <a href="/kak-posmotret-svoi-podarki/">как посмотреть свои подарки</a>.</p>
-</div></div></div>
+<script>document.querySelectorAll(".embed-copy").forEach(function(b){var t=document.getElementById(b.getAttribute("data-for"));if(!t)return;b.hidden=false;var label=b.textContent;b.addEventListener("click",function(){function done(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=label},2500)}t.select();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(done,function(){document.execCommand("copy");done()})}else{document.execCommand("copy");done()}})});</script></div><div data-read-end aria-hidden="true" style="height:1px"></div></div></div>
 
 <section class="faq"><h2 id="questions">Частые вопросы</h2><details><summary>Сколько символов можно написать в подарке в тг?</summary><p>В документации Telegram для разработчиков длину задаёт параметр stargifts_message_length_max, его значение по умолчанию — 128 (проверено 31 октября 2026 года). Приложение получает это число с сервера, поэтому Telegram может его поменять.</p></details><details><summary>Можно ли отправить подарок без подписи?</summary><p>Да. В документации сообщение к подарку помечено как необязательное.</p></details><details><summary>Видят ли другие люди текст подарка?</summary><p>Если получатель оставил подарок в профиле, подпись с именем отправителя и сообщением видна вместе с подарком. Поэтому с октября 2025 года Telegram даёт получателю удалить подпись за звёзды.</p></details><details><summary>Можно ли подписать подарок анонимно?</summary><p>Можно скрыть своё имя при отправке. Посторонние его не увидят, даже если подарок висит в профиле, а получатель всё равно будет знать, кто его поздравил.</p></details><details><summary>Можно ли изменить подпись после отправки?</summary><p>На официальных страницах Telegram такой возможности нет. Описано только удаление подписи получателем, поэтому проверьте текст до оплаты.</p></details></section>
 <section class="sources"><h2 id="sources">Источники</h2><ol><li><a href="https://telegram.org/blog/gifts-verification-platform/ru" rel="noopener">Gifts, Verification Platform and More (запуск подарков, отправка, скрытие имени)</a>, Telegram</li><li><a href="https://core.telegram.org/api/gifts" rel="noopener">Telegram Gifts — документация для разработчиков (сообщение к подарку, hide_name, исходные данные при улучшении)</a>, Telegram</li><li><a href="https://core.telegram.org/api/config" rel="noopener">Client configuration (stargifts_message_length_max, значение по умолчанию)</a>, Telegram</li><li><a href="https://telegram.org/blog/comments-in-video-chats-threads-for-bots/ru" rel="noopener">Комментарии в групповых звонках… (удаление подписей к подаркам)</a>, Telegram</li><li><a href="https://telegram.org/blog/welcome-messages-buttons-TG-13/ru" rel="noopener">Приветственные сообщения, кнопки в сообщениях и подписи к подаркам</a>, Telegram</li><li><a href="https://telegram.org/blog/group-calls-made-easy/ru" rel="noopener">Супербезопасные групповые звонки… (кнопка подарка в поле ввода)</a>, Telegram</li></ol></section>

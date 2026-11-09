@@ -23,7 +23,7 @@
 <link rel="preload" href="/fonts/geologica-cyr.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/geologica.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
-<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>document.addEventListener("DOMContentLoaded",function(){var p=location.pathname;document.querySelectorAll("[data-goatcounter-click]").forEach(function(a){a.setAttribute("data-goatcounter-referrer",p)});var m=document.querySelector("[data-read-end]");if(!m||!("IntersectionObserver" in window))return;var o=new IntersectionObserver(function(e){if(!e[0].isIntersecting)return;o.disconnect();(function s(n){var g=window.goatcounter;if(g&&g.count)g.count({path:"read-end"+p,title:document.title,event:true});else if(n<40)setTimeout(function(){s(n+1)},500)})(0)});o.observe(m)});</script>
 <meta name="google-site-verification" content="hHBGjlz6LvtyxdP3x3sWT5arWOdvQq0RpVLMBuHod_0">
 <meta name="google-site-verification" content="Qz24Xj1TYyAs-2BEPHub1zrr9jbexSUFW1zroT093qw">
 <meta name="msvalidate.01" content="74194B63F367EB355F843A035E6E6554">
@@ -277,6 +277,13 @@ footer.site .small{color:var(--on-plate-2)}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media print{header.site .tabs,header.site .top,.button,footer.site,.margin,.theme,.game-everywhere{display:none}header.site{background:none;color:#000;border:0}.running h1,.running-name,.running-name a,.running .lead{color:#000}body{background:#fff;color:#000}}
+/* «Add this table to your site» after bigger article tables (scripts/embed.mjs, config/embed.json) */
+.embed{margin:12px 0 4px;max-width:var(--measure)}
+.embed summary{cursor:pointer;font:600 var(--t-label)/1.4 var(--frame);color:var(--ink-2);padding:12px 0;min-height:44px;box-sizing:border-box}
+.embed summary:hover{color:var(--ink)}
+.embed label{display:block;margin:8px 0 6px}
+.embed-code{display:block;width:100%;box-sizing:border-box;font:400 .8125rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;resize:vertical}
+.embed-code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/#website","url":"https://blog.merge-verse.com/","name":"MergeVerse — блог","inLanguage":"ru","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://blog.merge-verse.com/"},{"@type":"ListItem","position":2,"name":"Как обменять подарки на звёзды в телеграм: шаги и срок"}]},{"@type":"BlogPosting","@id":"https://blog.merge-verse.com/kak-obmenyat-podarki-na-zvezdy/#article","headline":"Как обменять подарки на звёзды в телеграм: шаги и срок","description":"Подарок меняют на звёзды в первые 7 дней: откройте его, нажмите «Обменять на …» и подтвердите. Сколько звёзд дают, какие подарки не меняются и почему.","inLanguage":"ru","url":"https://blog.merge-verse.com/kak-obmenyat-podarki-na-zvezdy/","mainEntityOfPage":"https://blog.merge-verse.com/kak-obmenyat-podarki-na-zvezdy/","datePublished":"2026-11-04","dateModified":"2026-11-04","wordCount":796,"author":{"@id":"https://blog.merge-verse.com/#org"},"publisher":{"@id":"https://blog.merge-verse.com/#org"},"citation":["https://core.telegram.org/api/gifts","https://core.telegram.org/api/config","https://telegram.org/faq","https://core.telegram.org/bots/api","https://telegram.org/blog/gifts-verification-platform","https://translations.telegram.org/ru/ios/profile/Gift.Convert.Period.Text"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Можно ли обменять подарок на звёзды после 7 дней?","acceptedAnswer":{"@type":"Answer","text":"Нет. Приложение в этом случае пишет: «Обмен на звёзды доступен только в течение 7 дней после получения подарка». Остаётся оставить подарок или улучшить его, если есть кнопка «Улучшить»."}},{"@type":"Question","name":"Почему звёзд за подарок дают меньше, чем он стоил?","acceptedAnswer":{"@type":"Answer","text":"Так устроено у Telegram: в документации сказано, что сумма обмена обычно ниже цены покупки. Точное число всегда написано на кнопке «Обменять на …»."}},{"@type":"Question","name":"Можно ли вернуть подарок после обмена?","acceptedAnswer":{"@type":"Answer","text":"Нет. В окне подтверждения Telegram предупреждает, что действие нельзя отменить и подарок исчезнет навсегда."}},{"@type":"Question","name":"Можно ли обменять коллекционный подарок на звёзды?","acceptedAnswer":{"@type":"Answer","text":"Нет, обмен работает только для обычных подарков. Коллекционный продают на маркете Telegram кнопкой «Продать», цена тоже в звёздах."}}]}]}</script>
 </head>
@@ -365,12 +372,54 @@ footer.site .small{color:var(--on-plate-2)}
 <td>«Продать»</td>
 </tr>
 </tbody></table>
-</div><p>Если подарок обычный и у него есть кнопка «Улучшить», бывает третий путь: улучшить его за звёзды и потом продать уже как коллекционный. Улучшение стоит звёзд, и окупится ли оно, заранее не скажет никто, так что решайте сами. Как это работает, — в статье <a href="/kak-uluchshit-podarok-v-tg/">как улучшить подарок в тг</a>.</p>
+</div><details class="embed">
+<summary>Добавить эту таблицу на свой сайт</summary>
+<p class="small">Таблицу можно бесплатно поставить на свой сайт, в блог или рассылку. Скопируйте код и вставьте его на страницу как HTML: получится такая же таблица, а под ней ссылка на эту страницу как на источник.</p>
+<label class="small" for="embed-t1">Код HTML</label>
+<textarea id="embed-t1" class="embed-code" readonly rows="6" spellcheck="false">&lt;figure style=&quot;margin:1.5em 0;max-width:640px&quot;&gt;
+&lt;figcaption style=&quot;font-weight:bold;margin:0 0 .5em&quot;&gt;Обмен или продажа: что выбрать&lt;/figcaption&gt;
+&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:15px&quot;&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Обмен на звёзды&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Продажа на маркете&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Какой подарок&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;обычный&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;коллекционный&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Кто платит&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Telegram&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;другой пользователь&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Срок&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;7 дней&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;без срока&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Цена&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;фиксированная, на кнопке&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;вы ставите сами&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Кнопка&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;«Обменять на …»&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;«Продать»&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p style=&quot;font-size:13px;margin:.5em 0 0&quot;&gt;Источник: &lt;a href=&quot;https://blog.merge-verse.com/kak-obmenyat-podarki-na-zvezdy/&quot; style=&quot;color:inherit;text-decoration:underline&quot;&gt;MergeVerse — блог&lt;/a&gt;. Откуда эти данные, сказано на странице.&lt;/p&gt;
+&lt;/figure&gt;</textarea>
+<p><button type="button" class="button embed-copy" data-for="embed-t1" data-done="Скопировано" hidden>Скопировать код</button></p>
+</details><p>Если подарок обычный и у него есть кнопка «Улучшить», бывает третий путь: улучшить его за звёзды и потом продать уже как коллекционный. Улучшение стоит звёзд, и окупится ли оно, заранее не скажет никто, так что решайте сами. Как это работает, — в статье <a href="/kak-uluchshit-podarok-v-tg/">как улучшить подарок в тг</a>.</p>
 <h2 id="ostorozhno-s-botami-kotorym-vy-dali-dostup">Осторожно с ботами, которым вы дали доступ</h2>
 <p>Если вы подключали чат-бота к аккаунту через Telegram Business, загляните в его права. В Bot API у Telegram есть отдельные разрешения: менять обычные подарки на звёзды, передавать и улучшать подарки, переводить звёзды на счёт бота. Бот с такими правами может обменять ваш подарок без вас. Незнакомому боту их лучше не давать.</p>
 <h2 id="kuda-potratit-zvezdy-posle-obmena">Куда потратить звёзды после обмена</h2>
 <p>Звёзды остаются в Telegram: ими платят за подарки, улучшения, платные сообщения и покупки в ботах и мини-приложениях. Условия Telegram Stars запрещают продавать и выводить звёзды с личного баланса иначе, чем описано в самих условиях, так что предложения «выкуплю звёзды» из чатов — не к Telegram. Что такое звёзды и на что их тратят, рассказано в статье <a href="/zvezdy-telegram/">звёзды Telegram</a>.</p>
-</div></div></div>
+<script>document.querySelectorAll(".embed-copy").forEach(function(b){var t=document.getElementById(b.getAttribute("data-for"));if(!t)return;b.hidden=false;var label=b.textContent;b.addEventListener("click",function(){function done(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=label},2500)}t.select();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(done,function(){document.execCommand("copy");done()})}else{document.execCommand("copy");done()}})});</script></div><div data-read-end aria-hidden="true" style="height:1px"></div></div></div>
 
 <section class="faq"><h2 id="questions">Частые вопросы</h2><details><summary>Можно ли обменять подарок на звёзды после 7 дней?</summary><p>Нет. Приложение в этом случае пишет: «Обмен на звёзды доступен только в течение 7 дней после получения подарка». Остаётся оставить подарок или улучшить его, если есть кнопка «Улучшить».</p></details><details><summary>Почему звёзд за подарок дают меньше, чем он стоил?</summary><p>Так устроено у Telegram: в документации сказано, что сумма обмена обычно ниже цены покупки. Точное число всегда написано на кнопке «Обменять на …».</p></details><details><summary>Можно ли вернуть подарок после обмена?</summary><p>Нет. В окне подтверждения Telegram предупреждает, что действие нельзя отменить и подарок исчезнет навсегда.</p></details><details><summary>Можно ли обменять коллекционный подарок на звёзды?</summary><p>Нет, обмен работает только для обычных подарков. Коллекционный продают на маркете Telegram кнопкой «Продать», цена тоже в звёздах.</p></details></section>
 <section class="sources"><h2 id="sources">Источники</h2><ol><li><a href="https://core.telegram.org/api/gifts" rel="noopener">Telegram Gifts — конвертация подарков в звёзды</a>, Telegram</li><li><a href="https://core.telegram.org/api/config" rel="noopener">Client configuration: stargifts_convert_period_max</a>, Telegram</li><li><a href="https://telegram.org/faq" rel="noopener">Telegram FAQ: What does Profile Rating mean?</a>, Telegram</li><li><a href="https://core.telegram.org/bots/api" rel="noopener">Bot API: BusinessBotRights, convertGiftToStars</a>, Telegram</li><li><a href="https://telegram.org/blog/gifts-verification-platform" rel="noopener">Gifts, Verification Platform and More (5 октября 2024)</a>, Telegram</li><li><a href="https://translations.telegram.org/ru/ios/profile/Gift.Convert.Period.Text" rel="noopener">Строки приложения Telegram для iOS на русском: Gift.Convert.Period.Text</a>, Telegram Translations</li></ol></section>

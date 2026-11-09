@@ -22,7 +22,7 @@
 <link rel="preload" href="/fonts/piazzolla.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/geologica.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
-<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>document.addEventListener("DOMContentLoaded",function(){var p=location.pathname;document.querySelectorAll("[data-goatcounter-click]").forEach(function(a){a.setAttribute("data-goatcounter-referrer",p)});var m=document.querySelector("[data-read-end]");if(!m||!("IntersectionObserver" in window))return;var o=new IntersectionObserver(function(e){if(!e[0].isIntersecting)return;o.disconnect();(function s(n){var g=window.goatcounter;if(g&&g.count)g.count({path:"read-end"+p,title:document.title,event:true});else if(n<40)setTimeout(function(){s(n+1)},500)})(0)});o.observe(m)});</script>
 <meta name="google-site-verification" content="hHBGjlz6LvtyxdP3x3sWT5arWOdvQq0RpVLMBuHod_0">
 <meta name="google-site-verification" content="Qz24Xj1TYyAs-2BEPHub1zrr9jbexSUFW1zroT093qw">
 <meta name="msvalidate.01" content="74194B63F367EB355F843A035E6E6554">
@@ -276,6 +276,13 @@ footer.site .small{color:var(--on-plate-2)}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media print{header.site .tabs,header.site .top,.button,footer.site,.margin,.theme,.game-everywhere{display:none}header.site{background:none;color:#000;border:0}.running h1,.running-name,.running-name a,.running .lead{color:#000}body{background:#fff;color:#000}}
+/* «Add this table to your site» after bigger article tables (scripts/embed.mjs, config/embed.json) */
+.embed{margin:12px 0 4px;max-width:var(--measure)}
+.embed summary{cursor:pointer;font:600 var(--t-label)/1.4 var(--frame);color:var(--ink-2);padding:12px 0;min-height:44px;box-sizing:border-box}
+.embed summary:hover{color:var(--ink)}
+.embed label{display:block;margin:8px 0 6px}
+.embed-code{display:block;width:100%;box-sizing:border-box;font:400 .8125rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;resize:vertical}
+.embed-code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/en/#website","url":"https://blog.merge-verse.com/en/","name":"MergeVerse Blog","inLanguage":"en","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blog.merge-verse.com/en/"},{"@type":"ListItem","position":2,"name":"How to convert Telegram gifts to Stars, step by step"}]},{"@type":"BlogPosting","@id":"https://blog.merge-verse.com/en/convert-telegram-gifts-to-stars/#article","headline":"How to convert Telegram gifts to Stars, step by step","description":"Open the gift you received, choose to convert it and confirm: the gift is destroyed and Stars go to your balance. It works only within 7 days of receiving it.","inLanguage":"en","url":"https://blog.merge-verse.com/en/convert-telegram-gifts-to-stars/","mainEntityOfPage":"https://blog.merge-verse.com/en/convert-telegram-gifts-to-stars/","datePublished":"2026-11-07","dateModified":"2026-11-07","wordCount":917,"author":{"@id":"https://blog.merge-verse.com/#org"},"publisher":{"@id":"https://blog.merge-verse.com/#org"},"citation":["https://core.telegram.org/api/gifts","https://core.telegram.org/method/payments.convertStarGift","https://core.telegram.org/constructor/starGift","https://core.telegram.org/api/config","https://telegram.org/blog/gifts-verification-platform","https://telegram.org/faq#q-what-does-profile-rating-mean"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can you convert Telegram gifts to Stars?","acceptedAnswer":{"@type":"Answer","text":"Yes, a regular gift you received, within 7 days of receiving it. The gift disappears and its Stars value is added to your balance. Collectible (upgraded) gifts and gifts won at auction cannot be converted."}},{"@type":"Question","name":"Why do I get fewer Stars than the gift cost?","acceptedAnswer":{"@type":"Answer","text":"Telegram's API documentation says the conversion amount equals the full price only when the gift was bought with recently purchased Stars; otherwise it is lower. The app shows the exact number before you confirm."}},{"@type":"Question","name":"I missed the 7 days. Can I still convert the gift?","acceptedAnswer":{"@type":"Answer","text":"No. After the window the option goes away. You can keep the gift on your profile, hide it, or upgrade it to a collectible if the gift allows that."}},{"@type":"Question","name":"Can I undo a conversion?","acceptedAnswer":{"@type":"Answer","text":"No. Telegram's documentation says conversion permanently destroys the gift."}},{"@type":"Question","name":"Can I convert Stars back into money?","acceptedAnswer":{"@type":"Answer","text":"Not from a personal balance. Telegram's Stars terms do not allow users to sell or withdraw the Stars on their own balance; you spend them inside Telegram."}}]}]}</script>
 </head>
@@ -330,7 +337,43 @@ footer.site .small{color:var(--on-plate-2)}
 <td>No</td>
 </tr>
 </tbody></table>
-</div><p>The last two rows come straight from Telegram&#39;s API documentation: gifts acquired at auction cannot be converted, and the option is offered only when the gift has a non-zero conversion value. If you upgraded a gift, the conversion option is gone. A collectible can be sold, sent on or moved to the blockchain instead; our page on <a href="/en/how-to-upgrade-telegram-gift/">upgrading Telegram gifts</a> explains that trade-off before you make it.</p>
+</div><details class="embed">
+<summary>Add this table to your site</summary>
+<p class="small">Free to use on your site, blog or newsletter. Copy the code below and paste it into your page as HTML. It shows the same table with a link back to this page as the source.</p>
+<label class="small" for="embed-t1">HTML code</label>
+<textarea id="embed-t1" class="embed-code" readonly rows="6" spellcheck="false">&lt;figure style=&quot;margin:1.5em 0;max-width:640px&quot;&gt;
+&lt;figcaption style=&quot;font-weight:bold;margin:0 0 .5em&quot;&gt;Which gifts can be converted?&lt;/figcaption&gt;
+&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:15px&quot;&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Gift&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Can it be converted into Stars?&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Regular gift you received, less than 7 days ago&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Regular gift you received more than 7 days ago&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Collectible (upgraded) gift&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Gift you got through a gift auction&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Gift whose conversion value is zero&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p style=&quot;font-size:13px;margin:.5em 0 0&quot;&gt;Source: &lt;a href=&quot;https://blog.merge-verse.com/en/convert-telegram-gifts-to-stars/&quot; style=&quot;color:inherit;text-decoration:underline&quot;&gt;MergeVerse Blog&lt;/a&gt;. The page lists the sources of these figures.&lt;/p&gt;
+&lt;/figure&gt;</textarea>
+<p><button type="button" class="button embed-copy" data-for="embed-t1" data-done="Copied" hidden>Copy code</button></p>
+</details><p>The last two rows come straight from Telegram&#39;s API documentation: gifts acquired at auction cannot be converted, and the option is offered only when the gift has a non-zero conversion value. If you upgraded a gift, the conversion option is gone. A collectible can be sold, sent on or moved to the blockchain instead; our page on <a href="/en/how-to-upgrade-telegram-gift/">upgrading Telegram gifts</a> explains that trade-off before you make it.</p>
 <h2 id="how-to-convert-a-gift-into-stars">How to convert a gift into Stars</h2>
 <p>Telegram&#39;s blog does not list the taps for this, and we have not found an official page that names the button. So here is the route as far as Telegram documents it, without inventing labels:</p>
 <ol>
@@ -357,7 +400,7 @@ footer.site .small{color:var(--on-plate-2)}
 <li>Did someone close to you send it? If you would rather keep it out of sight than lose it, hiding is reversible and converting is not.</li>
 <li>Is the week nearly over? Decide now; the option will not wait.</li>
 </ul>
-</div></div></div>
+<script>document.querySelectorAll(".embed-copy").forEach(function(b){var t=document.getElementById(b.getAttribute("data-for"));if(!t)return;b.hidden=false;var label=b.textContent;b.addEventListener("click",function(){function done(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=label},2500)}t.select();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(done,function(){document.execCommand("copy");done()})}else{document.execCommand("copy");done()}})});</script></div><div data-read-end aria-hidden="true" style="height:1px"></div></div></div>
 
 <section class="faq"><h2 id="questions">Questions people ask</h2><details><summary>Can you convert Telegram gifts to Stars?</summary><p>Yes, a regular gift you received, within 7 days of receiving it. The gift disappears and its Stars value is added to your balance. Collectible (upgraded) gifts and gifts won at auction cannot be converted.</p></details><details><summary>Why do I get fewer Stars than the gift cost?</summary><p>Telegram's API documentation says the conversion amount equals the full price only when the gift was bought with recently purchased Stars; otherwise it is lower. The app shows the exact number before you confirm.</p></details><details><summary>I missed the 7 days. Can I still convert the gift?</summary><p>No. After the window the option goes away. You can keep the gift on your profile, hide it, or upgrade it to a collectible if the gift allows that.</p></details><details><summary>Can I undo a conversion?</summary><p>No. Telegram's documentation says conversion permanently destroys the gift.</p></details><details><summary>Can I convert Stars back into money?</summary><p>Not from a personal balance. Telegram's Stars terms do not allow users to sell or withdraw the Stars on their own balance; you spend them inside Telegram.</p></details></section>
 <section class="sources"><h2 id="sources">Sources</h2><ol><li><a href="https://core.telegram.org/api/gifts" rel="noopener">Telegram Gifts (API documentation)</a>, Telegram</li><li><a href="https://core.telegram.org/method/payments.convertStarGift" rel="noopener">payments.convertStarGift (API method)</a>, Telegram</li><li><a href="https://core.telegram.org/constructor/starGift" rel="noopener">starGift (API constructor)</a>, Telegram</li><li><a href="https://core.telegram.org/api/config" rel="noopener">Client configuration (API documentation)</a>, Telegram</li><li><a href="https://telegram.org/blog/gifts-verification-platform" rel="noopener">Gifts, Verification Platform and More</a>, Telegram</li><li><a href="https://telegram.org/faq#q-what-does-profile-rating-mean" rel="noopener">Telegram FAQ: What does profile rating mean?</a>, Telegram</li></ol></section>
