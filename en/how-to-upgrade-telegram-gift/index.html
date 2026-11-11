@@ -283,6 +283,30 @@ footer.site .small{color:var(--on-plate-2)}
 .embed label{display:block;margin:8px 0 6px}
 .embed-code{display:block;width:100%;box-sizing:border-box;font:400 .8125rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;resize:vertical}
 .embed-code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* ---------- tool pages (config/tools.json, scripts/tools.mjs): the form plate, then the static tables ---------- */
+.tool{margin:1.8rem 0}
+.calc{border:1px solid var(--rule);border-top:var(--wire);background:var(--tint);border-radius:6px;padding:18px clamp(14px,3vw,24px) 20px;margin:0 0 2rem}
+.calc .calc-title{margin:0 0 .8rem;font:650 var(--t-sub)/1.3 var(--frame)}
+.calc label{display:block;font:600 var(--t-label)/1.4 var(--frame);margin:0 0 6px}
+.calc textarea{display:block;width:100%;box-sizing:border-box;font:400 1rem/1.5 var(--frame);color:var(--ink);background:var(--sheet);border:1px solid var(--ink-2);border-radius:6px;padding:10px 12px;resize:vertical;min-height:88px}
+.calc textarea:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.calc-count{margin:.8rem 0 1rem;font:400 var(--t-label)/1.5 var(--frame)}
+.calc-count ul{margin:.3rem 0;padding-left:1.2rem}
+.calc-count .calc-over{font-weight:650}
+.calc-answer{margin:0;font:650 1rem/1.4 var(--frame)}
+.calc-num{font-variant-numeric:tabular-nums}
+.calc-styles{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.calc-styles li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule)}
+.calc-style-name{grid-column:1/-1;font:600 var(--t-label)/1.3 var(--frame);color:var(--ink-2)}
+.calc-styles output{min-width:0;overflow-wrap:anywhere;min-height:1.5em}
+.calc-copy{min-height:44px;padding:0 16px;font-size:.9375rem}
+.glyphs{font-family:"Cambria Math","STIX Two Math","Noto Sans Math","Segoe UI Symbol","Apple Symbols",var(--frame);font-size:1.125rem;line-height:1.5}
+.calc-chart h3{margin-top:2rem}
+.calc-chart td.none{color:var(--ink-2)}
+.calc-chart td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.calc-chart kbd{font:500 .875em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;white-space:nowrap}
+.calc-chart code{white-space:nowrap}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/en/#website","url":"https://blog.merge-verse.com/en/","name":"MergeVerse Blog","inLanguage":"en","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blog.merge-verse.com/en/"},{"@type":"ListItem","position":2,"name":"How to upgrade a Telegram gift to a collectible"}]},{"@type":"BlogPosting","@id":"https://blog.merge-verse.com/en/how-to-upgrade-telegram-gift/#article","headline":"How to upgrade a Telegram gift to a collectible","description":"Open the gift under Gifts on your profile and pay the upgrade price in Stars, or upgrade free if the sender prepaid. Not every gift can be upgraded.","inLanguage":"en","url":"https://blog.merge-verse.com/en/how-to-upgrade-telegram-gift/","mainEntityOfPage":"https://blog.merge-verse.com/en/how-to-upgrade-telegram-gift/","datePublished":"2026-11-03","dateModified":"2026-11-03","wordCount":1001,"author":{"@id":"https://blog.merge-verse.com/#org"},"publisher":{"@id":"https://blog.merge-verse.com/#org"},"citation":["https://telegram.org/blog/collectible-gifts-and-more","https://core.telegram.org/api/gifts","https://core.telegram.org/constructor/starGift","https://telegram.org/blog/wear-gifts-blockchain-and-more","https://telegram.org/blog/crafting-android-design-and-more","https://telegram.org/blog/welcome-messages-buttons-TG-13"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why can't I upgrade my Telegram gift?","acceptedAnswer":{"@type":"Answer","text":"Not every gift can be upgraded: Telegram enables the option per gift. The gift may also have been converted into Stars already, or be a collectible already. It is also worth updating the app before you look again."}},{"@type":"Question","name":"How much does it cost to upgrade a Telegram gift?","acceptedAnswer":{"@type":"Answer","text":"It is paid in Stars, and Telegram's API documentation says the price changes over time; the app shows it before you confirm. We do not quote a fixed number: older guides cite figures that are no longer reliable."}},{"@type":"Question","name":"Can I upgrade a gift for free?","acceptedAnswer":{"@type":"Answer","text":"Yes, if the sender included the upgrade when sending, or if someone else prepaid it for you. Then the upgrade costs you no Stars."}},{"@type":"Question","name":"Can I convert an upgraded gift back into Stars?","acceptedAnswer":{"@type":"Answer","text":"No. Conversion into Stars is described only for regular gifts. A collectible can be sold on Telegram's marketplace instead."}},{"@type":"Question","name":"Can I upgrade a gift twice?","acceptedAnswer":{"@type":"Answer","text":"There is nothing to upgrade further: an upgraded gift is already a collectible. Since February 2026 Telegram's crafting combines collectibles into rarer versions, which is a different process."}}]}]}</script>
 </head>

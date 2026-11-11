@@ -283,6 +283,30 @@ footer.site .small{color:var(--on-plate-2)}
 .embed label{display:block;margin:8px 0 6px}
 .embed-code{display:block;width:100%;box-sizing:border-box;font:400 .8125rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;resize:vertical}
 .embed-code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* ---------- tool pages (config/tools.json, scripts/tools.mjs): the form plate, then the static tables ---------- */
+.tool{margin:1.8rem 0}
+.calc{border:1px solid var(--rule);border-top:var(--wire);background:var(--tint);border-radius:6px;padding:18px clamp(14px,3vw,24px) 20px;margin:0 0 2rem}
+.calc .calc-title{margin:0 0 .8rem;font:650 var(--t-sub)/1.3 var(--frame)}
+.calc label{display:block;font:600 var(--t-label)/1.4 var(--frame);margin:0 0 6px}
+.calc textarea{display:block;width:100%;box-sizing:border-box;font:400 1rem/1.5 var(--frame);color:var(--ink);background:var(--sheet);border:1px solid var(--ink-2);border-radius:6px;padding:10px 12px;resize:vertical;min-height:88px}
+.calc textarea:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.calc-count{margin:.8rem 0 1rem;font:400 var(--t-label)/1.5 var(--frame)}
+.calc-count ul{margin:.3rem 0;padding-left:1.2rem}
+.calc-count .calc-over{font-weight:650}
+.calc-answer{margin:0;font:650 1rem/1.4 var(--frame)}
+.calc-num{font-variant-numeric:tabular-nums}
+.calc-styles{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.calc-styles li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule)}
+.calc-style-name{grid-column:1/-1;font:600 var(--t-label)/1.3 var(--frame);color:var(--ink-2)}
+.calc-styles output{min-width:0;overflow-wrap:anywhere;min-height:1.5em}
+.calc-copy{min-height:44px;padding:0 16px;font-size:.9375rem}
+.glyphs{font-family:"Cambria Math","STIX Two Math","Noto Sans Math","Segoe UI Symbol","Apple Symbols",var(--frame);font-size:1.125rem;line-height:1.5}
+.calc-chart h3{margin-top:2rem}
+.calc-chart td.none{color:var(--ink-2)}
+.calc-chart td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.calc-chart kbd{font:500 .875em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;white-space:nowrap}
+.calc-chart code{white-space:nowrap}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/en/#website","url":"https://blog.merge-verse.com/en/","name":"MergeVerse Blog","inLanguage":"en","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blog.merge-verse.com/en/"},{"@type":"ListItem","position":2,"name":"What are Telegram Stars and what are they used for?"}]},{"@type":"BlogPosting","@id":"https://blog.merge-verse.com/en/what-are-telegram-stars/#article","headline":"What are Telegram Stars and what are they used for?","description":"Telegram Stars are virtual items for paying for digital goods inside Telegram: gifts, bots, mini apps, paid posts and subscriptions. You buy them in the app.","inLanguage":"en","url":"https://blog.merge-verse.com/en/what-are-telegram-stars/","mainEntityOfPage":"https://blog.merge-verse.com/en/what-are-telegram-stars/","datePublished":"2026-11-06","dateModified":"2026-11-06","wordCount":1019,"author":{"@id":"https://blog.merge-verse.com/#org"},"publisher":{"@id":"https://blog.merge-verse.com/#org"},"citation":["https://telegram.org/blog/telegram-stars","https://telegram.org/tos/stars","https://core.telegram.org/api/stars","https://core.telegram.org/api/config","https://telegram.org/faq","https://telegram.org/blog/w3-browser-mini-app-store","https://telegram.org/blog/star-messages-gateway-2-0-and-more"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are Telegram Stars used for?","acceptedAnswer":{"@type":"Answer","text":"Paying inside Telegram: gifts, digital goods in bots and mini apps, paid photos and videos in channels, paid messages, reactions, subscriptions, giveaways, suggested posts and ads, plus Premium sent as a gift."}},{"@type":"Question","name":"Are Telegram Stars real money?","acceptedAnswer":{"@type":"Answer","text":"Telegram's terms call them virtual items for buying digital goods and services. You pay real money for them, but you cannot sell or withdraw the Stars on your personal balance."}},{"@type":"Question","name":"Can you get a refund on Telegram Stars?","acceptedAnswer":{"@type":"Answer","text":"Not for the Stars themselves: Telegram's terms say all sales of Stars are final. If a bot or mini app did not deliver what you paid for, write /paysupport to the bot; a refused refund can be disputed through BotFather."}},{"@type":"Question","name":"Can you withdraw Telegram Stars?","acceptedAnswer":{"@type":"Answer","text":"Only owners of channels and bots, for Stars those received. They withdraw in TON through Fragment with their two-step verification password; Telegram's documentation lists a minimum of 1,000 Stars (checked 30 October 2026)."}},{"@type":"Question","name":"Why do Stars cost different amounts in different places?","acceptedAnswer":{"@type":"Answer","text":"Telegram does not process the payment itself. Its terms say local taxes may be added and that payment processors' commissions and conversion rates are outside Telegram's control."}}]}]}</script>
 </head>
