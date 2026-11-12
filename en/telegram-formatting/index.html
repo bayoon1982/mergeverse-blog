@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telegram bold, italic and fonts: every formatting method</title>
+<meta name="description" content="To bold text in Telegram, select it and pick Bold, press Ctrl+B, or type **text**. Every style in one table, plus a font generator and a character counter.">
+<link rel="canonical" href="https://blog.merge-verse.com/en/telegram-formatting/">
+<link rel="alternate" hreflang="en" href="https://blog.merge-verse.com/en/telegram-formatting/">
+<link rel="alternate" hreflang="ru" href="https://blog.merge-verse.com/shrift-telegram/">
+<link rel="alternate" hreflang="x-default" href="https://blog.merge-verse.com/en/telegram-formatting/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Telegram bold, italic and fonts: every formatting method">
+<meta property="og:description" content="To bold text in Telegram, select it and pick Bold, press Ctrl+B, or type **text**. Every style in one table, plus a font generator and a character counter.">
+<meta property="og:url" content="https://blog.merge-verse.com/en/telegram-formatting/">
+<meta property="og:site_name" content="MergeVerse Blog">
+
+<meta name="color-scheme" content="light dark">
+<link rel="alternate" type="application/rss+xml" title="MergeVerse Blog" href="/en/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/piazzolla.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geologica.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>document.addEventListener("DOMContentLoaded",function(){var p=location.pathname;document.querySelectorAll("[data-goatcounter-click]").forEach(function(a){a.setAttribute("data-goatcounter-referrer",p)});var m=document.querySelector("[data-read-end]");if(!m||!("IntersectionObserver" in window))return;var o=new IntersectionObserver(function(e){if(!e[0].isIntersecting)return;o.disconnect();(function s(n){var g=window.goatcounter;if(g&&g.count)g.count({path:"read-end"+p,title:document.title,event:true});else if(n<40)setTimeout(function(){s(n+1)},500)})(0)});o.observe(m)});</script>
+<meta name="google-site-verification" content="hHBGjlz6LvtyxdP3x3sWT5arWOdvQq0RpVLMBuHod_0">
+<meta name="google-site-verification" content="Qz24Xj1TYyAs-2BEPHub1zrr9jbexSUFW1zroT093qw">
+<meta name="msvalidate.01" content="74194B63F367EB355F843A035E6E6554">
+<meta name="yandex-verification" content="9dfac024d3674a3d">
+<style>/* MergeVerse blog — a collector's reference of enamel pins.
+   The frame is struck like a hard-enamel badge: colour fields (cobalt masthead and
+   footer, the cobalt head of a table, the cinnabar 18+ roundel) held inside raised brass
+   wire, drawn as a double rule. The reading column is the plain white enamel between
+   them; at night the pins lie on blue-black velvet. No shadows, glow or gradients:
+   depth is wire, not light. Geologica (badge lettering, Cyrillic-first) sets the
+   frame and headings; Piazzolla sets the reading. Decisions and sources: DESIGN.md. */
+@font-face{font-family:"Geologica";src:url(/fonts/geologica.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Geologica";src:url(/fonts/geologica-cyr.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla-cyr.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla-italic-cyr.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+
+:root{
+  /* Enamels. Written as plain hex, not color-mix(): the contrast test reads computed colours. */
+  --cobalt:#1d3a9e;        /* the masthead plate; white on it 9.6:1 */
+  --cobalt-deep:#142b7a;   /* footer plate, pressed buttons; white on it 12:1 */
+  --cinnabar:#c8361f;      /* the one accent: the 18+ roundel, hover underline; white on it 5.2:1 */
+  --brass:#b8902f;         /* the wire: rules and rims only, never text */
+  --on-plate:#ffffff;
+  --on-plate-2:#c9d3f2;    /* secondary text on a cobalt plate, 8:1 on --cobalt-deep */
+  /* Day: white enamel. Cool, never cream. */
+  --ground:#f3f5fa;--sheet:#ffffff;--ink:#121a33;--ink-2:#4a5370;--rule:#cfd5e4;
+  --link:#1d3a9e;--tint:#eef1fa;--mark:#f3e3a6;
+  --frame:"Geologica","Segoe UI","Noto Sans",system-ui,sans-serif;
+  --read:"Piazzolla","Iowan Old Style","Noto Serif",Georgia,serif;
+  /* One scale: display, title, section, sub, body, label. */
+  --t-display:clamp(2.25rem,1.35rem + 4.2vw,4.5rem);
+  --t-title:clamp(1.875rem,1.3rem + 2.5vw,3rem);
+  --t-sec:clamp(1.375rem,1.2rem + .7vw,1.625rem);--t-sub:1.1875rem;--t-body:1.125rem;--t-label:.875rem;
+  --measure:40rem;--page:74rem;--gap:clamp(16px,4vw,40px);
+  --wire:4px double var(--brass);
+  color-scheme:light dark;
+}
+/* Night: the same pins on blue-black velvet. Plates keep their enamel. */
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;
+  --ground:#0d1222;--sheet:#141b31;--ink:#e9ecf5;--ink-2:#aab2ca;--rule:#2c3552;
+  --link:#a9bcff;--tint:#18213c;--mark:#6b5414;--brass:#c9a64e;
+}}
+:root[data-theme=dark]{color-scheme:dark;
+  --ground:#0d1222;--sheet:#141b31;--ink:#e9ecf5;--ink-2:#aab2ca;--rule:#2c3552;
+  --link:#a9bcff;--tint:#18213c;--mark:#6b5414;--brass:#c9a64e;
+}
+:root[data-theme=light]{color-scheme:light}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scrollbar-color:var(--brass) var(--ground);accent-color:var(--cobalt);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 var(--t-body)/1.6 var(--read);overflow-wrap:break-word;caret-color:var(--cinnabar);font-kerning:normal}
+::selection{background:var(--mark);color:var(--ink)}
+a{color:var(--link);text-decoration-line:underline;text-decoration-color:var(--brass);text-decoration-thickness:.08em;text-underline-offset:.2em}
+a:hover{text-decoration-color:var(--cinnabar);text-decoration-thickness:.12em}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:2px}
+img{max-width:100%;height:auto;display:block}
+picture{display:block;min-width:0}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;background:var(--sheet);color:var(--ink);padding:8px 12px;z-index:9}
+
+/* ---------- the masthead plate ---------- */
+header.site{background:var(--cobalt);color:var(--on-plate);border-bottom:var(--wire)}
+.band{max-width:var(--page);margin:0 auto;padding:0 var(--gap)}
+header.site a{color:var(--on-plate);text-decoration-color:var(--brass)}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:4px 18px;padding:8px 0}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-right:auto;font:750 1.0625rem/1.1 var(--frame);letter-spacing:-.01em;text-decoration:none}
+.brand:hover{text-decoration:underline}
+.pin{width:22px;height:22px;flex:none}
+.pin-wire{fill:var(--brass)}
+.pin-enamel{fill:var(--cinnabar)}
+.about{display:inline-flex;align-items:center;min-height:44px;font:550 var(--t-label)/1 var(--frame);text-decoration:none;padding:0 2px}
+.about:hover,.about[aria-current]{text-decoration:underline;text-decoration-thickness:2px}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+/* Switches: every option stays in view, the current one struck forward in white enamel
+   inside its brass rim. */
+.langs,.theme{display:inline-flex;align-items:stretch;min-height:44px;padding:3px;gap:3px;border:2px solid var(--brass);border-radius:6px;background:var(--cobalt-deep)}
+.langs a,.lang-here,.theme span{display:flex;align-items:center;padding:0 10px;border-radius:3px;font:600 .8125rem/1 var(--frame);text-decoration:none;color:var(--on-plate);transition:background-color .18s cubic-bezier(.2,.8,.2,1),color .18s cubic-bezier(.2,.8,.2,1)}
+.lang-here{background:var(--on-plate);color:var(--cobalt-deep);box-shadow:inset 0 0 0 1px var(--brass)}
+.langs a:hover{text-decoration:underline}
+/* Four languages do not fit one row at 280 px or with text at 200 %: the switch wraps inside its rim. */
+.langs{flex-wrap:wrap;max-width:100%}
+.theme{cursor:pointer;margin:0;font:inherit;color:var(--on-plate)}
+.theme[hidden]{display:none}
+.theme[aria-pressed=false] .theme-day,.theme[aria-pressed=true] .theme-night{background:var(--on-plate);color:var(--cobalt-deep);box-shadow:inset 0 0 0 1px var(--brass)}
+.theme:hover span:not(:only-child){text-decoration:underline}
+@media (max-width:639px){
+  .controls{flex-basis:100%;justify-content:space-between}
+}
+
+/* the plate's title on home, about and 404 */
+.running{padding:clamp(14px,3vw,34px) 0 clamp(22px,3.5vw,40px)}
+.running h1,.running-name{margin:0;font:800 var(--t-display)/1 var(--frame);letter-spacing:-.03em;text-wrap:balance;max-width:14ch;color:var(--on-plate)}
+.running-name{font-size:var(--t-title);max-width:none}
+.running-name a{text-decoration:none}
+.running .lead{margin:.7em 0 0;max-width:34rem;font:400 1.1875rem/1.45 var(--read);color:var(--on-plate-2)}
+
+/* section tabs, only when config sections_visible is on */
+.tabs{margin:0 0 -4px}
+.tabs-row,.tabs-list{display:flex;flex-wrap:wrap;gap:4px}
+.tabs a,.tabs summary{display:flex;align-items:center;min-height:44px;padding:0 12px;font:600 .875rem/1.15 var(--frame);text-decoration:none;color:var(--on-plate);background:var(--cobalt-deep);border-radius:6px 6px 0 0}
+.tabs a[aria-current]{background:var(--ground);color:var(--ink)}
+.tabs-row{display:none}
+.tabs summary{list-style:none;cursor:pointer;gap:8px;width:max-content}
+.tabs summary::-webkit-details-marker{display:none}
+.tabs .count{font-variant-numeric:tabular-nums}
+@media (min-width:900px){.tabs-row{display:flex}.tabs-phone{display:none}}
+
+.crumbs{max-width:var(--page);margin:0 auto;padding:18px var(--gap) 0;font:450 var(--t-label)/1.4 var(--frame);color:var(--ink-2)}
+.crumbs a{color:var(--ink-2)}
+.crumbs [aria-current]{color:var(--ink)}
+
+main{padding:0 0 64px}
+.sheet{max-width:var(--page);margin:0 auto;padding:0 var(--gap)}
+
+/* ---------- type ---------- */
+h1,h2,h3{font-family:var(--frame);color:var(--ink);text-wrap:balance;hyphens:manual}
+h1{font-size:var(--t-title);line-height:1.08;font-weight:780;letter-spacing:-.025em;margin:.45em 0 .55em;max-width:20ch}
+h2{max-width:var(--measure);font-size:var(--t-sec);line-height:1.2;font-weight:700;letter-spacing:-.015em;margin:2.1em 0 .5em}
+h3{font-size:var(--t-sub);line-height:1.3;font-weight:650;margin:1.7em 0 .35em}
+.small{font:400 var(--t-label)/1.5 var(--frame);color:var(--ink-2)}
+
+/* the spec band: the one dense place on the page */
+.spec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0 0 28px;border-top:var(--wire);border-bottom:var(--wire);max-width:var(--measure)}
+.spec div{padding:8px 12px 9px 0;min-width:0}
+.spec div:nth-child(2n){padding-left:12px;border-left:1px solid var(--rule)}
+.spec div:nth-child(n+3){border-top:1px solid var(--rule)}
+.spec dt{font:450 .8125rem/1.2 var(--frame);color:var(--ink-2)}
+.spec dd{margin:3px 0 0;font:600 .9375rem/1.3 var(--frame);font-variant-numeric:lining-nums tabular-nums}
+.spec dd a{color:var(--ink)}
+@media (min-width:600px){.spec{grid-template-columns:repeat(4,auto);justify-content:start}.spec div:nth-child(n){border-top:0;padding-right:18px}.spec div+div{padding-left:14px;border-left:1px solid var(--rule)}}
+
+/* panels: "In short" is a white enamel sheet in a plain 1px rule (the double wire stays on coloured fields) */
+.panel{max-width:var(--measure);margin:0 0 12px;background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.panel-head{margin:0;padding:12px 18px 0;font:700 1rem/1.2 var(--frame);letter-spacing:0;max-width:none;color:var(--ink)}
+.panel-body{margin:0;padding:6px 18px 14px 2.4rem}
+.panel-body li{margin:.3rem 0}
+.panel-body li::marker{color:var(--brass)}
+
+/* contents: a ruled list in the margin (wide) or a disclosure (narrow) */
+.contents h2{font:700 .9375rem/1.2 var(--frame);margin:0;padding:0 0 9px;border-bottom:1px solid var(--brass)}
+.contents ol{margin:0;padding:0;list-style:none}
+.contents li{border-bottom:1px solid var(--rule)}
+.contents a{display:block;padding:8px 0;color:var(--ink);text-decoration:none;font:450 .9375rem/1.35 var(--frame)}
+.contents a:hover{text-decoration:underline;text-decoration-color:var(--cinnabar)}
+.contents.narrow{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);max-width:var(--measure);margin-bottom:8px}
+.contents.narrow summary{list-style:none;cursor:pointer;min-height:48px;display:flex;align-items:center;gap:10px;font:700 .9375rem/1.2 var(--frame)}
+.contents.narrow summary::-webkit-details-marker{display:none}
+.contents.narrow summary::before,.faq summary::before{content:"";flex:none;width:13px;height:13px;background:linear-gradient(var(--brass),var(--brass)) center/13px 2.5px no-repeat,linear-gradient(var(--brass),var(--brass)) center/2.5px 13px no-repeat;transition:transform .22s cubic-bezier(.2,.8,.2,1)}
+.contents.narrow[open] summary::before,.faq details[open] summary::before{transform:rotate(90deg);background:linear-gradient(var(--brass),var(--brass)) center/13px 2.5px no-repeat}
+.contents.narrow .count{font-weight:450;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.contents.narrow ol{padding:4px 0 10px}
+.contents.narrow li:last-child{border-bottom:0}
+
+.layout{display:grid;gap:18px}
+.layout>header{min-width:0}
+.column{min-width:0;max-width:var(--measure)}
+.contents.wide{display:none}
+.margin{min-width:0}
+@media (min-width:1100px){
+  .layout{grid-template-columns:minmax(0,var(--measure)) minmax(0,1fr);grid-template-areas:"head side" "body side";grid-template-rows:auto 1fr;column-gap:64px;row-gap:0}
+  .layout>header{grid-area:head}.column{grid-area:body}
+  .margin{grid-area:side;justify-self:end;width:min(100%,18rem);position:sticky;top:24px;align-self:start;margin-top:2.6rem}
+  .contents.wide{display:block}.contents.narrow{display:none}
+}
+
+.prose{max-width:var(--measure);min-width:0}
+.prose p,.prose li{hyphens:manual;text-wrap:pretty}
+/* Hyphenate only where the measure is short: a phone column of ~35 characters. */
+@media (max-width:479px){.prose p,.prose li{hyphens:auto}}
+.prose ul,.prose ol{padding-left:1.4rem}
+.prose li{margin:.35rem 0}
+.prose ul li::marker{color:var(--brass)}
+.prose ol li::marker{color:var(--ink-2);font:600 .9375em var(--frame);font-variant-numeric:tabular-nums}
+.prose blockquote{margin:1.6rem 0;padding:.7rem 0;border-top:1px solid var(--brass);border-bottom:1px solid var(--brass);font-style:italic;color:var(--ink-2)}
+.prose strong{font-weight:650}
+.prose em{font-style:italic}
+.prose code{font:500 .88em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;background:var(--tint);border:1px solid var(--rule);padding:.05em .3em;border-radius:3px}
+.prose hr{border:0;border-top:1px solid var(--brass);margin:2.4rem 0}
+
+/* tables: a cobalt head plate on a brass wire, figures in line */
+.table-wrap{overflow-x:auto;margin:1.6rem 0;-webkit-overflow-scrolling:touch;max-width:100%}
+table{border-collapse:collapse;width:100%;font:400 .9375rem/1.45 var(--frame);font-variant-numeric:lining-nums tabular-nums;background:var(--sheet)}
+th,td{text-align:left;vertical-align:top;padding:9px 14px;border-bottom:1px solid var(--rule)}
+th{font-weight:650;background:var(--cobalt);color:var(--on-plate);border-bottom:var(--wire)}
+tbody tr:nth-child(even) td{background:var(--tint)}
+
+.button{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;margin:4px 0;background:var(--cobalt);color:var(--on-plate);font:650 1rem/1 var(--frame);text-decoration:none;border:2px solid var(--brass);border-radius:6px;white-space:nowrap}
+/* A long label or enlarged text wraps instead of pushing the page sideways (200 % text, 11.11.2026). */
+.button{white-space:normal;max-width:100%;line-height:1.2;padding-block:8px;box-sizing:border-box}
+.button:visited{color:var(--on-plate)}
+.button:hover{background:var(--cobalt-deep);text-decoration:underline;text-decoration-color:var(--on-plate)}
+
+/* questions: a drawn plus that turns to a minus */
+.faq details{border-bottom:1px solid var(--rule);max-width:var(--measure)}
+.faq details:first-of-type{border-top:1px solid var(--brass)}
+.faq summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;min-height:52px;padding:8px 0;font:600 1.0625rem/1.35 var(--frame)}
+.faq summary::-webkit-details-marker{display:none}
+.faq details p{margin:0 0 16px 27px}
+.sources ol{font-size:1rem;line-height:1.5;padding-left:1.5rem;max-width:var(--measure)}
+.sources li{margin:.45rem 0}
+.sources li::marker{font:600 .875rem var(--frame);font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.how{max-width:var(--measure);margin-top:2.4rem}
+
+/* ---------- lists of articles: ruled rows, dates tight to the right ---------- */
+.entries{list-style:none;margin:0;padding:0;border-top:1px solid var(--brass);max-width:var(--measure)}
+.entries li{display:grid;gap:6px;padding:16px 0 18px;border-bottom:1px solid var(--rule);break-inside:avoid}
+.entries a{text-decoration:none;color:var(--ink);display:block;min-width:0}
+.entry-title{display:block;font:650 var(--t-sub)/1.28 var(--frame);letter-spacing:-.008em;text-wrap:balance}
+.entries a:hover .entry-title{text-decoration:underline;text-decoration-color:var(--cinnabar);text-decoration-thickness:2px;text-underline-offset:.18em}
+.entry-desc{display:block;color:var(--ink-2);font-size:1rem;line-height:1.5;margin-top:5px;text-wrap:pretty}
+.entries time{font:450 .8125rem/1.3 var(--frame);color:var(--ink-2);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+@media (min-width:640px){
+  .entries li{grid-template-columns:minmax(0,1fr) auto;column-gap:28px;align-items:baseline}
+  .entries time{grid-column:2;grid-row:1;text-align:right}
+}
+.empty{color:var(--ink-2);max-width:var(--measure);margin:1.2rem 0}
+
+/* home: one list, newest first; the newest one is set larger */
+.home .index-head{max-width:var(--measure);margin:2rem 0 .7rem;font-size:var(--t-sub);font-weight:650}
+.home .index-head .count{font-weight:450;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.entries.flat li:first-child{padding:22px 0 24px}
+.entries.flat li:first-child .entry-title{font-size:var(--t-sec);font-weight:750;letter-spacing:-.018em;line-height:1.2}
+.entries.flat li:first-child .entry-desc{font-size:var(--t-body)}
+
+/* section hubs and the sectioned home, only when config sections_visible is on */
+.hub .start{margin-top:2.2rem}
+.hub .start .entry-title{font-size:var(--t-sec)}
+.dept{padding:18px 0 24px}
+.dept h3{margin:0 0 10px}
+.dept h3 a{color:var(--ink);text-decoration:none}
+.more{margin:.7rem 0 0;font:600 .9375rem/1.4 var(--frame)}
+
+/* ---------- the game: a quiet plaque that closes every page ---------- */
+.game-everywhere{max-width:var(--page);margin:56px auto 0;padding:0 var(--gap)}
+.game{max-width:var(--measure);margin:48px 0}
+.game-everywhere .game{margin:0}
+.game-plate{position:relative;background:var(--sheet);border:var(--wire);border-radius:8px;padding:20px 22px 18px 92px;min-height:120px}
+.game h2{margin:0 0 .3em;font-size:var(--t-sub);font-weight:700;letter-spacing:-.01em}
+.game p{margin:.35em 0}
+.game p:not(.small){font-size:1.0625rem;line-height:1.5}
+.game .button{margin-top:6px}
+.age{position:absolute;left:20px;top:20px;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--cinnabar);color:#fff;border:3px double var(--brass);font:800 1rem/1 var(--frame);letter-spacing:-.02em;font-variant-numeric:lining-nums}
+@media (max-width:479px){
+  .game-plate{padding:18px 18px 16px}
+  .age{position:static;margin:0 0 12px;width:46px;height:46px;font-size:.9375rem}
+}
+
+/* ---------- the footer plate ---------- */
+footer.site{background:var(--cobalt-deep);color:var(--on-plate-2);border-top:var(--wire);font:400 .9375rem/1.55 var(--frame)}
+footer.site .bar{max-width:var(--page);margin:0 auto;padding:24px var(--gap) 32px}
+footer.site p{margin:.4rem 0;max-width:var(--measure)}
+footer.site p:first-child{color:var(--on-plate);font-weight:550}
+footer.site a{color:var(--on-plate)}
+footer.site .small{color:var(--on-plate-2)}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+/* Touch screens and phone widths: every control outside running text is at least 44×44 px
+   (tests/pages.mjs, brief 11.11.2026). Negative margins keep the line where it was. */
+@media (pointer:coarse),(max-width:767px){
+  .langs,.theme{min-height:54px}
+  .langs a,.lang-here{min-height:44px}
+  .crumbs a{display:inline-block;min-width:44px;text-align:center;padding:13px 2px;margin:-13px -2px}
+  .spec dd a{display:inline-block;padding:13px 0;margin:-13px 0}
+  .contents a{padding:12px 0}
+  .sources a{padding-block:11px;margin-block:-11px}
+  .how a,.running-name a,.more a,.dept h3 a{display:inline-block;padding:13px 0;margin:-13px 0}
+}
+@media print{header.site .tabs,header.site .top,.button,footer.site,.margin,.theme,.game-everywhere,.game-inline,.game-home{display:none}header.site{background:none;color:#000;border:0}.running h1,.running-name,.running-name a,.running .lead{color:#000}body{background:#fff;color:#000}}
+/* «Add this table to your site» after bigger article tables (scripts/embed.mjs, config/embed.json) */
+.embed{margin:12px 0 4px;max-width:var(--measure)}
+.embed summary{cursor:pointer;font:600 var(--t-label)/1.4 var(--frame);color:var(--ink-2);padding:12px 0;min-height:44px;box-sizing:border-box}
+.embed summary:hover{color:var(--ink)}
+.embed label{display:block;margin:8px 0 6px}
+.embed-code{display:block;width:100%;box-sizing:border-box;font:400 .8125rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;resize:vertical}
+.embed-code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* ---------- tool pages (config/tools.json, scripts/tools.mjs): the form plate, then the static tables ---------- */
+.tool{margin:1.8rem 0}
+.calc{border:1px solid var(--rule);border-top:var(--wire);background:var(--tint);border-radius:6px;padding:18px clamp(14px,3vw,24px) 20px;margin:0 0 2rem}
+.calc .calc-title{margin:0 0 .8rem;font:650 var(--t-sub)/1.3 var(--frame)}
+.calc label{display:block;font:600 var(--t-label)/1.4 var(--frame);margin:0 0 6px}
+.calc textarea{display:block;width:100%;box-sizing:border-box;font:400 1rem/1.5 var(--frame);color:var(--ink);background:var(--sheet);border:1px solid var(--ink-2);border-radius:6px;padding:10px 12px;resize:vertical;min-height:88px}
+.calc textarea:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.calc-count{margin:.8rem 0 1rem;font:400 var(--t-label)/1.5 var(--frame)}
+.calc-count ul{margin:.3rem 0;padding-left:1.2rem}
+.calc-count .calc-over{font-weight:650}
+.calc-answer{margin:0;font:650 1rem/1.4 var(--frame)}
+.calc-num{font-variant-numeric:tabular-nums}
+.calc-styles{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.calc-styles li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule)}
+.calc-style-name{grid-column:1/-1;font:600 var(--t-label)/1.3 var(--frame);color:var(--ink-2)}
+.calc-styles output{min-width:0;overflow-wrap:anywhere;min-height:1.5em}
+.calc-copy{min-height:44px;padding:0 16px;font-size:.9375rem}
+.glyphs{font-family:"Cambria Math","STIX Two Math","Noto Sans Math","Segoe UI Symbol","Apple Symbols",var(--frame);font-size:1.125rem;line-height:1.5}
+.calc-chart h3{margin-top:2rem}
+.calc-chart td.none{color:var(--ink-2)}
+.calc-chart td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.calc-chart kbd{font:500 .875em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;white-space:nowrap}
+.calc-chart code{white-space:nowrap}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/en/#website","url":"https://blog.merge-verse.com/en/","name":"MergeVerse Blog","inLanguage":"en","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blog.merge-verse.com/en/"},{"@type":"ListItem","position":2,"name":"Telegram bold, italic and fonts: every formatting method"}]},{"@type":"WebPage","@id":"https://blog.merge-verse.com/en/telegram-formatting/#article","name":"Telegram bold, italic and fonts: every formatting method","description":"To bold text in Telegram, select it and pick Bold, press Ctrl+B, or type **text**. Every style in one table, plus a font generator and a character counter.","inLanguage":"en","url":"https://blog.merge-verse.com/en/telegram-formatting/","datePublished":"2026-11-12","dateModified":"2026-11-12","author":{"@id":"https://blog.merge-verse.com/#org"},"publisher":{"@id":"https://blog.merge-verse.com/#org"},"isPartOf":{"@id":"https://blog.merge-verse.com/en/#website"},"citation":["https://telegram.org/faq#q-can-i-format-text-and-write-long-posts","https://core.telegram.org/bots/api#formatting-options","https://core.telegram.org/api/entities","https://telegram.org/blog/reactions-spoilers-translations","https://telegram.org/blog/reply-revolution","https://telegram.org/blog/message-effects-and-more","https://telegramdesktop.github.io/tdesktop/changelog/","https://translations.telegram.org/en/android_x/settings/EditMarkdownHint2","https://www.unicode.org/charts/PDF/U1D400.pdf","https://www.unicode.org/versions/latest/core-spec/chapter-22/"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I bold text in Telegram on a phone?","acceptedAnswer":{"@type":"Answer","text":"Type your message, select the words, and choose Bold in the menu that appears over the selection. In the Android app you can also wrap the words in two asterisks on each side, like **this**, before sending."}},{"@type":"Question","name":"What is the Telegram shortcut for bold?","acceptedAnswer":{"@type":"Answer","text":"In Telegram Desktop it is Ctrl+B, or Cmd+B on a Mac. Ctrl+I makes italic, Ctrl+K adds a link to the selected word, Ctrl+Shift+M makes monospace and Ctrl+Shift+N clears formatting. These were added in version 1.3.0 in June 2018."}},{"@type":"Question","name":"Can I change the font in Telegram?","acceptedAnswer":{"@type":"Answer","text":"Not the font of your messages. Telegram lets you style parts of a message (bold, italic and so on) but has no choice of typeface. Font generators replace letters with look-alike Unicode symbols instead, which is a different thing."}},{"@type":"Question","name":"How many characters can a Telegram message have?","acceptedAnswer":{"@type":"Answer","text":"Telegram's Bot API allows 1 to 4,096 characters in a bot's message and up to 1,024 in a photo or video caption, counted after formatting is applied. Telegram publishes no separate number for people. The rich text editor for Telegram Premium users holds up to 32,768 characters in one message."}},{"@type":"Question","name":"Can I use fancy fonts in my Telegram username?","acceptedAnswer":{"@type":"Answer","text":"No. A username accepts only a-z, 0-9 and underscores, according to Telegram's FAQ. Look-alike characters from a font generator will not be accepted there."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="band">
+<div class="top"><a class="brand" href="/en/"><svg class="pin" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path class="pin-wire" d="M10 1 19 10 10 19 1 10Z"/><path class="pin-enamel" d="M10 4.6 15.4 10 10 15.4 4.6 10Z"/></svg>MergeVerse Blog</a><a class="about" href="/en/about/">About</a><div class="controls"><nav class="langs" aria-label="Language"><a class="lang" href="/shrift-telegram/" hreflang="ru" lang="ru" data-goatcounter-click="lang-ru">Русский</a><span class="lang-here" lang="en" aria-current="true">English</span><a class="lang" href="/es/" hreflang="es" lang="es" data-goatcounter-click="lang-es">Español</a></nav><button class="theme" type="button" hidden aria-label="Night pages" aria-pressed="false"><span class="theme-day" aria-hidden="true">Day</span><span class="theme-night" aria-hidden="true">Night</span></button></div></div>
+
+</div></header>
+<script>(function(){var b=document.querySelector(".theme");if(!b)return;var r=document.documentElement,m=matchMedia("(prefers-color-scheme: dark)");function cur(){return r.dataset.theme||(m.matches?"dark":"light")}function show(){b.setAttribute("aria-pressed",cur()==="dark"?"true":"false")}b.hidden=false;show();m.addEventListener&&m.addEventListener("change",show);b.addEventListener("click",function(){var t=cur()==="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("theme",t)}catch(e){}show()})})();</script>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/en/">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Telegram bold, italic and fonts: every formatting method</span></nav>
+<main id="main"><article class="sheet article"><div class="layout">
+<header><h1>Telegram bold, italic and fonts: every formatting method</h1>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-12">12 November 2026</time></dd></div>
+<div><dt>Checked</dt><dd><time datetime="2026-11-12">12 November 2026</time></dd></div>
+<div><dt>Reading</dt><dd>5 min</dd></div>
+<div><dt>Sources</dt><dd><a href="#sources">10 named</a></dd></div>
+</dl></header>
+<div class="margin"><nav class="contents wide" aria-labelledby="contents-h"><h2 id="contents-h">In this article</h2><ol><li><a href="#how-to-format-text-in-telegram">How to format text in Telegram</a></li><li><a href="#telegram-keyboard-shortcuts-for-bold-italic-and-links">Telegram keyboard shortcuts for bold, italic and links</a></li><li><a href="#typing-symbols-asterisks-tildes-and-bars">Typing symbols: asterisks, tildes and bars</a></li><li><a href="#spoilers-and-quotes">Spoilers and quotes</a></li><li><a href="#what-telegram-fonts-from-generators-really-are">What &amp;quot;Telegram fonts&amp;quot; from generators really are</a></li><li><a href="#fancy-fonts-in-your-name-and-username">Fancy fonts in your name and username</a></li><li><a href="#telegram-character-limits">Telegram character limits</a></li></ol></nav><details class="contents narrow"><summary>In this article <span class="count">7 sections</span></summary><ol><li><a href="#how-to-format-text-in-telegram">How to format text in Telegram</a></li><li><a href="#telegram-keyboard-shortcuts-for-bold-italic-and-links">Telegram keyboard shortcuts for bold, italic and links</a></li><li><a href="#typing-symbols-asterisks-tildes-and-bars">Typing symbols: asterisks, tildes and bars</a></li><li><a href="#spoilers-and-quotes">Spoilers and quotes</a></li><li><a href="#what-telegram-fonts-from-generators-really-are">What &amp;quot;Telegram fonts&amp;quot; from generators really are</a></li><li><a href="#fancy-fonts-in-your-name-and-username">Fancy fonts in your name and username</a></li><li><a href="#telegram-character-limits">Telegram character limits</a></li></ol></details></div>
+<div class="column"><section class="panel short" aria-labelledby="short-h"><h2 id="short-h" class="panel-head">In short</h2><ul class="panel-body"><li>Telegram has no font setting; it has formatting: bold, italic, underline, strikethrough, monospace, spoiler, quote and links.</li><li>The quickest way is to select the words in the message field and pick a style; Telegram Desktop adds Ctrl+B, Ctrl+I, Ctrl+K and Ctrl+Shift+M (Cmd on a Mac).</li><li>Typing **bold** or __italic__ also works in the Android app and Telegram Desktop.</li><li>Fancy fonts from generators are Unicode maths characters, not formatting, and screen readers and search may not read them.</li><li>A bot can send up to 4,096 characters per message and 1,024 per media caption; a Premium rich text post holds up to 32,768.</li></ul></section><div class="prose"><p>To bold text in Telegram, type your message, select the words and choose Bold from the menu that pops up. On a computer, Ctrl+B (Cmd+B on a Mac) does the same, and in the Android app or Telegram Desktop you can type two asterisks on each side, like <strong>this</strong>. Italic, underline, strikethrough, monospace, spoiler, quote and links work the same way. Telegram has no font setting, so &quot;fonts&quot; from generators are something else, covered below.</p>
+<p>Everything here was checked on 11 November 2026 against Telegram&#39;s FAQ, its blog, its developer documentation and the Telegram Desktop version history. This site is not affiliated with Telegram.</p>
+<div class="tool"><form class="calc" id="calc" data-tool="telegram-text" hidden novalidate aria-labelledby="calc-h">
+<h2 id="calc-h" class="calc-title">Font generator and character counter</h2>
+<label for="calc-text">Your text</label>
+<textarea id="calc-text" name="text" rows="3" spellcheck="false" autocomplete="off" aria-describedby="calc-hint"></textarea>
+<p class="small" id="calc-hint">Latin letters and digits get the style; any other letters stay as typed.</p>
+<div class="calc-count" id="calc-count" role="status" aria-live="polite" aria-atomic="true"></div>
+<ul class="calc-styles" id="calc-styles"></ul>
+</form>
+<script>(function client(D, styled) {
+  var f = document.getElementById("calc");
+  if (!f) return;
+  var box = f.elements.text, list = document.getElementById("calc-styles"), count = document.getElementById("calc-count");
+  var timer = null;
+  function fill(s, v) { return s.replace(/\{(\w+)\}/g, function (m, k) { return k in v ? v[k] : m; }); }
+  function num(n) { return n.toLocaleString(D.locale); }
+  function copy(text, b) {
+    function done() { b.textContent = D.w.copied; setTimeout(function () { b.textContent = D.w.copy; }, 2000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () { fallback(text); done(); });
+    else { fallback(text); done(); }
+  }
+  function fallback(text) {
+    var tmp = document.createElement("textarea");
+    tmp.value = text; tmp.setAttribute("readonly", ""); tmp.style.position = "fixed"; tmp.style.opacity = "0";
+    document.body.appendChild(tmp); tmp.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(tmp);
+  }
+  D.styles.forEach(function (st) {
+    var li = document.createElement("li"), name = document.createElement("span"), out = document.createElement("output"), b = document.createElement("button");
+    name.className = "calc-style-name"; name.textContent = st.name; name.id = "calc-n-" + st.key;
+    out.className = "glyphs"; out.id = "calc-o-" + st.key; out.setAttribute("aria-labelledby", name.id); out.setAttribute("data-style", st.key);
+    b.type = "button"; b.className = "button calc-copy"; b.textContent = D.w.copy; b.setAttribute("aria-describedby", name.id);
+    b.addEventListener("click", function () { if (out.textContent) copy(out.textContent, b); });
+    li.appendChild(name); li.appendChild(out); li.appendChild(b); list.appendChild(li);
+  });
+  function run() {
+    var s = box.value, n = 0, wide = 0;
+    for (var ch of s) { n++; if (ch.codePointAt(0) > 0xffff) wide++; }
+    D.styles.forEach(function (st) {
+      var o = document.getElementById("calc-o-" + st.key);
+      o.textContent = styled(st, D.holes, s);
+    });
+    var html = "<p class=\"calc-answer\">" + fill(D.w.count, { n: "<span class=\"calc-num\">" + num(n) + "</span>" }) + "</p>";
+    if (!s) html += "<p class=\"small\">" + D.w.empty + "</p>";
+    html += "<ul>" + D.limits.map(function (x) {
+      return "<li" + (n > x.max ? " class=\"calc-over\"" : "") + ">" + fill(n > x.max ? D.w.over : D.w.fits, { name: x.name, max: num(x.max), left: num(x.max - n), over: num(n - x.max) }) + "</li>";
+    }).join("") + "</ul>";
+    if (wide) html += "<p class=\"small\">" + fill(D.w.wide, { n: num(wide) }) + "</p>";
+    count.innerHTML = html;
+  }
+  f.hidden = false;
+  f.addEventListener("submit", function (e) { e.preventDefault(); });
+  box.addEventListener("input", function () { clearTimeout(timer); timer = setTimeout(run, 120); });
+  run();
+})({"styles":[{"key":"bold","name":"Bold","cap":"1D400","small":"1D41A","digit":"1D7CE"},{"key":"italic","name":"Italic","cap":"1D434","small":"1D44E","digit":null},{"key":"bold-italic","name":"Bold italic","cap":"1D468","small":"1D482","digit":null},{"key":"sans-bold","name":"Sans-serif bold","cap":"1D5D4","small":"1D5EE","digit":"1D7EC"},{"key":"sans-italic","name":"Sans-serif italic","cap":"1D608","small":"1D622","digit":null},{"key":"script","name":"Script","cap":"1D49C","small":"1D4B6","digit":null},{"key":"bold-script","name":"Bold script","cap":"1D4D0","small":"1D4EA","digit":null},{"key":"fraktur","name":"Fraktur","cap":"1D504","small":"1D51E","digit":null},{"key":"double-struck","name":"Double-struck","cap":"1D538","small":"1D552","digit":"1D7D8"},{"key":"monospace","name":"Typewriter (monospace)","cap":"1D670","small":"1D68A","digit":"1D7F6"}],"holes":{"1D455":"210E","1D49D":"212C","1D4A0":"2130","1D4A1":"2131","1D4A3":"210B","1D4A4":"2110","1D4A7":"2112","1D4A8":"2133","1D4AD":"211B","1D4BA":"212F","1D4BC":"210A","1D4C4":"2134","1D506":"212D","1D50B":"210C","1D50C":"2111","1D515":"211C","1D51D":"2128","1D53A":"2102","1D53F":"210D","1D545":"2115","1D547":"2119","1D548":"211A","1D549":"211D","1D551":"2124"},"limits":[{"name":"Message text","max":4096},{"name":"Caption of a photo, video or file","max":1024},{"name":"Long post in the rich text editor","max":32768}],"w":{"table_h":"How to make text bold, italic and more in Telegram","table_note":"Select the text in the message field. On a phone the styles are in the menu that pops up over the selection; on a computer, right-click and open Formatting. A dash means we found no such method in Telegram's own sources.","col_style":"Style","col_menu":"Menu item","col_keys":"Keys (Windows, Linux / Mac)","col_typing":"Symbols while typing","col_bot":"For bots (MarkdownV2)","where_android":"Android","where_desktop":"Telegram Desktop","where_android_desktop":"Android, Telegram Desktop","sample_h":"Font-style letters: every style on one example","sample_note":"This is not Telegram formatting but separate Unicode characters from the block made for maths. Only Latin letters have them, and only some styles have digits. You can select and copy the text from this table.","col_sample_style":"Style","col_sample":"How it looks","limits_h":"How many characters fit","col_limit":"Where","col_chars":"Characters","col_where":"Source","tool_h":"Font generator and character counter","input_label":"Your text","input_hint":"Latin letters and digits get the style; any other letters stay as typed.","copy":"Copy","copied":"Copied","count":"Characters: {n}","fits":"{name}: fits, {left} of {max} left","over":"{name}: {over} over the limit of {max}","wide":"Font-style characters in the text: {n}. When Telegram measures formatting it counts each of them as two, so you may have less room than shown.","empty":"Type something in Latin letters and the same text appears here in every style.","out_label":"{name}: result"},"locale":"en-US"}, function styled(st, holes, s) {
+  var out = "";
+  for (var ch of s) {
+    var c = ch.codePointAt(0), base = null, i = 0;
+    if (c >= 65 && c <= 90) { base = st.cap; i = c - 65; }
+    else if (c >= 97 && c <= 122) { base = st.small; i = c - 97; }
+    else if (c >= 48 && c <= 57 && st.digit) { base = st.digit; i = c - 48; }
+    if (base === null) { out += ch; continue; }
+    var hex = (parseInt(base, 16) + i).toString(16).toUpperCase();
+    out += String.fromCodePoint(parseInt(holes[hex] || hex, 16));
+  }
+  return out;
+});</script>
+<section class="calc-chart" aria-labelledby="chart-h">
+<h3 id="chart-h">How to make text bold, italic and more in Telegram</h3>
+<p class="small">Select the text in the message field. On a phone the styles are in the menu that pops up over the selection; on a computer, right-click and open Formatting. A dash means we found no such method in Telegram's own sources.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-labelledby="chart-h"><table data-chart="formatting">
+<thead><tr><th scope="col">Style</th><th scope="col">Menu item</th><th scope="col">Keys (Windows, Linux / Mac)</th><th scope="col">Symbols while typing</th><th scope="col">For bots (MarkdownV2)</th></tr></thead><tbody><tr><th scope="row">Bold</th><td>“Bold”</td><td><kbd>Ctrl+B / ⌘B</kbd></td><td><code>**text**</code> <span class="small">(Android, Telegram Desktop)</span></td><td><code>*text*</code></td></tr><tr><th scope="row">Italic</th><td>“Italic”</td><td><kbd>Ctrl+I / ⌘I</kbd></td><td><code>__text__</code> <span class="small">(Android, Telegram Desktop)</span></td><td><code>_text_</code></td></tr><tr><th scope="row">Underline</th><td>“Underline”</td><td class="none">—</td><td class="none">—</td><td><code>__text__</code></td></tr><tr><th scope="row">Strikethrough</th><td>“Strikethrough”</td><td class="none">—</td><td><code>~~text~~</code> <span class="small">(Android)</span></td><td><code>~text~</code></td></tr><tr><th scope="row">Monospace</th><td>“Monospace”</td><td><kbd>Ctrl+Shift+M / ⌘⇧M</kbd></td><td><code>`text`</code> <span class="small">(Android, Telegram Desktop)</span></td><td><code>`text`</code></td></tr><tr><th scope="row">Spoiler</th><td>“Spoiler”</td><td class="none">—</td><td><code>||text||</code> <span class="small">(Android)</span></td><td><code>||text||</code></td></tr><tr><th scope="row">Quote</th><td>“Quote”</td><td class="none">—</td><td class="none">—</td><td><code>&gt;text</code></td></tr><tr><th scope="row">Link on a word</th><td>the link item</td><td><kbd>Ctrl+K / ⌘K</kbd></td><td><code>[text](url)</code> <span class="small">(Android)</span></td><td><code>[text](url)</code></td></tr><tr><th scope="row">Code block</th><td class="none">—</td><td class="none">—</td><td><code>```text```</code> <span class="small">(Telegram Desktop)</span></td><td><code>```text```</code></td></tr><tr><th scope="row">Clear formatting</th><td class="none">—</td><td><kbd>Ctrl+Shift+N / ⌘⇧N</kbd></td><td class="none">—</td><td class="none">—</td></tr></tbody></table></div><details class="embed">
+<summary>Add this table to your site</summary>
+<p class="small">Free to use on your site, blog or newsletter. Copy the code below and paste it into your page as HTML. It shows the same table with a link back to this page as the source.</p>
+<label class="small" for="embed-telegram-text">HTML code</label>
+<textarea id="embed-telegram-text" class="embed-code" readonly rows="6" spellcheck="false">&lt;figure style=&quot;margin:1.5em 0;max-width:640px&quot;&gt;
+&lt;figcaption style=&quot;font-weight:bold;margin:0 0 .5em&quot;&gt;How to make text bold, italic and more in Telegram&lt;/figcaption&gt;
+&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:15px&quot;&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Style&lt;/th&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Menu item&lt;/th&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Keys (Windows, Linux / Mac)&lt;/th&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Symbols while typing&lt;/th&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;For bots (MarkdownV2)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Bold&lt;/th&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;“Bold”&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;kbd&gt;Ctrl+B / ⌘B&lt;/kbd&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;**text**&lt;/code&gt; &lt;span&gt;(Android, Telegram Desktop)&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;*text*&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Italic&lt;/th&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;“Italic”&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;kbd&gt;Ctrl+I / ⌘I&lt;/kbd&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;__text__&lt;/code&gt; &lt;span&gt;(Android, Telegram Desktop)&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;_text_&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Underline&lt;/th&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;“Underline”&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;__text__&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Strikethrough&lt;/th&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;“Strikethrough”&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;~~text~~&lt;/code&gt; &lt;span&gt;(Android)&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;~text~&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Monospace&lt;/th&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;“Monospace”&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;kbd&gt;Ctrl+Shift+M / ⌘⇧M&lt;/kbd&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;`text`&lt;/code&gt; &lt;span&gt;(Android, Telegram Desktop)&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;`text`&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Spoiler&lt;/th&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;“Spoiler”&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;||text||&lt;/code&gt; &lt;span&gt;(Android)&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;||text||&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Quote&lt;/th&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;“Quote”&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;&amp;gt;text&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Link on a word&lt;/th&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;the link item&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;kbd&gt;Ctrl+K / ⌘K&lt;/kbd&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;[text](url)&lt;/code&gt; &lt;span&gt;(Android)&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;[text](url)&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Code block&lt;/th&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;```text```&lt;/code&gt; &lt;span&gt;(Telegram Desktop)&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;code&gt;```text```&lt;/code&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Clear formatting&lt;/th&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;&lt;kbd&gt;Ctrl+Shift+N / ⌘⇧N&lt;/kbd&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;—&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;p style=&quot;font-size:13px;margin:.5em 0 0&quot;&gt;Source: &lt;a href=&quot;https://blog.merge-verse.com/en/telegram-formatting/&quot; style=&quot;color:inherit;text-decoration:underline&quot;&gt;MergeVerse Blog&lt;/a&gt;. Methods from Telegram's FAQ, the Telegram Desktop version history and the Bot API docs.&lt;/p&gt;
+&lt;/figure&gt;</textarea>
+<p><button type="button" class="button embed-copy" data-for="embed-telegram-text" data-done="Copied" hidden>Copy code</button></p>
+</details>
+<h3 id="limits-h">How many characters fit</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-labelledby="limits-h"><table data-chart="limits"><thead><tr><th scope="col">Where</th><th scope="col">Characters</th><th scope="col">Source</th></tr></thead><tbody><tr><th scope="row">Message text</th><td class="num">4,096</td><td>Bot API, a message sent by a bot</td></tr><tr><th scope="row">Caption of a photo, video or file</th><td class="num">1,024</td><td>Bot API, a media caption</td></tr><tr><th scope="row">Long post in the rich text editor</th><td class="num">32,768</td><td>Telegram FAQ, Telegram Premium only</td></tr></tbody></table></div>
+<h3 id="sample-h">Font-style letters: every style on one example</h3>
+<p class="small">This is not Telegram formatting but separate Unicode characters from the block made for maths. Only Latin letters have them, and only some styles have digits. You can select and copy the text from this table.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-labelledby="sample-h"><table data-chart="sample"><thead><tr><th scope="col">Style</th><th scope="col">How it looks</th></tr></thead><tbody><tr><th scope="row">Bold</th><td class="glyphs" data-style="bold">𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝟐𝟎𝟐𝟔</td></tr><tr><th scope="row">Italic</th><td class="glyphs" data-style="italic">𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 2026</td></tr><tr><th scope="row">Bold italic</th><td class="glyphs" data-style="bold-italic">𝑻𝒆𝒍𝒆𝒈𝒓𝒂𝒎 2026</td></tr><tr><th scope="row">Sans-serif bold</th><td class="glyphs" data-style="sans-bold">𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝟮𝟬𝟮𝟲</td></tr><tr><th scope="row">Sans-serif italic</th><td class="glyphs" data-style="sans-italic">𝘛𝘦𝘭𝘦𝘨𝘳𝘢𝘮 2026</td></tr><tr><th scope="row">Script</th><td class="glyphs" data-style="script">𝒯ℯ𝓁ℯℊ𝓇𝒶𝓂 2026</td></tr><tr><th scope="row">Bold script</th><td class="glyphs" data-style="bold-script">𝓣𝓮𝓵𝓮𝓰𝓻𝓪𝓶 2026</td></tr><tr><th scope="row">Fraktur</th><td class="glyphs" data-style="fraktur">𝔗𝔢𝔩𝔢𝔤𝔯𝔞𝔪 2026</td></tr><tr><th scope="row">Double-struck</th><td class="glyphs" data-style="double-struck">𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 𝟚𝟘𝟚𝟞</td></tr><tr><th scope="row">Typewriter (monospace)</th><td class="glyphs" data-style="monospace">𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝟸𝟶𝟸𝟼</td></tr></tbody></table></div>
+</section></div><script>document.querySelectorAll(".embed-copy").forEach(function(b){var t=document.getElementById(b.getAttribute("data-for"));if(!t)return;b.hidden=false;var label=b.textContent;b.addEventListener("click",function(){function done(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=label},2500)}t.select();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(done,function(){document.execCommand("copy");done()})}else{document.execCommand("copy");done()}})});</script>
+
+<h2 id="how-to-format-text-in-telegram">How to format text in Telegram</h2>
+<p>Telegram&#39;s FAQ describes one method that covers every style: select text in the message field and pick the formatting. The styles it lists are bold, italic, underlined, strikethrough, spoiler, monospace, a link and a quote.</p>
+<ol>
+<li>Type the message, but don&#39;t send it yet.</li>
+<li>Select a word or part of a sentence.</li>
+<li>On a phone, pick the style in the menu that appears over the selection. On a computer, right-click the selection and open Formatting.</li>
+<li>Send the message as usual.</li>
+</ol>
+<p>Styles can be combined, so bold italic is fine. Telegram Desktop added that in June 2021. To strip formatting from a selection in Telegram Desktop, press Ctrl+Shift+N.</p>
+<h2 id="telegram-keyboard-shortcuts-for-bold-italic-and-links">Telegram keyboard shortcuts for bold, italic and links</h2>
+<p>Formatting shortcuts arrived in Telegram Desktop 1.3.0 on 1 June 2018. The version history lists Ctrl+B for bold, Ctrl+I for italic, Ctrl+K to create or edit a link on the selected text, Ctrl+Shift+M for monospace and Ctrl+Shift+N to clear formatting. On a Mac, use Cmd in place of Ctrl.</p>
+<p>You may come across shortcuts for underline, strikethrough or spoiler in other guides. We could not find them in any official Telegram note, so the table shows a dash there rather than a guess.</p>
+<h2 id="typing-symbols-asterisks-tildes-and-bars">Typing symbols: asterisks, tildes and bars</h2>
+<p>The older method works without the menu. A hint in the Android app spells it out: two asterisks on each side for bold (<code>**text**</code>), two underscores for italic (<code>__text__</code>), two tildes for strikethrough (<code>~~text~~</code>), a backtick for monospace (<code>`text`</code>), two vertical bars for a spoiler (<code>||text||</code>), and <code>[text](url)</code> for a link.</p>
+<p>Telegram Desktop has accepted asterisks and underscores since July 2017, and backticks even earlier. Three backticks before and after a passage make a code block. The Desktop history does not mention tildes or bars, so on a computer the menu is the safer choice for strikethrough and spoilers.</p>
+<p>Bots use a different syntax called MarkdownV2. There a single asterisk means bold and a single underscore italic, which is why the last column of the table differs from the typing column. That syntax is for developers sending messages through the Bot API, not for people typing in the app.</p>
+<h2 id="spoilers-and-quotes">Spoilers and quotes</h2>
+<p>A spoiler hides the selected words in the chat, in the chat list and in notifications. The reader taps it to reveal the text.</p>
+<p>Quote formatting can go on any text, not only on someone else&#39;s message, and one message can hold several quotes. A long quote can be collapsed: format the passage as a quote and tap the collapse button in the message field. Readers expand it if they want to read it, and scroll past it if they don&#39;t.</p>
+<h2 id="what-telegram-fonts-from-generators-really-are">What &quot;Telegram fonts&quot; from generators really are</h2>
+<p>Sites that offer Telegram fonts do not change any font. They swap ordinary letters for look-alike characters from the Unicode block called Mathematical Alphanumeric Symbols, U+1D400 to U+1D7FF. It holds bold, italic, script, Fraktur, double-struck and other versions of Latin letters, some Greek letters and digits. The generator above does the same and shows you every style at once.</p>
+<p>Before you use them, know the downsides:</p>
+<ul>
+<li>The Unicode Standard says these characters are meant only for mathematical or technical notation, not for ordinary text.</li>
+<li>Each one has its own name, such as MATHEMATICAL BOLD SMALL A, so a screen reader may spell a styled word letter by letter or skip it.</li>
+<li>Search that looks for ordinary letters may not find a styled word, in a chat or anywhere else.</li>
+<li>Only Latin letters and some digits exist in the block. Cyrillic, accented letters and most punctuation stay as typed.</li>
+</ul>
+<p>The block also has gaps. There is no italic small h, for example: the chart points to the Planck constant sign ℎ instead, and some script, Fraktur and double-struck capitals are borrowed from a neighbouring block the same way. The generator fills those gaps exactly as the Unicode chart says.</p>
+<h2 id="fancy-fonts-in-your-name-and-username">Fancy fonts in your name and username</h2>
+<p>Not in your username. Telegram&#39;s FAQ allows only a-z, 0-9 and underscores there, so look-alike characters will not be accepted. Our page on the <a href="/en/telegram-username/">Telegram username</a> has the full rules and the link formats.</p>
+<p>People do sometimes put styled letters in their display name. Keep in mind that anyone searching for you by name in ordinary letters may not find you, which matters if you want people to reach you through <a href="/en/telegram-search/">Telegram search</a>. Telegram&#39;s own ways to decorate a profile, such as the gifts you choose to show, are covered in <a href="/en/how-to-hide-telegram-gifts/">how to hide Telegram gifts</a>, which also explains how to pin the ones you want on display.</p>
+<h2 id="telegram-character-limits">Telegram character limits</h2>
+<p>The Bot API gives exact numbers for bots: 1 to 4,096 characters in a message and up to 1,024 in the caption of a photo, video or file. The count is taken after formatting is parsed, so the asterisks and bars of the markup don&#39;t count. Telegram publishes no separate limit for messages people type.</p>
+<p>For long posts, Telegram Premium users get a rich text editor with headings, tables and lists. Telegram&#39;s FAQ says one such message can hold up to 32,768 characters. Premium itself is explained in our Telegram Premium guide.</p>
+<p>The counter in the tool checks your text against all three numbers. If the text contains styled characters, it warns you: Telegram&#39;s documentation measures formatted text in UTF-16 units, and each of those characters takes two, so you may hit a limit sooner than a plain count suggests.</p>
+<p>Stickers and custom emoji are the other way people dress up messages. Our guide to <a href="/en/telegram-stickers/">Telegram stickers</a> covers those.</p>
+</div><div data-read-end aria-hidden="true" style="height:1px"></div></div></div>
+
+<section class="faq"><h2 id="questions">Questions people ask</h2><details><summary>How do I bold text in Telegram on a phone?</summary><p>Type your message, select the words, and choose Bold in the menu that appears over the selection. In the Android app you can also wrap the words in two asterisks on each side, like **this**, before sending.</p></details><details><summary>What is the Telegram shortcut for bold?</summary><p>In Telegram Desktop it is Ctrl+B, or Cmd+B on a Mac. Ctrl+I makes italic, Ctrl+K adds a link to the selected word, Ctrl+Shift+M makes monospace and Ctrl+Shift+N clears formatting. These were added in version 1.3.0 in June 2018.</p></details><details><summary>Can I change the font in Telegram?</summary><p>Not the font of your messages. Telegram lets you style parts of a message (bold, italic and so on) but has no choice of typeface. Font generators replace letters with look-alike Unicode symbols instead, which is a different thing.</p></details><details><summary>How many characters can a Telegram message have?</summary><p>Telegram's Bot API allows 1 to 4,096 characters in a bot's message and up to 1,024 in a photo or video caption, counted after formatting is applied. Telegram publishes no separate number for people. The rich text editor for Telegram Premium users holds up to 32,768 characters in one message.</p></details><details><summary>Can I use fancy fonts in my Telegram username?</summary><p>No. A username accepts only a-z, 0-9 and underscores, according to Telegram's FAQ. Look-alike characters from a font generator will not be accepted there.</p></details></section>
+<section class="sources"><h2 id="sources">Sources</h2><ol><li><a href="https://telegram.org/faq#q-can-i-format-text-and-write-long-posts" rel="noopener">Telegram FAQ: Can I format text and write long posts?</a>, Telegram</li><li><a href="https://core.telegram.org/bots/api#formatting-options" rel="noopener">Bot API: Formatting options</a>, Telegram</li><li><a href="https://core.telegram.org/api/entities" rel="noopener">Styled text with message entities</a>, Telegram</li><li><a href="https://telegram.org/blog/reactions-spoilers-translations" rel="noopener">Reactions, Spoilers, Translation and QR Codes</a>, Telegram</li><li><a href="https://telegram.org/blog/reply-revolution" rel="noopener">Replies 2.0, Adjustable Link Previews, Name Colors and More</a>, Telegram</li><li><a href="https://telegram.org/blog/message-effects-and-more" rel="noopener">Message Effects, Hashtag Search, and More</a>, Telegram</li><li><a href="https://telegramdesktop.github.io/tdesktop/changelog/" rel="noopener">Telegram Desktop: version history</a>, Telegram Desktop</li><li><a href="https://translations.telegram.org/en/android_x/settings/EditMarkdownHint2" rel="noopener">Telegram Translations: EditMarkdownHint2 (Android)</a>, Telegram</li><li><a href="https://www.unicode.org/charts/PDF/U1D400.pdf" rel="noopener">Mathematical Alphanumeric Symbols, code chart U+1D400–U+1D7FF</a>, Unicode Consortium</li><li><a href="https://www.unicode.org/versions/latest/core-spec/chapter-22/" rel="noopener">The Unicode Standard, chapter 22: Symbols</a>, Unicode Consortium</li></ol></section>
+<p class="small how"><a href="/en/about/">How we write these pages</a></p>
+<section class="related"><h2 id="read-next">Read next</h2><ul class="entries"><li><a href="/en/telegram-username/"><span class="entry-title">Telegram username: rules, link, change and remove</span><span class="entry-desc">A Telegram username is a public @name of 5 to 32 characters (a-z, 0-9, _). How to set, change or remove it, how the t.me link works, and who can find you.</span></a><time datetime="2026-11-12">12 November 2026</time></li><li><a href="/en/how-to-hide-telegram-gifts/"><span class="entry-title">How to hide Telegram gifts on your profile</span><span class="entry-desc">Hide one gift from My Profile, Gifts by tapping it and choosing to hide it. To stop new gifts showing up, use Settings, Privacy &amp; Security, Gifts.</span></a><time datetime="2026-11-04">4 November 2026</time></li><li><a href="/en/telegram-stickers/"><span class="entry-title">Telegram stickers: kinds, adding, making, removing</span><span class="entry-desc">Telegram stickers are static images, Lottie animations or short WEBM videos, grouped in free sets. How to add a set, make your own and remove one.</span></a><time datetime="2026-11-01">1 November 2026</time></li></ul></section>
+</article><div class="wrap game-everywhere"><aside class="game" aria-labelledby="game-h"><div class="game-plate"><span class="age" aria-hidden="true">18+</span><h2 id="game-h">The game MergeVerse</h2>
+<p>A Telegram game built around gifts: collect cards and upgrade them by crafting, with no chance involved.</p>
+<p><a class="button" href="https://t.me/mergeversebot?startapp=ref_eldar" rel="noopener" data-goatcounter-click="game">Open in Telegram</a></p>
+<p class="small">18+. The game is not affiliated with Telegram; taking part is subject to the game's rules.</p></div>
+</aside></div></main>
+<footer class="site"><div class="bar">
+<p>Telegram Gifts and Stars: how to sell, upgrade and manage them, step by step, with sources.</p>
+<p><a href="/en/about/">About these pages</a> · <a href="/en/feed.xml">Feed</a></p>
+<p class="small">We write these articles with help from an AI model. Every fact is checked against the sources listed under each article; anything we could not confirm is left out.</p>
+<p class="small">This site is not affiliated with Telegram. Telegram, Telegram Gifts and Telegram Stars are names of Telegram's services.</p>
+</div></footer>
+</body>
+</html>

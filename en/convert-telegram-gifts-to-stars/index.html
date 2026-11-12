@@ -103,7 +103,10 @@ header.site a{color:var(--on-plate);text-decoration-color:var(--brass)}
 .langs a,.lang-here,.theme span{display:flex;align-items:center;padding:0 10px;border-radius:3px;font:600 .8125rem/1 var(--frame);text-decoration:none;color:var(--on-plate);transition:background-color .18s cubic-bezier(.2,.8,.2,1),color .18s cubic-bezier(.2,.8,.2,1)}
 .lang-here{background:var(--on-plate);color:var(--cobalt-deep);box-shadow:inset 0 0 0 1px var(--brass)}
 .langs a:hover{text-decoration:underline}
+/* Four languages do not fit one row at 280 px or with text at 200 %: the switch wraps inside its rim. */
+.langs{flex-wrap:wrap;max-width:100%}
 .theme{cursor:pointer;margin:0;font:inherit;color:var(--on-plate)}
+.theme[hidden]{display:none}
 .theme[aria-pressed=false] .theme-day,.theme[aria-pressed=true] .theme-night{background:var(--on-plate);color:var(--cobalt-deep);box-shadow:inset 0 0 0 1px var(--brass)}
 .theme:hover span:not(:only-child){text-decoration:underline}
 @media (max-width:639px){
@@ -208,6 +211,8 @@ th{font-weight:650;background:var(--cobalt);color:var(--on-plate);border-bottom:
 tbody tr:nth-child(even) td{background:var(--tint)}
 
 .button{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;margin:4px 0;background:var(--cobalt);color:var(--on-plate);font:650 1rem/1 var(--frame);text-decoration:none;border:2px solid var(--brass);border-radius:6px;white-space:nowrap}
+/* A long label or enlarged text wraps instead of pushing the page sideways (200 % text, 11.11.2026). */
+.button{white-space:normal;max-width:100%;line-height:1.2;padding-block:8px;box-sizing:border-box}
 .button:visited{color:var(--on-plate)}
 .button:hover{background:var(--cobalt-deep);text-decoration:underline;text-decoration-color:var(--on-plate)}
 
@@ -274,8 +279,19 @@ footer.site p:first-child{color:var(--on-plate);font-weight:550}
 footer.site a{color:var(--on-plate)}
 footer.site .small{color:var(--on-plate-2)}
 
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
-@media print{header.site .tabs,header.site .top,.button,footer.site,.margin,.theme,.game-everywhere{display:none}header.site{background:none;color:#000;border:0}.running h1,.running-name,.running-name a,.running .lead{color:#000}body{background:#fff;color:#000}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+/* Touch screens and phone widths: every control outside running text is at least 44×44 px
+   (tests/pages.mjs, brief 11.11.2026). Negative margins keep the line where it was. */
+@media (pointer:coarse),(max-width:767px){
+  .langs,.theme{min-height:54px}
+  .langs a,.lang-here{min-height:44px}
+  .crumbs a{display:inline-block;min-width:44px;text-align:center;padding:13px 2px;margin:-13px -2px}
+  .spec dd a{display:inline-block;padding:13px 0;margin:-13px 0}
+  .contents a{padding:12px 0}
+  .sources a{padding-block:11px;margin-block:-11px}
+  .how a,.running-name a,.more a,.dept h3 a{display:inline-block;padding:13px 0;margin:-13px 0}
+}
+@media print{header.site .tabs,header.site .top,.button,footer.site,.margin,.theme,.game-everywhere,.game-inline,.game-home{display:none}header.site{background:none;color:#000;border:0}.running h1,.running-name,.running-name a,.running .lead{color:#000}body{background:#fff;color:#000}}
 /* «Add this table to your site» after bigger article tables (scripts/embed.mjs, config/embed.json) */
 .embed{margin:12px 0 4px;max-width:var(--measure)}
 .embed summary{cursor:pointer;font:600 var(--t-label)/1.4 var(--frame);color:var(--ink-2);padding:12px 0;min-height:44px;box-sizing:border-box}
@@ -313,7 +329,7 @@ footer.site .small{color:var(--on-plate-2)}
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site"><div class="band">
-<div class="top"><a class="brand" href="/en/"><svg class="pin" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path class="pin-wire" d="M10 1 19 10 10 19 1 10Z"/><path class="pin-enamel" d="M10 4.6 15.4 10 10 15.4 4.6 10Z"/></svg>MergeVerse Blog</a><a class="about" href="/en/about/">About</a><div class="controls"><nav class="langs" aria-label="Language"><a class="lang" href="/kak-obmenyat-podarki-na-zvezdy/" hreflang="ru" lang="ru" data-goatcounter-click="lang-ru">Русский</a><span class="lang-here" lang="en" aria-current="true">English</span></nav><button class="theme" type="button" hidden aria-label="Night pages" aria-pressed="false"><span class="theme-day" aria-hidden="true">Day</span><span class="theme-night" aria-hidden="true">Night</span></button></div></div>
+<div class="top"><a class="brand" href="/en/"><svg class="pin" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path class="pin-wire" d="M10 1 19 10 10 19 1 10Z"/><path class="pin-enamel" d="M10 4.6 15.4 10 10 15.4 4.6 10Z"/></svg>MergeVerse Blog</a><a class="about" href="/en/about/">About</a><div class="controls"><nav class="langs" aria-label="Language"><a class="lang" href="/kak-obmenyat-podarki-na-zvezdy/" hreflang="ru" lang="ru" data-goatcounter-click="lang-ru">Русский</a><span class="lang-here" lang="en" aria-current="true">English</span><a class="lang" href="/es/" hreflang="es" lang="es" data-goatcounter-click="lang-es">Español</a></nav><button class="theme" type="button" hidden aria-label="Night pages" aria-pressed="false"><span class="theme-day" aria-hidden="true">Day</span><span class="theme-night" aria-hidden="true">Night</span></button></div></div>
 
 </div></header>
 <script>(function(){var b=document.querySelector(".theme");if(!b)return;var r=document.documentElement,m=matchMedia("(prefers-color-scheme: dark)");function cur(){return r.dataset.theme||(m.matches?"dark":"light")}function show(){b.setAttribute("aria-pressed",cur()==="dark"?"true":"false")}b.hidden=false;show();m.addEventListener&&m.addEventListener("change",show);b.addEventListener("click",function(){var t=cur()==="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("theme",t)}catch(e){}show()})})();</script>
