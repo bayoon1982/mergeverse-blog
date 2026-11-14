@@ -324,6 +324,14 @@ footer.site .small{color:var(--on-plate-2)}
 .calc-chart td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .calc-chart kbd{font:500 .875em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;white-space:nowrap}
 .calc-chart code{white-space:nowrap}
+/* Tool «links» (config/tools.json → telegram-links): fields of the link builder. */
+.calc-field{margin:0 0 .9rem}
+.calc-field .small{margin:.3rem 0 0}
+.calc input[type=text],.calc select{display:block;width:100%;box-sizing:border-box;min-height:44px;font:400 1rem/1.5 var(--frame);color:var(--ink);background:var(--sheet);border:1px solid var(--ink-2);border-radius:6px;padding:8px 12px}
+/* WebKit keeps a native select about 25 px tall whatever min-height says, so the select is drawn by us: 44 px, with a grey caret that reads on both themes. */
+.calc select{-webkit-appearance:none;appearance:none;height:auto;padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%237f8aa8' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.calc input[type=text]:focus-visible,.calc select:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.calc-link{font:500 .9375rem/1.5 ui-monospace,"SF Mono",Menlo,Consolas,monospace;overflow-wrap:anywhere}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/en/#website","url":"https://blog.merge-verse.com/en/","name":"MergeVerse Blog","inLanguage":"en","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blog.merge-verse.com/en/"},{"@type":"ListItem","position":2,"name":"Telegram Stars"}]},{"@type":"CollectionPage","name":"Telegram Stars","url":"https://blog.merge-verse.com/en/telegram-stars/","inLanguage":"en","hasPart":[{"@id":"https://blog.merge-verse.com/en/what-are-telegram-stars/#article"}]}]}</script>
 </head>
@@ -339,7 +347,7 @@ footer.site .small{color:var(--on-plate-2)}
 <section class="start" aria-labelledby="start-h"><h2 id="start-h">Start here</h2><ul class="entries"><li><a href="/en/what-are-telegram-stars/"><span class="entry-title">What are Telegram Stars and what are they used for?</span><span class="entry-desc">Telegram Stars are virtual items for paying for digital goods inside Telegram: gifts, bots, mini apps, paid posts and subscriptions. You buy them in the app.</span></a><time datetime="2026-11-06">6 November 2026</time></li></ul></section>
 
 </div><div class="wrap game-everywhere"><aside class="game" aria-labelledby="game-h"><div class="game-plate"><span class="age" aria-hidden="true">18+</span><h2 id="game-h">The game MergeVerse</h2>
-<p>A Telegram game built around gifts: collect cards and upgrade them by crafting, with no chance involved.</p>
+<p>A card game inside Telegram about gifts: collect cards and merge two identical ones into a card of the next level. The result is known in advance, nothing is left to chance.</p>
 <p><a class="button" href="https://t.me/mergeversebot?startapp=ref_eldar" rel="noopener" data-goatcounter-click="game">Open in Telegram</a></p>
 <p class="small">18+. The game is not affiliated with Telegram; taking part is subject to the game's rules.</p></div>
 </aside></div></main>

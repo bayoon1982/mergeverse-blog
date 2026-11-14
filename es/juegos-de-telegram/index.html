@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juegos de Telegram: cómo funcionan y cómo jugar</title>
+<meta name="description" content="Los juegos de Telegram se abren dentro de la app: juegos HTML5 que envía un bot o miniapps a pantalla completa. Dónde encontrarlos, cómo jugar en grupo y pagar.">
+<link rel="canonical" href="https://blog.merge-verse.com/es/juegos-de-telegram/">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Juegos de Telegram: cómo funcionan y cómo jugar">
+<meta property="og:description" content="Los juegos de Telegram se abren dentro de la app: juegos HTML5 que envía un bot o miniapps a pantalla completa. Dónde encontrarlos, cómo jugar en grupo y pagar.">
+<meta property="og:url" content="https://blog.merge-verse.com/es/juegos-de-telegram/">
+<meta property="og:site_name" content="Blog de MergeVerse">
+
+<meta name="color-scheme" content="light dark">
+<link rel="alternate" type="application/rss+xml" title="Blog de MergeVerse" href="/es/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/piazzolla.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geologica.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>document.addEventListener("DOMContentLoaded",function(){var p=location.pathname;document.querySelectorAll("[data-goatcounter-click]").forEach(function(a){a.setAttribute("data-goatcounter-referrer",p)});var m=document.querySelector("[data-read-end]");if(!m||!("IntersectionObserver" in window))return;var o=new IntersectionObserver(function(e){if(!e[0].isIntersecting)return;o.disconnect();(function s(n){var g=window.goatcounter;if(g&&g.count)g.count({path:"read-end"+p,title:document.title,event:true});else if(n<40)setTimeout(function(){s(n+1)},500)})(0)});o.observe(m)});</script>
+<meta name="google-site-verification" content="hHBGjlz6LvtyxdP3x3sWT5arWOdvQq0RpVLMBuHod_0">
+<meta name="google-site-verification" content="Qz24Xj1TYyAs-2BEPHub1zrr9jbexSUFW1zroT093qw">
+<meta name="msvalidate.01" content="74194B63F367EB355F843A035E6E6554">
+<meta name="yandex-verification" content="9dfac024d3674a3d">
+<style>/* MergeVerse blog — a collector's reference of enamel pins.
+   The frame is struck like a hard-enamel badge: colour fields (cobalt masthead and
+   footer, the cobalt head of a table, the cinnabar 18+ roundel) held inside raised brass
+   wire, drawn as a double rule. The reading column is the plain white enamel between
+   them; at night the pins lie on blue-black velvet. No shadows, glow or gradients:
+   depth is wire, not light. Geologica (badge lettering, Cyrillic-first) sets the
+   frame and headings; Piazzolla sets the reading. Decisions and sources: DESIGN.md. */
+@font-face{font-family:"Geologica";src:url(/fonts/geologica.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Geologica";src:url(/fonts/geologica-cyr.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla-cyr.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla-italic-cyr.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+
+:root{
+  /* Enamels. Written as plain hex, not color-mix(): the contrast test reads computed colours. */
+  --cobalt:#1d3a9e;        /* the masthead plate; white on it 9.6:1 */
+  --cobalt-deep:#142b7a;   /* footer plate, pressed buttons; white on it 12:1 */
+  --cinnabar:#c8361f;      /* the one accent: the 18+ roundel, hover underline; white on it 5.2:1 */
+  --brass:#b8902f;         /* the wire: rules and rims only, never text */
+  --on-plate:#ffffff;
+  --on-plate-2:#c9d3f2;    /* secondary text on a cobalt plate, 8:1 on --cobalt-deep */
+  /* Day: white enamel. Cool, never cream. */
+  --ground:#f3f5fa;--sheet:#ffffff;--ink:#121a33;--ink-2:#4a5370;--rule:#cfd5e4;
+  --link:#1d3a9e;--tint:#eef1fa;--mark:#f3e3a6;
+  --frame:"Geologica","Segoe UI","Noto Sans",system-ui,sans-serif;
+  --read:"Piazzolla","Iowan Old Style","Noto Serif",Georgia,serif;
+  /* One scale: display, title, section, sub, body, label. */
+  --t-display:clamp(2.25rem,1.35rem + 4.2vw,4.5rem);
+  --t-title:clamp(1.875rem,1.3rem + 2.5vw,3rem);
+  --t-sec:clamp(1.375rem,1.2rem + .7vw,1.625rem);--t-sub:1.1875rem;--t-body:1.125rem;--t-label:.875rem;
+  --measure:40rem;--page:74rem;--gap:clamp(16px,4vw,40px);
+  --wire:4px double var(--brass);
+  color-scheme:light dark;
+}
+/* Night: the same pins on blue-black velvet. Plates keep their enamel. */
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;
+  --ground:#0d1222;--sheet:#141b31;--ink:#e9ecf5;--ink-2:#aab2ca;--rule:#2c3552;
+  --link:#a9bcff;--tint:#18213c;--mark:#6b5414;--brass:#c9a64e;
+}}
+:root[data-theme=dark]{color-scheme:dark;
+  --ground:#0d1222;--sheet:#141b31;--ink:#e9ecf5;--ink-2:#aab2ca;--rule:#2c3552;
+  --link:#a9bcff;--tint:#18213c;--mark:#6b5414;--brass:#c9a64e;
+}
+:root[data-theme=light]{color-scheme:light}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scrollbar-color:var(--brass) var(--ground);accent-color:var(--cobalt);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 var(--t-body)/1.6 var(--read);overflow-wrap:break-word;caret-color:var(--cinnabar);font-kerning:normal}
+::selection{background:var(--mark);color:var(--ink)}
+a{color:var(--link);text-decoration-line:underline;text-decoration-color:var(--brass);text-decoration-thickness:.08em;text-underline-offset:.2em}
+a:hover{text-decoration-color:var(--cinnabar);text-decoration-thickness:.12em}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:2px}
+img{max-width:100%;height:auto;display:block}
+picture{display:block;min-width:0}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;background:var(--sheet);color:var(--ink);padding:8px 12px;z-index:9}
+
+/* ---------- the masthead plate ---------- */
+header.site{background:var(--cobalt);color:var(--on-plate);border-bottom:var(--wire)}
+.band{max-width:var(--page);margin:0 auto;padding:0 var(--gap)}
+header.site a{color:var(--on-plate);text-decoration-color:var(--brass)}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:4px 18px;padding:8px 0}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-right:auto;font:750 1.0625rem/1.1 var(--frame);letter-spacing:-.01em;text-decoration:none}
+.brand:hover{text-decoration:underline}
+.pin{width:22px;height:22px;flex:none}
+.pin-wire{fill:var(--brass)}
+.pin-enamel{fill:var(--cinnabar)}
+.about{display:inline-flex;align-items:center;min-height:44px;font:550 var(--t-label)/1 var(--frame);text-decoration:none;padding:0 2px}
+.about:hover,.about[aria-current]{text-decoration:underline;text-decoration-thickness:2px}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+/* Switches: every option stays in view, the current one struck forward in white enamel
+   inside its brass rim. */
+.langs,.theme{display:inline-flex;align-items:stretch;min-height:44px;padding:3px;gap:3px;border:2px solid var(--brass);border-radius:6px;background:var(--cobalt-deep)}
+.langs a,.lang-here,.theme span{display:flex;align-items:center;padding:0 10px;border-radius:3px;font:600 .8125rem/1 var(--frame);text-decoration:none;color:var(--on-plate);transition:background-color .18s cubic-bezier(.2,.8,.2,1),color .18s cubic-bezier(.2,.8,.2,1)}
+.lang-here{background:var(--on-plate);color:var(--cobalt-deep);box-shadow:inset 0 0 0 1px var(--brass)}
+.langs a:hover{text-decoration:underline}
+/* Four languages do not fit one row at 280 px or with text at 200 %: the switch wraps inside its rim. */
+.langs{flex-wrap:wrap;max-width:100%}
+.theme{cursor:pointer;margin:0;font:inherit;color:var(--on-plate)}
+.theme[hidden]{display:none}
+.theme[aria-pressed=false] .theme-day,.theme[aria-pressed=true] .theme-night{background:var(--on-plate);color:var(--cobalt-deep);box-shadow:inset 0 0 0 1px var(--brass)}
+.theme:hover span:not(:only-child){text-decoration:underline}
+@media (max-width:639px){
+  .controls{flex-basis:100%;justify-content:space-between}
+}
+
+/* the plate's title on home, about and 404 */
+.running{padding:clamp(14px,3vw,34px) 0 clamp(22px,3.5vw,40px)}
+.running h1,.running-name{margin:0;font:800 var(--t-display)/1 var(--frame);letter-spacing:-.03em;text-wrap:balance;max-width:14ch;color:var(--on-plate)}
+.running-name{font-size:var(--t-title);max-width:none}
+.running-name a{text-decoration:none}
+.running .lead{margin:.7em 0 0;max-width:34rem;font:400 1.1875rem/1.45 var(--read);color:var(--on-plate-2)}
+
+/* section tabs, only when config sections_visible is on */
+.tabs{margin:0 0 -4px}
+.tabs-row,.tabs-list{display:flex;flex-wrap:wrap;gap:4px}
+.tabs a,.tabs summary{display:flex;align-items:center;min-height:44px;padding:0 12px;font:600 .875rem/1.15 var(--frame);text-decoration:none;color:var(--on-plate);background:var(--cobalt-deep);border-radius:6px 6px 0 0}
+.tabs a[aria-current]{background:var(--ground);color:var(--ink)}
+.tabs-row{display:none}
+.tabs summary{list-style:none;cursor:pointer;gap:8px;width:max-content}
+.tabs summary::-webkit-details-marker{display:none}
+.tabs .count{font-variant-numeric:tabular-nums}
+@media (min-width:900px){.tabs-row{display:flex}.tabs-phone{display:none}}
+
+.crumbs{max-width:var(--page);margin:0 auto;padding:18px var(--gap) 0;font:450 var(--t-label)/1.4 var(--frame);color:var(--ink-2)}
+.crumbs a{color:var(--ink-2)}
+.crumbs [aria-current]{color:var(--ink)}
+
+main{padding:0 0 64px}
+.sheet{max-width:var(--page);margin:0 auto;padding:0 var(--gap)}
+
+/* ---------- type ---------- */
+h1,h2,h3{font-family:var(--frame);color:var(--ink);text-wrap:balance;hyphens:manual}
+h1{font-size:var(--t-title);line-height:1.08;font-weight:780;letter-spacing:-.025em;margin:.45em 0 .55em;max-width:20ch}
+h2{max-width:var(--measure);font-size:var(--t-sec);line-height:1.2;font-weight:700;letter-spacing:-.015em;margin:2.1em 0 .5em}
+h3{font-size:var(--t-sub);line-height:1.3;font-weight:650;margin:1.7em 0 .35em}
+.small{font:400 var(--t-label)/1.5 var(--frame);color:var(--ink-2)}
+
+/* the spec band: the one dense place on the page */
+.spec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0 0 28px;border-top:var(--wire);border-bottom:var(--wire);max-width:var(--measure)}
+.spec div{padding:8px 12px 9px 0;min-width:0}
+.spec div:nth-child(2n){padding-left:12px;border-left:1px solid var(--rule)}
+.spec div:nth-child(n+3){border-top:1px solid var(--rule)}
+.spec dt{font:450 .8125rem/1.2 var(--frame);color:var(--ink-2)}
+.spec dd{margin:3px 0 0;font:600 .9375rem/1.3 var(--frame);font-variant-numeric:lining-nums tabular-nums}
+.spec dd a{color:var(--ink)}
+@media (min-width:600px){.spec{grid-template-columns:repeat(4,auto);justify-content:start}.spec div:nth-child(n){border-top:0;padding-right:18px}.spec div+div{padding-left:14px;border-left:1px solid var(--rule)}}
+
+/* panels: "In short" is a white enamel sheet in a plain 1px rule (the double wire stays on coloured fields) */
+.panel{max-width:var(--measure);margin:0 0 12px;background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.panel-head{margin:0;padding:12px 18px 0;font:700 1rem/1.2 var(--frame);letter-spacing:0;max-width:none;color:var(--ink)}
+.panel-body{margin:0;padding:6px 18px 14px 2.4rem}
+.panel-body li{margin:.3rem 0}
+.panel-body li::marker{color:var(--brass)}
+
+/* contents: a ruled list in the margin (wide) or a disclosure (narrow) */
+.contents h2{font:700 .9375rem/1.2 var(--frame);margin:0;padding:0 0 9px;border-bottom:1px solid var(--brass)}
+.contents ol{margin:0;padding:0;list-style:none}
+.contents li{border-bottom:1px solid var(--rule)}
+.contents a{display:block;padding:8px 0;color:var(--ink);text-decoration:none;font:450 .9375rem/1.35 var(--frame)}
+.contents a:hover{text-decoration:underline;text-decoration-color:var(--cinnabar)}
+.contents.narrow{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);max-width:var(--measure);margin-bottom:8px}
+.contents.narrow summary{list-style:none;cursor:pointer;min-height:48px;display:flex;align-items:center;gap:10px;font:700 .9375rem/1.2 var(--frame)}
+.contents.narrow summary::-webkit-details-marker{display:none}
+.contents.narrow summary::before,.faq summary::before{content:"";flex:none;width:13px;height:13px;background:linear-gradient(var(--brass),var(--brass)) center/13px 2.5px no-repeat,linear-gradient(var(--brass),var(--brass)) center/2.5px 13px no-repeat;transition:transform .22s cubic-bezier(.2,.8,.2,1)}
+.contents.narrow[open] summary::before,.faq details[open] summary::before{transform:rotate(90deg);background:linear-gradient(var(--brass),var(--brass)) center/13px 2.5px no-repeat}
+.contents.narrow .count{font-weight:450;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.contents.narrow ol{padding:4px 0 10px}
+.contents.narrow li:last-child{border-bottom:0}
+
+.layout{display:grid;gap:18px}
+.layout>header{min-width:0}
+.column{min-width:0;max-width:var(--measure)}
+.contents.wide{display:none}
+.margin{min-width:0}
+@media (min-width:1100px){
+  .layout{grid-template-columns:minmax(0,var(--measure)) minmax(0,1fr);grid-template-areas:"head side" "body side";grid-template-rows:auto 1fr;column-gap:64px;row-gap:0}
+  .layout>header{grid-area:head}.column{grid-area:body}
+  .margin{grid-area:side;justify-self:end;width:min(100%,18rem);position:sticky;top:24px;align-self:start;margin-top:2.6rem}
+  .contents.wide{display:block}.contents.narrow{display:none}
+}
+
+.prose{max-width:var(--measure);min-width:0}
+.prose p,.prose li{hyphens:manual;text-wrap:pretty}
+/* Hyphenate only where the measure is short: a phone column of ~35 characters. */
+@media (max-width:479px){.prose p,.prose li{hyphens:auto}}
+.prose ul,.prose ol{padding-left:1.4rem}
+.prose li{margin:.35rem 0}
+.prose ul li::marker{color:var(--brass)}
+.prose ol li::marker{color:var(--ink-2);font:600 .9375em var(--frame);font-variant-numeric:tabular-nums}
+.prose blockquote{margin:1.6rem 0;padding:.7rem 0;border-top:1px solid var(--brass);border-bottom:1px solid var(--brass);font-style:italic;color:var(--ink-2)}
+.prose strong{font-weight:650}
+.prose em{font-style:italic}
+.prose code{font:500 .88em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;background:var(--tint);border:1px solid var(--rule);padding:.05em .3em;border-radius:3px}
+.prose hr{border:0;border-top:1px solid var(--brass);margin:2.4rem 0}
+
+/* tables: a cobalt head plate on a brass wire, figures in line */
+.table-wrap{overflow-x:auto;margin:1.6rem 0;-webkit-overflow-scrolling:touch;max-width:100%}
+table{border-collapse:collapse;width:100%;font:400 .9375rem/1.45 var(--frame);font-variant-numeric:lining-nums tabular-nums;background:var(--sheet)}
+th,td{text-align:left;vertical-align:top;padding:9px 14px;border-bottom:1px solid var(--rule)}
+th{font-weight:650;background:var(--cobalt);color:var(--on-plate);border-bottom:var(--wire)}
+tbody tr:nth-child(even) td{background:var(--tint)}
+
+.button{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;margin:4px 0;background:var(--cobalt);color:var(--on-plate);font:650 1rem/1 var(--frame);text-decoration:none;border:2px solid var(--brass);border-radius:6px;white-space:nowrap}
+/* A long label or enlarged text wraps instead of pushing the page sideways (200 % text, 11.11.2026). */
+.button{white-space:normal;max-width:100%;line-height:1.2;padding-block:8px;box-sizing:border-box}
+.button:visited{color:var(--on-plate)}
+.button:hover{background:var(--cobalt-deep);text-decoration:underline;text-decoration-color:var(--on-plate)}
+
+/* questions: a drawn plus that turns to a minus */
+.faq details{border-bottom:1px solid var(--rule);max-width:var(--measure)}
+.faq details:first-of-type{border-top:1px solid var(--brass)}
+.faq summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;min-height:52px;padding:8px 0;font:600 1.0625rem/1.35 var(--frame)}
+.faq summary::-webkit-details-marker{display:none}
+.faq details p{margin:0 0 16px 27px}
+.sources ol{font-size:1rem;line-height:1.5;padding-left:1.5rem;max-width:var(--measure)}
+.sources li{margin:.45rem 0}
+.sources li::marker{font:600 .875rem var(--frame);font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.how{max-width:var(--measure);margin-top:2.4rem}
+
+/* ---------- lists of articles: ruled rows, dates tight to the right ---------- */
+.entries{list-style:none;margin:0;padding:0;border-top:1px solid var(--brass);max-width:var(--measure)}
+.entries li{display:grid;gap:6px;padding:16px 0 18px;border-bottom:1px solid var(--rule);break-inside:avoid}
+.entries a{text-decoration:none;color:var(--ink);display:block;min-width:0}
+.entry-title{display:block;font:650 var(--t-sub)/1.28 var(--frame);letter-spacing:-.008em;text-wrap:balance}
+.entries a:hover .entry-title{text-decoration:underline;text-decoration-color:var(--cinnabar);text-decoration-thickness:2px;text-underline-offset:.18em}
+.entry-desc{display:block;color:var(--ink-2);font-size:1rem;line-height:1.5;margin-top:5px;text-wrap:pretty}
+.entries time{font:450 .8125rem/1.3 var(--frame);color:var(--ink-2);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+@media (min-width:640px){
+  .entries li{grid-template-columns:minmax(0,1fr) auto;column-gap:28px;align-items:baseline}
+  .entries time{grid-column:2;grid-row:1;text-align:right}
+}
+.empty{color:var(--ink-2);max-width:var(--measure);margin:1.2rem 0}
+
+/* home: one list, newest first; the newest one is set larger */
+.home .index-head{max-width:var(--measure);margin:2rem 0 .7rem;font-size:var(--t-sub);font-weight:650}
+.home .index-head .count{font-weight:450;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.entries.flat li:first-child{padding:22px 0 24px}
+.entries.flat li:first-child .entry-title{font-size:var(--t-sec);font-weight:750;letter-spacing:-.018em;line-height:1.2}
+.entries.flat li:first-child .entry-desc{font-size:var(--t-body)}
+
+/* section hubs and the sectioned home, only when config sections_visible is on */
+.hub .start{margin-top:2.2rem}
+.hub .start .entry-title{font-size:var(--t-sec)}
+.dept{padding:18px 0 24px}
+.dept h3{margin:0 0 10px}
+.dept h3 a{color:var(--ink);text-decoration:none}
+.more{margin:.7rem 0 0;font:600 .9375rem/1.4 var(--frame)}
+
+/* ---------- the game: a quiet plaque that closes every page ---------- */
+.game-everywhere{max-width:var(--page);margin:56px auto 0;padding:0 var(--gap)}
+.game{max-width:var(--measure);margin:48px 0}
+.game-everywhere .game{margin:0}
+.game-plate{position:relative;background:var(--sheet);border:var(--wire);border-radius:8px;padding:20px 22px 18px 92px;min-height:120px}
+.game h2{margin:0 0 .3em;font-size:var(--t-sub);font-weight:700;letter-spacing:-.01em}
+.game p{margin:.35em 0}
+.game p:not(.small){font-size:1.0625rem;line-height:1.5}
+.game .button{margin-top:6px}
+.age{position:absolute;left:20px;top:20px;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--cinnabar);color:#fff;border:3px double var(--brass);font:800 1rem/1 var(--frame);letter-spacing:-.02em;font-variant-numeric:lining-nums}
+@media (max-width:479px){
+  .game-plate{padding:18px 18px 16px}
+  .age{position:static;margin:0 0 12px;width:46px;height:46px;font-size:.9375rem}
+}
+
+/* ---------- the footer plate ---------- */
+footer.site{background:var(--cobalt-deep);color:var(--on-plate-2);border-top:var(--wire);font:400 .9375rem/1.55 var(--frame)}
+footer.site .bar{max-width:var(--page);margin:0 auto;padding:24px var(--gap) 32px}
+footer.site p{margin:.4rem 0;max-width:var(--measure)}
+footer.site p:first-child{color:var(--on-plate);font-weight:550}
+footer.site a{color:var(--on-plate)}
+footer.site .small{color:var(--on-plate-2)}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+/* Touch screens and phone widths: every control outside running text is at least 44×44 px
+   (tests/pages.mjs, brief 11.11.2026). Negative margins keep the line where it was. */
+@media (pointer:coarse),(max-width:767px){
+  .langs,.theme{min-height:54px}
+  .langs a,.lang-here{min-height:44px}
+  .crumbs a{display:inline-block;min-width:44px;text-align:center;padding:13px 2px;margin:-13px -2px}
+  .spec dd a{display:inline-block;padding:13px 0;margin:-13px 0}
+  .contents a{padding:12px 0}
+  .sources a{padding-block:11px;margin-block:-11px}
+  .how a,.running-name a,.more a,.dept h3 a{display:inline-block;padding:13px 0;margin:-13px 0}
+}
+@media print{header.site .tabs,header.site .top,.button,footer.site,.margin,.theme,.game-everywhere,.game-inline,.game-home{display:none}header.site{background:none;color:#000;border:0}.running h1,.running-name,.running-name a,.running .lead{color:#000}body{background:#fff;color:#000}}
+/* «Add this table to your site» after bigger article tables (scripts/embed.mjs, config/embed.json) */
+.embed{margin:12px 0 4px;max-width:var(--measure)}
+.embed summary{cursor:pointer;font:600 var(--t-label)/1.4 var(--frame);color:var(--ink-2);padding:12px 0;min-height:44px;box-sizing:border-box}
+.embed summary:hover{color:var(--ink)}
+.embed label{display:block;margin:8px 0 6px}
+.embed-code{display:block;width:100%;box-sizing:border-box;font:400 .8125rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;resize:vertical}
+.embed-code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* ---------- tool pages (config/tools.json, scripts/tools.mjs): the form plate, then the static tables ---------- */
+.tool{margin:1.8rem 0}
+.calc{border:1px solid var(--rule);border-top:var(--wire);background:var(--tint);border-radius:6px;padding:18px clamp(14px,3vw,24px) 20px;margin:0 0 2rem}
+.calc .calc-title{margin:0 0 .8rem;font:650 var(--t-sub)/1.3 var(--frame)}
+.calc label{display:block;font:600 var(--t-label)/1.4 var(--frame);margin:0 0 6px}
+.calc textarea{display:block;width:100%;box-sizing:border-box;font:400 1rem/1.5 var(--frame);color:var(--ink);background:var(--sheet);border:1px solid var(--ink-2);border-radius:6px;padding:10px 12px;resize:vertical;min-height:88px}
+.calc textarea:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.calc-count{margin:.8rem 0 1rem;font:400 var(--t-label)/1.5 var(--frame)}
+.calc-count ul{margin:.3rem 0;padding-left:1.2rem}
+.calc-count .calc-over{font-weight:650}
+.calc-answer{margin:0;font:650 1rem/1.4 var(--frame)}
+.calc-num{font-variant-numeric:tabular-nums}
+.calc-styles{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.calc-styles li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule)}
+.calc-style-name{grid-column:1/-1;font:600 var(--t-label)/1.3 var(--frame);color:var(--ink-2)}
+.calc-styles output{min-width:0;overflow-wrap:anywhere;min-height:1.5em}
+.calc-copy{min-height:44px;padding:0 16px;font-size:.9375rem}
+.glyphs{font-family:"Cambria Math","STIX Two Math","Noto Sans Math","Segoe UI Symbol","Apple Symbols",var(--frame);font-size:1.125rem;line-height:1.5}
+.calc-chart h3{margin-top:2rem}
+.calc-chart td.none{color:var(--ink-2)}
+.calc-chart td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.calc-chart kbd{font:500 .875em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;white-space:nowrap}
+.calc-chart code{white-space:nowrap}
+/* Tool «links» (config/tools.json → telegram-links): fields of the link builder. */
+.calc-field{margin:0 0 .9rem}
+.calc-field .small{margin:.3rem 0 0}
+.calc input[type=text],.calc select{display:block;width:100%;box-sizing:border-box;min-height:44px;font:400 1rem/1.5 var(--frame);color:var(--ink);background:var(--sheet);border:1px solid var(--ink-2);border-radius:6px;padding:8px 12px}
+/* WebKit keeps a native select about 25 px tall whatever min-height says, so the select is drawn by us: 44 px, with a grey caret that reads on both themes. */
+.calc select{-webkit-appearance:none;appearance:none;height:auto;padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%237f8aa8' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.calc input[type=text]:focus-visible,.calc select:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.calc-link{font:500 .9375rem/1.5 ui-monospace,"SF Mono",Menlo,Consolas,monospace;overflow-wrap:anywhere}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/es/#website","url":"https://blog.merge-verse.com/es/","name":"Blog de MergeVerse","inLanguage":"es","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://blog.merge-verse.com/es/"},{"@type":"ListItem","position":2,"name":"Regalos, stickers y canales","item":"https://blog.merge-verse.com/es/regalos-stickers-canales/"},{"@type":"ListItem","position":3,"name":"Juegos de Telegram: cómo funcionan y cómo jugar"}]},{"@type":"BlogPosting","@id":"https://blog.merge-verse.com/es/juegos-de-telegram/#article","headline":"Juegos de Telegram: cómo funcionan y cómo jugar","description":"Los juegos de Telegram se abren dentro de la app: juegos HTML5 que envía un bot o miniapps a pantalla completa. Dónde encontrarlos, cómo jugar en grupo y pagar.","inLanguage":"es","url":"https://blog.merge-verse.com/es/juegos-de-telegram/","mainEntityOfPage":"https://blog.merge-verse.com/es/juegos-de-telegram/","datePublished":"2026-11-14","dateModified":"2026-11-14","wordCount":983,"author":{"@id":"https://blog.merge-verse.com/#org"},"publisher":{"@id":"https://blog.merge-verse.com/#org"},"articleSection":"Regalos, stickers y canales","citation":["https://core.telegram.org/bots/games","https://core.telegram.org/bots","https://core.telegram.org/bots/features","https://core.telegram.org/bots/payments-stars","https://telegram.org/faq?setln=es"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se juega a un juego en Telegram?","acceptedAnswer":{"@type":"Answer","text":"Abres el bot del juego o su enlace t.me y pulsas el botón Jugar del mensaje del juego, o el botón que abre la miniapp. El juego se carga dentro de Telegram, sin instalar nada más."}},{"@type":"Question","name":"¿Puedo jugar con mis amigos en un grupo?","acceptedAnswer":{"@type":"Answer","text":"Sí, con los juegos HTML5 de bots. Telegram dice que se pueden jugar a solas o para competir en grupos y chats privados, y el mensaje del juego muestra los récords de ese chat."}},{"@type":"Question","name":"¿Dónde encuentro juegos de Telegram?","acceptedAnswer":{"@type":"Answer","text":"En la tienda de miniapps, que está en la pestaña Apps de la búsqueda. La documentación de Telegram también pone como ejemplos los bots @gamebot y @gamee."}},{"@type":"Question","name":"¿Los juegos de Telegram son gratis?","acceptedAnswer":{"@type":"Answer","text":"La plataforma de bots de Telegram es gratuita para los usuarios, pero cada desarrollador decide si vende algo dentro del juego. Si lo que vende es digital, Telegram obliga a cobrarlo en Telegram Stars."}},{"@type":"Question","name":"¿Telegram hace estos juegos?","acceptedAnswer":{"@type":"Answer","text":"No. Los juegos los crean desarrolladores externos sobre la plataforma de bots de Telegram. Trátalos como a cualquier bot: con prudencia."}}]}]}</script>
+</head>
+<body data-dept="4">
+<a class="skip" href="#main">Ir al contenido</a>
+<header class="site"><div class="band">
+<div class="top"><a class="brand" href="/es/"><svg class="pin" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path class="pin-wire" d="M10 1 19 10 10 19 1 10Z"/><path class="pin-enamel" d="M10 4.6 15.4 10 10 15.4 4.6 10Z"/></svg>Blog de MergeVerse</a><a class="about" href="/es/about/">Sobre el sitio</a><div class="controls"><nav class="langs" aria-label="Idioma"><a class="lang" href="/" hreflang="ru" lang="ru" data-goatcounter-click="lang-ru">Русский</a><a class="lang" href="/en/" hreflang="en" lang="en" data-goatcounter-click="lang-en">English</a><span class="lang-here" lang="es" aria-current="true">Español</span><a class="lang" href="/de/" hreflang="de" lang="de" data-goatcounter-click="lang-de">Deutsch</a></nav><button class="theme" type="button" hidden aria-label="Modo noche" aria-pressed="false"><span class="theme-day" aria-hidden="true">Día</span><span class="theme-night" aria-hidden="true">Noche</span></button></div></div>
+<div class="running"><p class="running-name"><a href="/es/regalos-stickers-canales/">Regalos, stickers y canales</a></p></div>
+<nav class="tabs" aria-label="Secciones"><div class="tabs-row"><a href="/es/regalos-stickers-canales/">Regalos, stickers y canales</a></div><details class="tabs-phone"><summary>Todas las secciones <span class="count">1</span></summary><div class="tabs-list"><a href="/es/regalos-stickers-canales/">Regalos, stickers y canales</a></div></details></nav></div></header>
+<script>(function(){var b=document.querySelector(".theme");if(!b)return;var r=document.documentElement,m=matchMedia("(prefers-color-scheme: dark)");function cur(){return r.dataset.theme||(m.matches?"dark":"light")}function show(){b.setAttribute("aria-pressed",cur()==="dark"?"true":"false")}b.hidden=false;show();m.addEventListener&&m.addEventListener("change",show);b.addEventListener("click",function(){var t=cur()==="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("theme",t)}catch(e){}show()})})();</script>
+<nav class="crumbs" aria-label="Ruta de navegación"><a href="/es/">Inicio</a> <span aria-hidden="true">›</span> <a href="/es/regalos-stickers-canales/">Regalos, stickers y canales</a> <span aria-hidden="true">›</span> <span aria-current="page">Juegos de Telegram: cómo funcionan y cómo jugar</span></nav>
+<main id="main"><article class="sheet article"><div class="layout">
+<header><h1>Juegos de Telegram: cómo funcionan y cómo jugar</h1>
+<dl class="spec">
+<div><dt>Publicado</dt><dd><time datetime="2026-11-14">14 de noviembre de 2026</time></dd></div>
+<div><dt>Revisado</dt><dd><time datetime="2026-11-14">14 de noviembre de 2026</time></dd></div>
+<div><dt>Lectura</dt><dd>5 min</dd></div>
+<div><dt>Fuentes</dt><dd><a href="#sources">5 citadas</a></dd></div>
+</dl></header>
+<div class="margin"><nav class="contents wide" aria-labelledby="contents-h"><h2 id="contents-h">En este artículo</h2><ol><li><a href="#qu-son-los-juegos-de-telegram">Qué son los juegos de Telegram</a></li><li><a href="#juegos-de-bot-y-juegos-en-miniapp">Juegos de bot y juegos en miniapp</a></li><li><a href="#c-mo-jugar-a-un-juego-de-telegram">Cómo jugar a un juego de Telegram</a></li><li><a href="#jugar-en-grupo-con-amigos">Jugar en grupo con amigos</a></li><li><a href="#d-nde-encontrar-juegos">Dónde encontrar juegos</a></li><li><a href="#compras-dentro-de-los-juegos-telegram-stars">Compras dentro de los juegos: Telegram Stars</a></li><li><a href="#seguridad-lo-que-un-juego-nunca-debe-pedirte">Seguridad: lo que un juego nunca debe pedirte</a></li></ol></nav><details class="contents narrow"><summary>En este artículo <span class="count">7 apartados</span></summary><ol><li><a href="#qu-son-los-juegos-de-telegram">Qué son los juegos de Telegram</a></li><li><a href="#juegos-de-bot-y-juegos-en-miniapp">Juegos de bot y juegos en miniapp</a></li><li><a href="#c-mo-jugar-a-un-juego-de-telegram">Cómo jugar a un juego de Telegram</a></li><li><a href="#jugar-en-grupo-con-amigos">Jugar en grupo con amigos</a></li><li><a href="#d-nde-encontrar-juegos">Dónde encontrar juegos</a></li><li><a href="#compras-dentro-de-los-juegos-telegram-stars">Compras dentro de los juegos: Telegram Stars</a></li><li><a href="#seguridad-lo-que-un-juego-nunca-debe-pedirte">Seguridad: lo que un juego nunca debe pedirte</a></li></ol></details></div>
+<div class="column"><section class="panel short" aria-labelledby="short-h"><h2 id="short-h" class="panel-head">En resumen</h2><ul class="panel-body"><li>En Telegram hay dos tipos de juegos: los juegos HTML5 que un bot envía a un chat con un botón Jugar, y las miniapps, aplicaciones completas que pueden ocupar toda la pantalla.</li><li>Los juegos de bot se juegan a solas, en chats privados o en grupos, y el mensaje del juego muestra los récords de ese chat.</li><li>Las miniapps se buscan en la tienda de miniapps, en la pestaña Apps de la búsqueda, y se pueden anclar a la pantalla de inicio.</li><li>Lo que compras dentro de un juego, si es digital, se paga en Telegram Stars en la pantalla de pago de Telegram.</li><li>Un juego es un bot: nunca le des tu código de acceso, contraseñas ni datos bancarios.</li></ul></section><div class="prose"><p>Los juegos de Telegram se juegan dentro de la propia app, sin instalar nada. Son de dos tipos: juegos HTML5 que un bot envía a un chat con un botón Jugar, y miniapps, aplicaciones completas que pueden ocupar toda la pantalla. Los primeros se juegan a solas o en grupo, con tabla de récords; las segundas se buscan en la pestaña Apps de la búsqueda. Lo digital que compres dentro se paga en Telegram Stars.</p>
+<p>Todo lo que sigue sale de core.telegram.org y telegram.org, leídos el 5 de noviembre de 2026. Este sitio no está vinculado a Telegram y no publica listas de juegos.</p>
+<h2 id="qu-son-los-juegos-de-telegram">Qué son los juegos de Telegram</h2>
+<p>Un juego de Telegram es siempre un bot. Telegram lo cuenta entre los usos de su plataforma de bots: los desarrolladores pueden crear juegos HTML5 ligeros y también juegos a pantalla completa con controles de movimiento, puntos de interés según la ubicación y ajustes según el hardware del teléfono.</p>
+<p>Telegram no hace estos juegos. Los crean desarrolladores externos, igual que el resto de bots. Si todavía no tienes claro qué es un bot, empieza por nuestra guía de <a href="/es/bots-telegram/">bots de Telegram</a>.</p>
+<aside class="game game-inline" aria-labelledby="game-h-inline"><div class="game-plate"><span class="age" aria-hidden="true">18+</span><h2 id="game-h-inline">El juego MergeVerse</h2>
+<p>Un juego de cartas dentro de Telegram sobre regalos: reúne cartas y une dos iguales para obtener una del nivel siguiente. El resultado se conoce de antemano, sin azar.</p>
+<p><a class="button" href="https://t.me/mergeversebot?startapp=ref_eldar" rel="noopener" data-goatcounter-click="game-inline">Abrir en Telegram</a></p>
+<p class="small">18+. El juego no está vinculado a Telegram; participar implica aceptar las reglas del juego.</p></div>
+</aside>
+<h2 id="juegos-de-bot-y-juegos-en-miniapp">Juegos de bot y juegos en miniapp</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Juego HTML5 de bot</th>
+<th>Juego en miniapp</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cómo se abre</td>
+<td>Botón Jugar en un mensaje del bot</td>
+<td>Botón del bot, enlace o tienda de miniapps</td>
+</tr>
+<tr>
+<td>Dónde aparece</td>
+<td>En cualquier chat o grupo al que se envíe</td>
+<td>Se abre como una aplicación dentro de Telegram</td>
+</tr>
+<tr>
+<td>Récords</td>
+<td>En el propio mensaje, por chat</td>
+<td>Los que programe el desarrollador</td>
+</tr>
+<tr>
+<td>Pantalla</td>
+<td>Navegador integrado de Telegram</td>
+<td>Puede ocupar toda la pantalla, en vertical u horizontal</td>
+</tr>
+</tbody></table>
+</div><details class="embed">
+<summary>Añade esta tabla a tu web</summary>
+<p class="small">Puedes usarla gratis en tu web, blog o boletín. Copia el código y pégalo en tu página como HTML. Muestra la misma tabla con un enlace a esta página como fuente.</p>
+<label class="small" for="embed-t1">Código HTML</label>
+<textarea id="embed-t1" class="embed-code" readonly rows="6" spellcheck="false">&lt;figure style=&quot;margin:1.5em 0;max-width:640px&quot;&gt;
+&lt;figcaption style=&quot;font-weight:bold;margin:0 0 .5em&quot;&gt;Juegos de bot y juegos en miniapp&lt;/figcaption&gt;
+&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:15px&quot;&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Juego HTML5 de bot&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Juego en miniapp&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Cómo se abre&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Botón Jugar en un mensaje del bot&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Botón del bot, enlace o tienda de miniapps&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Dónde aparece&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;En cualquier chat o grupo al que se envíe&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Se abre como una aplicación dentro de Telegram&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Récords&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;En el propio mensaje, por chat&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Los que programe el desarrollador&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Pantalla&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Navegador integrado de Telegram&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Puede ocupar toda la pantalla, en vertical u horizontal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p style=&quot;font-size:13px;margin:.5em 0 0&quot;&gt;Fuente: &lt;a href=&quot;https://blog.merge-verse.com/es/juegos-de-telegram/&quot; style=&quot;color:inherit;text-decoration:underline&quot;&gt;Blog de MergeVerse&lt;/a&gt;. La página indica las fuentes de estos datos.&lt;/p&gt;
+&lt;/figure&gt;</textarea>
+<p><button type="button" class="button embed-copy" data-for="embed-t1" data-done="Copiado" hidden>Copiar código</button></p>
+</details><p>La documentación de Telegram dice que, desde abril de 2022, los desarrolladores también pueden usar las Web Apps para crear juegos potentes con JavaScript. Hoy esas Web Apps se llaman miniapps.</p>
+<h2 id="c-mo-jugar-a-un-juego-de-telegram">Cómo jugar a un juego de Telegram</h2>
+<p>Con un juego HTML5 de bot:</p>
+<ol>
+<li>Abre el bot del juego, o un mensaje de juego que alguien te haya reenviado.</li>
+<li>Pulsa el botón Jugar del mensaje. Telegram lo pone siempre como primer botón.</li>
+<li>El juego se abre en el navegador integrado de Telegram.</li>
+<li>Al terminar, tu puntuación puede entrar en la tabla de récords de ese chat.</li>
+</ol>
+<p>Con una miniapp:</p>
+<ol>
+<li>Ábrela desde el botón del bot, desde un enlace o desde la tienda de miniapps.</li>
+<li>Si es un juego, puede ocupar toda la pantalla y usar el teléfono en horizontal.</li>
+<li>Si la usas a menudo, añade un acceso directo a la pantalla de inicio de tu teléfono para abrirla con un toque.</li>
+</ol>
+<p>Una miniapp también puede cambiar tu estado emoji, por ejemplo al empezar una partida, pero solo si le das permiso para actualizarlo.</p>
+<h2 id="jugar-en-grupo-con-amigos">Jugar en grupo con amigos</h2>
+<p>Los juegos HTML5 de bot nacieron para esto. Telegram dice que se juegan a solas o para competir en grupos y en chats privados. El mensaje del juego enseña los récords del chat donde está. Cuando alguien bate el récord, aparece un mensaje de servicio en el chat y la tabla se actualiza.</p>
+<p>Para compartir un juego hay un botón de compartir en la esquina superior derecha de la pantalla del juego. Algunos juegos añaden otro propio que envía el juego a un chat junto con tu mejor puntuación. Los bots también pueden ofrecer sus juegos en modo en línea: escribes su @usuario en un chat y eliges el juego.</p>
+<p>Si lo que buscas es un sitio donde siga la conversación entre partidas, un grupo sirve mejor que un canal. En un canal solo publican los administradores; lo explicamos en la guía del <a href="/es/canal-de-telegram/">canal de Telegram</a>.</p>
+<h2 id="d-nde-encontrar-juegos">Dónde encontrar juegos</h2>
+<p>Las preguntas frecuentes de Telegram indican el sitio oficial: la tienda de miniapps, en la pestaña Apps de la búsqueda. La documentación de juegos pone como ejemplos los bots @gamebot y @gamee, y la introducción a los bots remite a la biblioteca de @Gamee.</p>
+<p>Para juegos sueltos, busca el nombre exacto del bot en el buscador de chats y compara el nombre de usuario letra por letra. Hay copias de bots conocidos con un carácter cambiado.</p>
+<p>Si te van más las preguntas, Telegram tiene encuestas en modo cuestionario, con una sola respuesta correcta, y un bot de cuestionarios (Quiz Bot) para preparar tests de varias preguntas y compartirlos.</p>
+<h2 id="compras-dentro-de-los-juegos-telegram-stars">Compras dentro de los juegos: Telegram Stars</h2>
+<p>La plataforma de bots es gratuita para los usuarios, pero un juego puede vender cosas dentro. Para bienes y servicios digitales, Telegram obliga a los bots y miniapps a cobrar en Telegram Stars. El pago se hace en la pantalla de Telegram: el bot envía una factura con un botón Pagar y tú confirmas el importe en Stars. No tienes que escribir el nombre, la dirección ni la tarjeta.</p>
+<p>Las Stars se compran a Telegram con compras dentro de la app de Apple o Google, o con @PremiumBot. Si algo falla con un pago, el responsable es el desarrollador del juego: está obligado a atender el comando /paysupport y puede devolver pagos en Stars.</p>
+<h2 id="seguridad-lo-que-un-juego-nunca-debe-pedirte">Seguridad: lo que un juego nunca debe pedirte</h2>
+<p>Un juego es un bot, y Telegram aconseja tratar a cualquier bot como a un desconocido:</p>
+<ul>
+<li>no le des tus contraseñas, los códigos de inicio de sesión de Telegram ni números de cuenta bancaria, aunque te los pida con amabilidad;</li>
+<li>no abras archivos ejecutables que te envíe;</li>
+<li>no pagues objetos digitales fuera de la pantalla de pago de Telegram, porque para lo digital Telegram exige Stars.</li>
+</ul>
+<p>Un bot ve tu nombre público, tu nombre de usuario, tus fotos de perfil y lo que le envías. No ve tu número de teléfono salvo que se lo des.</p>
+<p>Nosotros hacemos <a href="https://t.me/mergeversebot?startapp=ref_eldar" rel="noopener" data-goatcounter-click="game-text">MergeVerse</a>, un juego de cartas dentro de Telegram sobre regalos, solo para mayores de 18 años y sin vínculo con Telegram. Si acabas de llegar a la app, lee antes qué es Telegram y para qué sirve.</p>
+<script>document.querySelectorAll(".embed-copy").forEach(function(b){var t=document.getElementById(b.getAttribute("data-for"));if(!t)return;b.hidden=false;var label=b.textContent;b.addEventListener("click",function(){function done(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=label},2500)}t.select();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(done,function(){document.execCommand("copy");done()})}else{document.execCommand("copy");done()}})});</script></div><div data-read-end aria-hidden="true" style="height:1px"></div></div></div>
+
+<section class="faq"><h2 id="questions">Preguntas frecuentes</h2><details><summary>¿Cómo se juega a un juego en Telegram?</summary><p>Abres el bot del juego o su enlace t.me y pulsas el botón Jugar del mensaje del juego, o el botón que abre la miniapp. El juego se carga dentro de Telegram, sin instalar nada más.</p></details><details><summary>¿Puedo jugar con mis amigos en un grupo?</summary><p>Sí, con los juegos HTML5 de bots. Telegram dice que se pueden jugar a solas o para competir en grupos y chats privados, y el mensaje del juego muestra los récords de ese chat.</p></details><details><summary>¿Dónde encuentro juegos de Telegram?</summary><p>En la tienda de miniapps, que está en la pestaña Apps de la búsqueda. La documentación de Telegram también pone como ejemplos los bots @gamebot y @gamee.</p></details><details><summary>¿Los juegos de Telegram son gratis?</summary><p>La plataforma de bots de Telegram es gratuita para los usuarios, pero cada desarrollador decide si vende algo dentro del juego. Si lo que vende es digital, Telegram obliga a cobrarlo en Telegram Stars.</p></details><details><summary>¿Telegram hace estos juegos?</summary><p>No. Los juegos los crean desarrolladores externos sobre la plataforma de bots de Telegram. Trátalos como a cualquier bot: con prudencia.</p></details></section>
+<section class="sources"><h2 id="sources">Fuentes</h2><ol><li><a href="https://core.telegram.org/bots/games" rel="noopener">Gaming Platform</a>, Telegram</li><li><a href="https://core.telegram.org/bots" rel="noopener">Bots: An introduction for developers</a>, Telegram</li><li><a href="https://core.telegram.org/bots/features" rel="noopener">Telegram Bot Features</a>, Telegram</li><li><a href="https://core.telegram.org/bots/payments-stars" rel="noopener">Bot Payments API for Digital Goods and Services</a>, Telegram</li><li><a href="https://telegram.org/faq?setln=es" rel="noopener">Preguntas frecuentes de Telegram: bots y miniapps</a>, Telegram</li></ol></section>
+<p class="small how"><a href="/es/about/">Cómo escribimos estas páginas</a></p>
+<section class="related"><h2 id="read-next">Sigue leyendo</h2><ul class="entries"><li><a href="/es/bots-telegram/"><span class="entry-title">Bots de Telegram: qué son y cómo usarlos</span><span class="entry-desc">Un bot de Telegram es una cuenta que maneja un programa. Cómo encontrarlo, iniciarlo, usarlo en cualquier chat, pagarle en Stars y bloquearlo.</span></a><time datetime="2026-11-12">12 de noviembre de 2026</time></li><li><a href="/es/canal-de-telegram/"><span class="entry-title">Canal de Telegram: qué es, cómo unirte y cómo crearlo</span><span class="entry-desc">Un canal de Telegram es una vía de difusión: publican los administradores y leen los suscriptores, sin límite de suscriptores. Cómo buscarlo y crear el tuyo.</span></a><time datetime="2026-11-13">13 de noviembre de 2026</time></li></ul><p class="more"><a href="/es/regalos-stickers-canales/">Los 3 artículos de Regalos, stickers y canales</a></p></section>
+</article><div class="wrap game-everywhere"><aside class="game" aria-labelledby="game-h"><div class="game-plate"><span class="age" aria-hidden="true">18+</span><h2 id="game-h">El juego MergeVerse</h2>
+<p>Un juego de cartas dentro de Telegram sobre regalos: reúne cartas y une dos iguales para obtener una del nivel siguiente. El resultado se conoce de antemano, sin azar.</p>
+<p><a class="button" href="https://t.me/mergeversebot?startapp=ref_eldar" rel="noopener" data-goatcounter-click="game">Abrir en Telegram</a></p>
+<p class="small">18+. El juego no está vinculado a Telegram; participar implica aceptar las reglas del juego.</p></div>
+</aside></div></main>
+<footer class="site"><div class="bar">
+<p>Regalos y Stars de Telegram: cómo venderlos, mejorarlos y gestionarlos, paso a paso y con fuentes.</p>
+<p><a href="/es/about/">Sobre estas páginas</a> · <a href="/es/feed.xml">Feed RSS</a></p>
+<p class="small">Escribimos estos artículos con ayuda de un modelo de IA. Cada dato se comprueba con las fuentes citadas bajo el artículo; lo que no pudimos confirmar queda fuera.</p>
+<p class="small">Este sitio no está vinculado a Telegram. Telegram, Telegram Gifts y Telegram Stars son nombres de servicios de Telegram.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telegram ID: the number behind every account</title>
+<meta name="description" content="A Telegram ID is a unique number Telegram gives every user, bot, group and channel. How it differs from a username and phone number, and why apps ask for it.">
+<link rel="canonical" href="https://blog.merge-verse.com/en/telegram-id/">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Telegram ID: the number behind every account">
+<meta property="og:description" content="A Telegram ID is a unique number Telegram gives every user, bot, group and channel. How it differs from a username and phone number, and why apps ask for it.">
+<meta property="og:url" content="https://blog.merge-verse.com/en/telegram-id/">
+<meta property="og:site_name" content="MergeVerse Blog">
+
+<meta name="color-scheme" content="light dark">
+<link rel="alternate" type="application/rss+xml" title="MergeVerse Blog" href="/en/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/piazzolla.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geologica.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script data-goatcounter="https://mergeverseblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script><script>document.addEventListener("DOMContentLoaded",function(){var p=location.pathname;document.querySelectorAll("[data-goatcounter-click]").forEach(function(a){a.setAttribute("data-goatcounter-referrer",p)});var m=document.querySelector("[data-read-end]");if(!m||!("IntersectionObserver" in window))return;var o=new IntersectionObserver(function(e){if(!e[0].isIntersecting)return;o.disconnect();(function s(n){var g=window.goatcounter;if(g&&g.count)g.count({path:"read-end"+p,title:document.title,event:true});else if(n<40)setTimeout(function(){s(n+1)},500)})(0)});o.observe(m)});</script>
+<meta name="google-site-verification" content="hHBGjlz6LvtyxdP3x3sWT5arWOdvQq0RpVLMBuHod_0">
+<meta name="google-site-verification" content="Qz24Xj1TYyAs-2BEPHub1zrr9jbexSUFW1zroT093qw">
+<meta name="msvalidate.01" content="74194B63F367EB355F843A035E6E6554">
+<meta name="yandex-verification" content="9dfac024d3674a3d">
+<style>/* MergeVerse blog — a collector's reference of enamel pins.
+   The frame is struck like a hard-enamel badge: colour fields (cobalt masthead and
+   footer, the cobalt head of a table, the cinnabar 18+ roundel) held inside raised brass
+   wire, drawn as a double rule. The reading column is the plain white enamel between
+   them; at night the pins lie on blue-black velvet. No shadows, glow or gradients:
+   depth is wire, not light. Geologica (badge lettering, Cyrillic-first) sets the
+   frame and headings; Piazzolla sets the reading. Decisions and sources: DESIGN.md. */
+@font-face{font-family:"Geologica";src:url(/fonts/geologica.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Geologica";src:url(/fonts/geologica-cyr.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla-cyr.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Piazzolla";src:url(/fonts/piazzolla-italic-cyr.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+
+:root{
+  /* Enamels. Written as plain hex, not color-mix(): the contrast test reads computed colours. */
+  --cobalt:#1d3a9e;        /* the masthead plate; white on it 9.6:1 */
+  --cobalt-deep:#142b7a;   /* footer plate, pressed buttons; white on it 12:1 */
+  --cinnabar:#c8361f;      /* the one accent: the 18+ roundel, hover underline; white on it 5.2:1 */
+  --brass:#b8902f;         /* the wire: rules and rims only, never text */
+  --on-plate:#ffffff;
+  --on-plate-2:#c9d3f2;    /* secondary text on a cobalt plate, 8:1 on --cobalt-deep */
+  /* Day: white enamel. Cool, never cream. */
+  --ground:#f3f5fa;--sheet:#ffffff;--ink:#121a33;--ink-2:#4a5370;--rule:#cfd5e4;
+  --link:#1d3a9e;--tint:#eef1fa;--mark:#f3e3a6;
+  --frame:"Geologica","Segoe UI","Noto Sans",system-ui,sans-serif;
+  --read:"Piazzolla","Iowan Old Style","Noto Serif",Georgia,serif;
+  /* One scale: display, title, section, sub, body, label. */
+  --t-display:clamp(2.25rem,1.35rem + 4.2vw,4.5rem);
+  --t-title:clamp(1.875rem,1.3rem + 2.5vw,3rem);
+  --t-sec:clamp(1.375rem,1.2rem + .7vw,1.625rem);--t-sub:1.1875rem;--t-body:1.125rem;--t-label:.875rem;
+  --measure:40rem;--page:74rem;--gap:clamp(16px,4vw,40px);
+  --wire:4px double var(--brass);
+  color-scheme:light dark;
+}
+/* Night: the same pins on blue-black velvet. Plates keep their enamel. */
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;
+  --ground:#0d1222;--sheet:#141b31;--ink:#e9ecf5;--ink-2:#aab2ca;--rule:#2c3552;
+  --link:#a9bcff;--tint:#18213c;--mark:#6b5414;--brass:#c9a64e;
+}}
+:root[data-theme=dark]{color-scheme:dark;
+  --ground:#0d1222;--sheet:#141b31;--ink:#e9ecf5;--ink-2:#aab2ca;--rule:#2c3552;
+  --link:#a9bcff;--tint:#18213c;--mark:#6b5414;--brass:#c9a64e;
+}
+:root[data-theme=light]{color-scheme:light}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scrollbar-color:var(--brass) var(--ground);accent-color:var(--cobalt);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 var(--t-body)/1.6 var(--read);overflow-wrap:break-word;caret-color:var(--cinnabar);font-kerning:normal}
+::selection{background:var(--mark);color:var(--ink)}
+a{color:var(--link);text-decoration-line:underline;text-decoration-color:var(--brass);text-decoration-thickness:.08em;text-underline-offset:.2em}
+a:hover{text-decoration-color:var(--cinnabar);text-decoration-thickness:.12em}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:2px}
+img{max-width:100%;height:auto;display:block}
+picture{display:block;min-width:0}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;background:var(--sheet);color:var(--ink);padding:8px 12px;z-index:9}
+
+/* ---------- the masthead plate ---------- */
+header.site{background:var(--cobalt);color:var(--on-plate);border-bottom:var(--wire)}
+.band{max-width:var(--page);margin:0 auto;padding:0 var(--gap)}
+header.site a{color:var(--on-plate);text-decoration-color:var(--brass)}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:4px 18px;padding:8px 0}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-right:auto;font:750 1.0625rem/1.1 var(--frame);letter-spacing:-.01em;text-decoration:none}
+.brand:hover{text-decoration:underline}
+.pin{width:22px;height:22px;flex:none}
+.pin-wire{fill:var(--brass)}
+.pin-enamel{fill:var(--cinnabar)}
+.about{display:inline-flex;align-items:center;min-height:44px;font:550 var(--t-label)/1 var(--frame);text-decoration:none;padding:0 2px}
+.about:hover,.about[aria-current]{text-decoration:underline;text-decoration-thickness:2px}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+/* Switches: every option stays in view, the current one struck forward in white enamel
+   inside its brass rim. */
+.langs,.theme{display:inline-flex;align-items:stretch;min-height:44px;padding:3px;gap:3px;border:2px solid var(--brass);border-radius:6px;background:var(--cobalt-deep)}
+.langs a,.lang-here,.theme span{display:flex;align-items:center;padding:0 10px;border-radius:3px;font:600 .8125rem/1 var(--frame);text-decoration:none;color:var(--on-plate);transition:background-color .18s cubic-bezier(.2,.8,.2,1),color .18s cubic-bezier(.2,.8,.2,1)}
+.lang-here{background:var(--on-plate);color:var(--cobalt-deep);box-shadow:inset 0 0 0 1px var(--brass)}
+.langs a:hover{text-decoration:underline}
+/* Four languages do not fit one row at 280 px or with text at 200 %: the switch wraps inside its rim. */
+.langs{flex-wrap:wrap;max-width:100%}
+.theme{cursor:pointer;margin:0;font:inherit;color:var(--on-plate)}
+.theme[hidden]{display:none}
+.theme[aria-pressed=false] .theme-day,.theme[aria-pressed=true] .theme-night{background:var(--on-plate);color:var(--cobalt-deep);box-shadow:inset 0 0 0 1px var(--brass)}
+.theme:hover span:not(:only-child){text-decoration:underline}
+@media (max-width:639px){
+  .controls{flex-basis:100%;justify-content:space-between}
+}
+
+/* the plate's title on home, about and 404 */
+.running{padding:clamp(14px,3vw,34px) 0 clamp(22px,3.5vw,40px)}
+.running h1,.running-name{margin:0;font:800 var(--t-display)/1 var(--frame);letter-spacing:-.03em;text-wrap:balance;max-width:14ch;color:var(--on-plate)}
+.running-name{font-size:var(--t-title);max-width:none}
+.running-name a{text-decoration:none}
+.running .lead{margin:.7em 0 0;max-width:34rem;font:400 1.1875rem/1.45 var(--read);color:var(--on-plate-2)}
+
+/* section tabs, only when config sections_visible is on */
+.tabs{margin:0 0 -4px}
+.tabs-row,.tabs-list{display:flex;flex-wrap:wrap;gap:4px}
+.tabs a,.tabs summary{display:flex;align-items:center;min-height:44px;padding:0 12px;font:600 .875rem/1.15 var(--frame);text-decoration:none;color:var(--on-plate);background:var(--cobalt-deep);border-radius:6px 6px 0 0}
+.tabs a[aria-current]{background:var(--ground);color:var(--ink)}
+.tabs-row{display:none}
+.tabs summary{list-style:none;cursor:pointer;gap:8px;width:max-content}
+.tabs summary::-webkit-details-marker{display:none}
+.tabs .count{font-variant-numeric:tabular-nums}
+@media (min-width:900px){.tabs-row{display:flex}.tabs-phone{display:none}}
+
+.crumbs{max-width:var(--page);margin:0 auto;padding:18px var(--gap) 0;font:450 var(--t-label)/1.4 var(--frame);color:var(--ink-2)}
+.crumbs a{color:var(--ink-2)}
+.crumbs [aria-current]{color:var(--ink)}
+
+main{padding:0 0 64px}
+.sheet{max-width:var(--page);margin:0 auto;padding:0 var(--gap)}
+
+/* ---------- type ---------- */
+h1,h2,h3{font-family:var(--frame);color:var(--ink);text-wrap:balance;hyphens:manual}
+h1{font-size:var(--t-title);line-height:1.08;font-weight:780;letter-spacing:-.025em;margin:.45em 0 .55em;max-width:20ch}
+h2{max-width:var(--measure);font-size:var(--t-sec);line-height:1.2;font-weight:700;letter-spacing:-.015em;margin:2.1em 0 .5em}
+h3{font-size:var(--t-sub);line-height:1.3;font-weight:650;margin:1.7em 0 .35em}
+.small{font:400 var(--t-label)/1.5 var(--frame);color:var(--ink-2)}
+
+/* the spec band: the one dense place on the page */
+.spec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0 0 28px;border-top:var(--wire);border-bottom:var(--wire);max-width:var(--measure)}
+.spec div{padding:8px 12px 9px 0;min-width:0}
+.spec div:nth-child(2n){padding-left:12px;border-left:1px solid var(--rule)}
+.spec div:nth-child(n+3){border-top:1px solid var(--rule)}
+.spec dt{font:450 .8125rem/1.2 var(--frame);color:var(--ink-2)}
+.spec dd{margin:3px 0 0;font:600 .9375rem/1.3 var(--frame);font-variant-numeric:lining-nums tabular-nums}
+.spec dd a{color:var(--ink)}
+@media (min-width:600px){.spec{grid-template-columns:repeat(4,auto);justify-content:start}.spec div:nth-child(n){border-top:0;padding-right:18px}.spec div+div{padding-left:14px;border-left:1px solid var(--rule)}}
+
+/* panels: "In short" is a white enamel sheet in a plain 1px rule (the double wire stays on coloured fields) */
+.panel{max-width:var(--measure);margin:0 0 12px;background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.panel-head{margin:0;padding:12px 18px 0;font:700 1rem/1.2 var(--frame);letter-spacing:0;max-width:none;color:var(--ink)}
+.panel-body{margin:0;padding:6px 18px 14px 2.4rem}
+.panel-body li{margin:.3rem 0}
+.panel-body li::marker{color:var(--brass)}
+
+/* contents: a ruled list in the margin (wide) or a disclosure (narrow) */
+.contents h2{font:700 .9375rem/1.2 var(--frame);margin:0;padding:0 0 9px;border-bottom:1px solid var(--brass)}
+.contents ol{margin:0;padding:0;list-style:none}
+.contents li{border-bottom:1px solid var(--rule)}
+.contents a{display:block;padding:8px 0;color:var(--ink);text-decoration:none;font:450 .9375rem/1.35 var(--frame)}
+.contents a:hover{text-decoration:underline;text-decoration-color:var(--cinnabar)}
+.contents.narrow{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);max-width:var(--measure);margin-bottom:8px}
+.contents.narrow summary{list-style:none;cursor:pointer;min-height:48px;display:flex;align-items:center;gap:10px;font:700 .9375rem/1.2 var(--frame)}
+.contents.narrow summary::-webkit-details-marker{display:none}
+.contents.narrow summary::before,.faq summary::before{content:"";flex:none;width:13px;height:13px;background:linear-gradient(var(--brass),var(--brass)) center/13px 2.5px no-repeat,linear-gradient(var(--brass),var(--brass)) center/2.5px 13px no-repeat;transition:transform .22s cubic-bezier(.2,.8,.2,1)}
+.contents.narrow[open] summary::before,.faq details[open] summary::before{transform:rotate(90deg);background:linear-gradient(var(--brass),var(--brass)) center/13px 2.5px no-repeat}
+.contents.narrow .count{font-weight:450;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.contents.narrow ol{padding:4px 0 10px}
+.contents.narrow li:last-child{border-bottom:0}
+
+.layout{display:grid;gap:18px}
+.layout>header{min-width:0}
+.column{min-width:0;max-width:var(--measure)}
+.contents.wide{display:none}
+.margin{min-width:0}
+@media (min-width:1100px){
+  .layout{grid-template-columns:minmax(0,var(--measure)) minmax(0,1fr);grid-template-areas:"head side" "body side";grid-template-rows:auto 1fr;column-gap:64px;row-gap:0}
+  .layout>header{grid-area:head}.column{grid-area:body}
+  .margin{grid-area:side;justify-self:end;width:min(100%,18rem);position:sticky;top:24px;align-self:start;margin-top:2.6rem}
+  .contents.wide{display:block}.contents.narrow{display:none}
+}
+
+.prose{max-width:var(--measure);min-width:0}
+.prose p,.prose li{hyphens:manual;text-wrap:pretty}
+/* Hyphenate only where the measure is short: a phone column of ~35 characters. */
+@media (max-width:479px){.prose p,.prose li{hyphens:auto}}
+.prose ul,.prose ol{padding-left:1.4rem}
+.prose li{margin:.35rem 0}
+.prose ul li::marker{color:var(--brass)}
+.prose ol li::marker{color:var(--ink-2);font:600 .9375em var(--frame);font-variant-numeric:tabular-nums}
+.prose blockquote{margin:1.6rem 0;padding:.7rem 0;border-top:1px solid var(--brass);border-bottom:1px solid var(--brass);font-style:italic;color:var(--ink-2)}
+.prose strong{font-weight:650}
+.prose em{font-style:italic}
+.prose code{font:500 .88em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;background:var(--tint);border:1px solid var(--rule);padding:.05em .3em;border-radius:3px}
+.prose hr{border:0;border-top:1px solid var(--brass);margin:2.4rem 0}
+
+/* tables: a cobalt head plate on a brass wire, figures in line */
+.table-wrap{overflow-x:auto;margin:1.6rem 0;-webkit-overflow-scrolling:touch;max-width:100%}
+table{border-collapse:collapse;width:100%;font:400 .9375rem/1.45 var(--frame);font-variant-numeric:lining-nums tabular-nums;background:var(--sheet)}
+th,td{text-align:left;vertical-align:top;padding:9px 14px;border-bottom:1px solid var(--rule)}
+th{font-weight:650;background:var(--cobalt);color:var(--on-plate);border-bottom:var(--wire)}
+tbody tr:nth-child(even) td{background:var(--tint)}
+
+.button{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;margin:4px 0;background:var(--cobalt);color:var(--on-plate);font:650 1rem/1 var(--frame);text-decoration:none;border:2px solid var(--brass);border-radius:6px;white-space:nowrap}
+/* A long label or enlarged text wraps instead of pushing the page sideways (200 % text, 11.11.2026). */
+.button{white-space:normal;max-width:100%;line-height:1.2;padding-block:8px;box-sizing:border-box}
+.button:visited{color:var(--on-plate)}
+.button:hover{background:var(--cobalt-deep);text-decoration:underline;text-decoration-color:var(--on-plate)}
+
+/* questions: a drawn plus that turns to a minus */
+.faq details{border-bottom:1px solid var(--rule);max-width:var(--measure)}
+.faq details:first-of-type{border-top:1px solid var(--brass)}
+.faq summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;min-height:52px;padding:8px 0;font:600 1.0625rem/1.35 var(--frame)}
+.faq summary::-webkit-details-marker{display:none}
+.faq details p{margin:0 0 16px 27px}
+.sources ol{font-size:1rem;line-height:1.5;padding-left:1.5rem;max-width:var(--measure)}
+.sources li{margin:.45rem 0}
+.sources li::marker{font:600 .875rem var(--frame);font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.how{max-width:var(--measure);margin-top:2.4rem}
+
+/* ---------- lists of articles: ruled rows, dates tight to the right ---------- */
+.entries{list-style:none;margin:0;padding:0;border-top:1px solid var(--brass);max-width:var(--measure)}
+.entries li{display:grid;gap:6px;padding:16px 0 18px;border-bottom:1px solid var(--rule);break-inside:avoid}
+.entries a{text-decoration:none;color:var(--ink);display:block;min-width:0}
+.entry-title{display:block;font:650 var(--t-sub)/1.28 var(--frame);letter-spacing:-.008em;text-wrap:balance}
+.entries a:hover .entry-title{text-decoration:underline;text-decoration-color:var(--cinnabar);text-decoration-thickness:2px;text-underline-offset:.18em}
+.entry-desc{display:block;color:var(--ink-2);font-size:1rem;line-height:1.5;margin-top:5px;text-wrap:pretty}
+.entries time{font:450 .8125rem/1.3 var(--frame);color:var(--ink-2);font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+@media (min-width:640px){
+  .entries li{grid-template-columns:minmax(0,1fr) auto;column-gap:28px;align-items:baseline}
+  .entries time{grid-column:2;grid-row:1;text-align:right}
+}
+.empty{color:var(--ink-2);max-width:var(--measure);margin:1.2rem 0}
+
+/* home: one list, newest first; the newest one is set larger */
+.home .index-head{max-width:var(--measure);margin:2rem 0 .7rem;font-size:var(--t-sub);font-weight:650}
+.home .index-head .count{font-weight:450;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.entries.flat li:first-child{padding:22px 0 24px}
+.entries.flat li:first-child .entry-title{font-size:var(--t-sec);font-weight:750;letter-spacing:-.018em;line-height:1.2}
+.entries.flat li:first-child .entry-desc{font-size:var(--t-body)}
+
+/* section hubs and the sectioned home, only when config sections_visible is on */
+.hub .start{margin-top:2.2rem}
+.hub .start .entry-title{font-size:var(--t-sec)}
+.dept{padding:18px 0 24px}
+.dept h3{margin:0 0 10px}
+.dept h3 a{color:var(--ink);text-decoration:none}
+.more{margin:.7rem 0 0;font:600 .9375rem/1.4 var(--frame)}
+
+/* ---------- the game: a quiet plaque that closes every page ---------- */
+.game-everywhere{max-width:var(--page);margin:56px auto 0;padding:0 var(--gap)}
+.game{max-width:var(--measure);margin:48px 0}
+.game-everywhere .game{margin:0}
+.game-plate{position:relative;background:var(--sheet);border:var(--wire);border-radius:8px;padding:20px 22px 18px 92px;min-height:120px}
+.game h2{margin:0 0 .3em;font-size:var(--t-sub);font-weight:700;letter-spacing:-.01em}
+.game p{margin:.35em 0}
+.game p:not(.small){font-size:1.0625rem;line-height:1.5}
+.game .button{margin-top:6px}
+.age{position:absolute;left:20px;top:20px;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--cinnabar);color:#fff;border:3px double var(--brass);font:800 1rem/1 var(--frame);letter-spacing:-.02em;font-variant-numeric:lining-nums}
+@media (max-width:479px){
+  .game-plate{padding:18px 18px 16px}
+  .age{position:static;margin:0 0 12px;width:46px;height:46px;font-size:.9375rem}
+}
+
+/* ---------- the footer plate ---------- */
+footer.site{background:var(--cobalt-deep);color:var(--on-plate-2);border-top:var(--wire);font:400 .9375rem/1.55 var(--frame)}
+footer.site .bar{max-width:var(--page);margin:0 auto;padding:24px var(--gap) 32px}
+footer.site p{margin:.4rem 0;max-width:var(--measure)}
+footer.site p:first-child{color:var(--on-plate);font-weight:550}
+footer.site a{color:var(--on-plate)}
+footer.site .small{color:var(--on-plate-2)}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+/* Touch screens and phone widths: every control outside running text is at least 44×44 px
+   (tests/pages.mjs, brief 11.11.2026). Negative margins keep the line where it was. */
+@media (pointer:coarse),(max-width:767px){
+  .langs,.theme{min-height:54px}
+  .langs a,.lang-here{min-height:44px}
+  .crumbs a{display:inline-block;min-width:44px;text-align:center;padding:13px 2px;margin:-13px -2px}
+  .spec dd a{display:inline-block;padding:13px 0;margin:-13px 0}
+  .contents a{padding:12px 0}
+  .sources a{padding-block:11px;margin-block:-11px}
+  .how a,.running-name a,.more a,.dept h3 a{display:inline-block;padding:13px 0;margin:-13px 0}
+}
+@media print{header.site .tabs,header.site .top,.button,footer.site,.margin,.theme,.game-everywhere,.game-inline,.game-home{display:none}header.site{background:none;color:#000;border:0}.running h1,.running-name,.running-name a,.running .lead{color:#000}body{background:#fff;color:#000}}
+/* «Add this table to your site» after bigger article tables (scripts/embed.mjs, config/embed.json) */
+.embed{margin:12px 0 4px;max-width:var(--measure)}
+.embed summary{cursor:pointer;font:600 var(--t-label)/1.4 var(--frame);color:var(--ink-2);padding:12px 0;min-height:44px;box-sizing:border-box}
+.embed summary:hover{color:var(--ink)}
+.embed label{display:block;margin:8px 0 6px}
+.embed-code{display:block;width:100%;box-sizing:border-box;font:400 .8125rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;resize:vertical}
+.embed-code:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* ---------- tool pages (config/tools.json, scripts/tools.mjs): the form plate, then the static tables ---------- */
+.tool{margin:1.8rem 0}
+.calc{border:1px solid var(--rule);border-top:var(--wire);background:var(--tint);border-radius:6px;padding:18px clamp(14px,3vw,24px) 20px;margin:0 0 2rem}
+.calc .calc-title{margin:0 0 .8rem;font:650 var(--t-sub)/1.3 var(--frame)}
+.calc label{display:block;font:600 var(--t-label)/1.4 var(--frame);margin:0 0 6px}
+.calc textarea{display:block;width:100%;box-sizing:border-box;font:400 1rem/1.5 var(--frame);color:var(--ink);background:var(--sheet);border:1px solid var(--ink-2);border-radius:6px;padding:10px 12px;resize:vertical;min-height:88px}
+.calc textarea:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.calc-count{margin:.8rem 0 1rem;font:400 var(--t-label)/1.5 var(--frame)}
+.calc-count ul{margin:.3rem 0;padding-left:1.2rem}
+.calc-count .calc-over{font-weight:650}
+.calc-answer{margin:0;font:650 1rem/1.4 var(--frame)}
+.calc-num{font-variant-numeric:tabular-nums}
+.calc-styles{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.calc-styles li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule)}
+.calc-style-name{grid-column:1/-1;font:600 var(--t-label)/1.3 var(--frame);color:var(--ink-2)}
+.calc-styles output{min-width:0;overflow-wrap:anywhere;min-height:1.5em}
+.calc-copy{min-height:44px;padding:0 16px;font-size:.9375rem}
+.glyphs{font-family:"Cambria Math","STIX Two Math","Noto Sans Math","Segoe UI Symbol","Apple Symbols",var(--frame);font-size:1.125rem;line-height:1.5}
+.calc-chart h3{margin-top:2rem}
+.calc-chart td.none{color:var(--ink-2)}
+.calc-chart td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.calc-chart kbd{font:500 .875em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;white-space:nowrap}
+.calc-chart code{white-space:nowrap}
+/* Tool «links» (config/tools.json → telegram-links): fields of the link builder. */
+.calc-field{margin:0 0 .9rem}
+.calc-field .small{margin:.3rem 0 0}
+.calc input[type=text],.calc select{display:block;width:100%;box-sizing:border-box;min-height:44px;font:400 1rem/1.5 var(--frame);color:var(--ink);background:var(--sheet);border:1px solid var(--ink-2);border-radius:6px;padding:8px 12px}
+/* WebKit keeps a native select about 25 px tall whatever min-height says, so the select is drawn by us: 44 px, with a grey caret that reads on both themes. */
+.calc select{-webkit-appearance:none;appearance:none;height:auto;padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%237f8aa8' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.calc input[type=text]:focus-visible,.calc select:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.calc-link{font:500 .9375rem/1.5 ui-monospace,"SF Mono",Menlo,Consolas,monospace;overflow-wrap:anywhere}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/en/#website","url":"https://blog.merge-verse.com/en/","name":"MergeVerse Blog","inLanguage":"en","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blog.merge-verse.com/en/"},{"@type":"ListItem","position":2,"name":"Profile and chats","item":"https://blog.merge-verse.com/en/profile-and-chats/"},{"@type":"ListItem","position":3,"name":"Telegram ID: the number behind every account"}]},{"@type":"BlogPosting","@id":"https://blog.merge-verse.com/en/telegram-id/#article","headline":"Telegram ID: the number behind every account","description":"A Telegram ID is a unique number Telegram gives every user, bot, group and channel. How it differs from a username and phone number, and why apps ask for it.","inLanguage":"en","url":"https://blog.merge-verse.com/en/telegram-id/","mainEntityOfPage":"https://blog.merge-verse.com/en/telegram-id/","datePublished":"2026-11-14","dateModified":"2026-11-14","wordCount":1180,"author":{"@id":"https://blog.merge-verse.com/#org"},"publisher":{"@id":"https://blog.merge-verse.com/#org"},"articleSection":"Profile and chats","citation":["https://core.telegram.org/api/peers","https://core.telegram.org/api/bots/ids","https://core.telegram.org/bots/api","https://core.telegram.org/widgets/login","https://core.telegram.org/api/links","https://telegram.org/faq","https://telegram.org/privacy","https://core.telegram.org/api/config"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is my Telegram ID number?","acceptedAnswer":{"@type":"Answer","text":"It is a number Telegram assigned to your account when you signed up. It never appears as part of your profile name or username. Any bot you message receives it, because that is how the Bot API identifies users."}},{"@type":"Question","name":"Is a Telegram ID the same as a username?","acceptedAnswer":{"@type":"Answer","text":"No. A username is a public @name you choose, can change or remove. The ID is a number Telegram assigns, and you can't pick or edit it."}},{"@type":"Question","name":"Can someone find me with my Telegram ID?","acceptedAnswer":{"@type":"Answer","text":"Not directly. Telegram's API documentation says that with only a user ID and no access hash, an app cannot interact with that user. Your public username and phone number settings decide who can find you."}},{"@type":"Question","name":"Why does a bot ask for my Telegram ID?","acceptedAnswer":{"@type":"Answer","text":"Usually it doesn't need to ask: when you message a bot, it already receives your ID along with your public name and username. Bots use the ID to remember you, for example to save your settings."}},{"@type":"Question","name":"Should I use a Telegram ID lookup site?","acceptedAnswer":{"@type":"Answer","text":"We don't recommend any. Telegram's FAQ advises treating any bot as a stranger, and a lookup service is a third party you would hand information to."}}]}]}</script>
+</head>
+<body data-dept="3">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="band">
+<div class="top"><a class="brand" href="/en/"><svg class="pin" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path class="pin-wire" d="M10 1 19 10 10 19 1 10Z"/><path class="pin-enamel" d="M10 4.6 15.4 10 10 15.4 4.6 10Z"/></svg>MergeVerse Blog</a><a class="about" href="/en/about/">About</a><div class="controls"><nav class="langs" aria-label="Language"><a class="lang" href="/" hreflang="ru" lang="ru" data-goatcounter-click="lang-ru">Русский</a><span class="lang-here" lang="en" aria-current="true">English</span><a class="lang" href="/es/" hreflang="es" lang="es" data-goatcounter-click="lang-es">Español</a><a class="lang" href="/de/" hreflang="de" lang="de" data-goatcounter-click="lang-de">Deutsch</a></nav><button class="theme" type="button" hidden aria-label="Night pages" aria-pressed="false"><span class="theme-day" aria-hidden="true">Day</span><span class="theme-night" aria-hidden="true">Night</span></button></div></div>
+<div class="running"><p class="running-name"><a href="/en/profile-and-chats/">Profile and chats</a></p></div>
+<nav class="tabs" aria-label="Sections"><div class="tabs-row"><a href="/en/selling-gifts/">Selling gifts</a><a href="/en/upgrades-nft/">Upgrades and NFT</a><a href="/en/profile-and-chats/">Profile and chats</a><a href="/en/gifts-stickers-channels/">Gifts, stickers and channels</a><a href="/en/telegram-stars/">Telegram Stars</a></div><details class="tabs-phone"><summary>All sections <span class="count">5</span></summary><div class="tabs-list"><a href="/en/selling-gifts/">Selling gifts</a><a href="/en/upgrades-nft/">Upgrades and NFT</a><a href="/en/profile-and-chats/">Profile and chats</a><a href="/en/gifts-stickers-channels/">Gifts, stickers and channels</a><a href="/en/telegram-stars/">Telegram Stars</a></div></details></nav></div></header>
+<script>(function(){var b=document.querySelector(".theme");if(!b)return;var r=document.documentElement,m=matchMedia("(prefers-color-scheme: dark)");function cur(){return r.dataset.theme||(m.matches?"dark":"light")}function show(){b.setAttribute("aria-pressed",cur()==="dark"?"true":"false")}b.hidden=false;show();m.addEventListener&&m.addEventListener("change",show);b.addEventListener("click",function(){var t=cur()==="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("theme",t)}catch(e){}show()})})();</script>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/en/">Home</a> <span aria-hidden="true">›</span> <a href="/en/profile-and-chats/">Profile and chats</a> <span aria-hidden="true">›</span> <span aria-current="page">Telegram ID: the number behind every account</span></nav>
+<main id="main"><article class="sheet article"><div class="layout">
+<header><h1>Telegram ID: the number behind every account</h1>
+<dl class="spec">
+<div><dt>Published</dt><dd><time datetime="2026-11-14">14 November 2026</time></dd></div>
+<div><dt>Checked</dt><dd><time datetime="2026-11-14">14 November 2026</time></dd></div>
+<div><dt>Reading</dt><dd>5 min</dd></div>
+<div><dt>Sources</dt><dd><a href="#sources">8 named</a></dd></div>
+</dl></header>
+<div class="margin"><nav class="contents wide" aria-labelledby="contents-h"><h2 id="contents-h">In this article</h2><ol><li><a href="#what-a-telegram-id-is">What a Telegram ID is</a></li><li><a href="#telegram-id-vs-username-vs-phone-number">Telegram ID vs username vs phone number</a></li><li><a href="#telegram-id-numbers-for-groups-and-channels">Telegram ID numbers for groups and channels</a></li><li><a href="#why-apps-and-bots-ask-for-your-telegram-id">Why apps and bots ask for your Telegram ID</a></li><li><a href="#how-to-see-your-own-telegram-id">How to see your own Telegram ID</a></li><li><a href="#privacy-what-someone-can-do-with-your-telegram-id">Privacy: what someone can do with your Telegram ID</a></li><li><a href="#telegram-id-lookup-what-it-can-and-can-t-tell-you">Telegram ID lookup: what it can and can&amp;#39;t tell you</a></li></ol></nav><details class="contents narrow"><summary>In this article <span class="count">7 sections</span></summary><ol><li><a href="#what-a-telegram-id-is">What a Telegram ID is</a></li><li><a href="#telegram-id-vs-username-vs-phone-number">Telegram ID vs username vs phone number</a></li><li><a href="#telegram-id-numbers-for-groups-and-channels">Telegram ID numbers for groups and channels</a></li><li><a href="#why-apps-and-bots-ask-for-your-telegram-id">Why apps and bots ask for your Telegram ID</a></li><li><a href="#how-to-see-your-own-telegram-id">How to see your own Telegram ID</a></li><li><a href="#privacy-what-someone-can-do-with-your-telegram-id">Privacy: what someone can do with your Telegram ID</a></li><li><a href="#telegram-id-lookup-what-it-can-and-can-t-tell-you">Telegram ID lookup: what it can and can&amp;#39;t tell you</a></li></ol></details></div>
+<div class="column"><section class="panel short" aria-labelledby="short-h"><h2 id="short-h" class="panel-head">In short</h2><ul class="panel-body"><li>A Telegram ID is a unique number Telegram assigns to every user, bot, group and channel; you don't choose it.</li><li>Your username is a public name you pick and can change or remove; your phone number is what you sign in with and is hidden by default.</li><li>In the Bot API, user IDs are positive, basic group IDs are negative, and supergroup and channel IDs are negative numbers starting with -100.</li><li>Bots and sites with 'Log in with Telegram' receive your ID so they can recognize you next time.</li><li>An ID on its own doesn't let a stranger open a chat with you; Telegram's API needs more than the number.</li></ul></section><div class="prose"><p>A Telegram ID is a unique number that Telegram assigns to every account, bot, group and channel. You don&#39;t choose it and you can&#39;t edit it. It is different from your username, which is a public name you pick, and from your phone number, which you sign in with. Bots and &quot;Log in with Telegram&quot; sites receive your ID so they can tell you apart from everyone else.</p>
+<p>Everything below comes from core.telegram.org and telegram.org, read on 31 October 2026. This site is not affiliated with Telegram.</p>
+<aside class="game game-inline" aria-labelledby="game-h-inline"><div class="game-plate"><span class="age" aria-hidden="true">18+</span><h2 id="game-h-inline">The game MergeVerse</h2>
+<p>A card game inside Telegram about gifts: collect cards and merge two identical ones into a card of the next level. The result is known in advance, nothing is left to chance.</p>
+<p><a class="button" href="https://t.me/mergeversebot?startapp=ref_eldar" rel="noopener" data-goatcounter-click="game-inline">Open in Telegram</a></p>
+<p class="small">18+. The game is not affiliated with Telegram; taking part is subject to the game's rules.</p></div>
+</aside>
+<h2 id="what-a-telegram-id-is">What a Telegram ID is</h2>
+<p>Inside Telegram, every user, bot, group and channel is a &quot;peer&quot;, and Telegram&#39;s API documentation says each peer has an ID: a unique 64-bit number used to identify that specific user, chat or channel. Names change, usernames come and go, but apps refer to you by this number.</p>
+<p>The Bot API describes the same field for a user or bot as a unique identifier, and notes that it may have more than 32 significant bits but at most 52. In plain terms, it is a whole number, and it can be a long one. Telegram&#39;s own configuration shows what one looks like: it lists the official Telegram account that posts feature news as 777000, and the anti-spam account as 5434988373.</p>
+<p>One detail surprises people. The documentation says the ID sequences of users, chats and channels overlap, so the same number can belong to one user and to an unrelated channel. Apps tell them apart by type, which is why bots write group and channel IDs differently.</p>
+<h2 id="telegram-id-vs-username-vs-phone-number">Telegram ID vs username vs phone number</h2>
+<p>These three are often mixed up, and some guides call the username a &quot;Telegram ID&quot;. Here is how they differ:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Telegram ID</th>
+<th>Username</th>
+<th>Phone number</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Who sets it</td>
+<td>Telegram</td>
+<td>You</td>
+<td>You, at sign-up</td>
+</tr>
+<tr>
+<td>What it looks like</td>
+<td>A number, e.g. 777000</td>
+<td>@name, 5 to 32 characters</td>
+<td>International number</td>
+</tr>
+<tr>
+<td>Can you change it</td>
+<td>No</td>
+<td>Yes, or remove it</td>
+<td>Yes; the FAQ says you can change your number and keep everything</td>
+</tr>
+<tr>
+<td>Who sees it</td>
+<td>Bots and apps you use</td>
+<td>Anyone; it is always public</td>
+<td>By default, only people who saved you as a contact</td>
+</tr>
+<tr>
+<td>Can people find you by it</td>
+<td>Not on its own</td>
+<td>Yes, in search</td>
+<td>Only if your privacy settings allow it</td>
+</tr>
+</tbody></table>
+</div><details class="embed">
+<summary>Add this table to your site</summary>
+<p class="small">Free to use on your site, blog or newsletter. Copy the code below and paste it into your page as HTML. It shows the same table with a link back to this page as the source.</p>
+<label class="small" for="embed-t1">HTML code</label>
+<textarea id="embed-t1" class="embed-code" readonly rows="6" spellcheck="false">&lt;figure style=&quot;margin:1.5em 0;max-width:640px&quot;&gt;
+&lt;figcaption style=&quot;font-weight:bold;margin:0 0 .5em&quot;&gt;Telegram ID vs username vs phone number&lt;/figcaption&gt;
+&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:15px&quot;&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Telegram ID&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Username&lt;/th&gt;
+&lt;th style=&quot;border:1px solid #bbb;padding:6px 8px;text-align:left;background:#f3f3f3;color:#222&quot;&gt;Phone number&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Who sets it&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Telegram&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;You&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;You, at sign-up&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;What it looks like&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;A number, e.g. 777000&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;@name, 5 to 32 characters&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;International number&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Can you change it&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;No&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Yes, or remove it&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Yes; the FAQ says you can change your number and keep everything&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Who sees it&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Bots and apps you use&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Anyone; it is always public&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;By default, only people who saved you as a contact&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Can people find you by it&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Not on its own&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Yes, in search&lt;/td&gt;
+&lt;td style=&quot;border:1px solid #bbb;padding:6px 8px&quot;&gt;Only if your privacy settings allow it&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p style=&quot;font-size:13px;margin:.5em 0 0&quot;&gt;Source: &lt;a href=&quot;https://blog.merge-verse.com/en/telegram-id/&quot; style=&quot;color:inherit;text-decoration:underline&quot;&gt;MergeVerse Blog&lt;/a&gt;. The page lists the sources of these figures.&lt;/p&gt;
+&lt;/figure&gt;</textarea>
+<p><button type="button" class="button embed-copy" data-for="embed-t1" data-done="Copied" hidden>Copy code</button></p>
+</details><p>The username rules and the t.me link are covered in our guide to the <a href="/en/telegram-username/">Telegram username</a>. Phone number visibility is set in Settings &gt; Privacy and Security &gt; Phone Number, according to Telegram&#39;s FAQ.</p>
+<h2 id="telegram-id-numbers-for-groups-and-channels">Telegram ID numbers for groups and channels</h2>
+<p>Bots see chats with signs and prefixes added, and Telegram&#39;s documentation gives the exact rule:</p>
+<ul>
+<li>Users and bots: a positive number, the same in the Bot API as everywhere else.</li>
+<li>Basic groups: the same number made negative.</li>
+<li>Supergroups and channels: 1000000000000 is added to the number and the result is made negative, so it starts with -100.</li>
+</ul>
+<p>That is why a channel ID in a bot&#39;s settings looks like -100 followed by more digits, while your own ID is positive. If you&#39;re setting up a group bot and it asks for &quot;the chat ID&quot;, the leading minus sign is part of it.</p>
+<h2 id="why-apps-and-bots-ask-for-your-telegram-id">Why apps and bots ask for your Telegram ID</h2>
+<p>Most of the time nobody has to ask. When you message a bot, it receives your ID together with your public name, username and profile pictures. Telegram&#39;s FAQ lists what bots can see, and its privacy policy says bot developers can get your public account data. The ID is how a bot remembers you between chats: your language, your settings, what you ordered.</p>
+<p>Sites that offer &quot;Log in with Telegram&quot; work the same way. Telegram&#39;s login documentation says the basic profile scope gives the site your user ID, name, username and profile photo. Your phone number goes to the site only if it asks for that separately and you agree.</p>
+<p>You may be asked for an ID directly in a few situations:</p>
+<ol>
+<li>A group or channel admin sets up a bot and needs to tell it which chat or which admins to trust.</li>
+<li>A service you signed up for wants to link your Telegram account to its own account.</li>
+<li>A developer is testing their own bot.</li>
+</ol>
+<p>If a stranger asks for your ID together with a login code or password, stop. Telegram&#39;s FAQ says never to share passwords or Telegram codes with a bot, and that applies to people as well.</p>
+<h2 id="how-to-see-your-own-telegram-id">How to see your own Telegram ID</h2>
+<p>Telegram&#39;s pages don&#39;t describe a profile field in the official apps that shows your numeric ID, so we won&#39;t invent a menu path. What the documentation does make clear is that any bot you message receives the ID. A bot you trust, such as one your own group uses, can show it back to you.</p>
+<p>There are many third-party &quot;ID bots&quot; and lookup sites. We don&#39;t recommend any of them. Telegram&#39;s FAQ advises treating any bot as a stranger, and its privacy policy says bots are completely independent from Telegram. If you need the number, use a bot you already rely on, or ask the admin who needs it how their own bot reads it.</p>
+<h2 id="privacy-what-someone-can-do-with-your-telegram-id">Privacy: what someone can do with your Telegram ID</h2>
+<p>On its own, very little. Telegram&#39;s API documentation is direct about it: if an app has only a user, channel or supergroup ID without any kind of access hash, it cannot interact with that peer. A number alone doesn&#39;t open a chat with you, reveal your phone number or show your profile to someone who has never seen you.</p>
+<p>Telegram also documents tg://user?id= links, but its link documentation calls them an abstraction offered by the Bot API that normal clients should ignore. So a link built from your ID is not a reliable way for strangers to reach you either.</p>
+<p>What decides who can find you is your username and your privacy settings. If you want fewer people to reach you, remove your username and keep your phone number limited to contacts. For what else your profile shows, such as gifts, see <a href="/en/how-to-hide-telegram-gifts/">how to hide Telegram gifts</a>.</p>
+<h2 id="telegram-id-lookup-what-it-can-and-can-t-tell-you">Telegram ID lookup: what it can and can&#39;t tell you</h2>
+<p>&quot;Telegram ID lookup&quot; services promise to turn a number into a profile or the other way round. Telegram&#39;s documentation explains why they are limited: an ID without an access hash can&#39;t be used to interact with a user. Telegram&#39;s privacy policy says a username, screen name and profile pictures are public, and that public data is what any outside service can work with.</p>
+<p>The safer habit is to look people up by their public username in Telegram&#39;s own search, and to treat any site that asks you to sign in with your phone number to &quot;see who looked you up&quot; as a red flag. For the parts of Telegram that do involve your account&#39;s value, read <a href="/en/what-are-telegram-stars/">what Telegram Stars are</a> and <a href="/en/what-are-telegram-gifts/">what Telegram gifts are</a>, and to see how bots use your ID day to day, read <a href="/en/telegram-bots/">Telegram bots explained</a>.</p>
+<script>document.querySelectorAll(".embed-copy").forEach(function(b){var t=document.getElementById(b.getAttribute("data-for"));if(!t)return;b.hidden=false;var label=b.textContent;b.addEventListener("click",function(){function done(){b.textContent=b.getAttribute("data-done");setTimeout(function(){b.textContent=label},2500)}t.select();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t.value).then(done,function(){document.execCommand("copy");done()})}else{document.execCommand("copy");done()}})});</script></div><div data-read-end aria-hidden="true" style="height:1px"></div></div></div>
+
+<section class="faq"><h2 id="questions">Questions people ask</h2><details><summary>What is my Telegram ID number?</summary><p>It is a number Telegram assigned to your account when you signed up. It never appears as part of your profile name or username. Any bot you message receives it, because that is how the Bot API identifies users.</p></details><details><summary>Is a Telegram ID the same as a username?</summary><p>No. A username is a public @name you choose, can change or remove. The ID is a number Telegram assigns, and you can't pick or edit it.</p></details><details><summary>Can someone find me with my Telegram ID?</summary><p>Not directly. Telegram's API documentation says that with only a user ID and no access hash, an app cannot interact with that user. Your public username and phone number settings decide who can find you.</p></details><details><summary>Why does a bot ask for my Telegram ID?</summary><p>Usually it doesn't need to ask: when you message a bot, it already receives your ID along with your public name and username. Bots use the ID to remember you, for example to save your settings.</p></details><details><summary>Should I use a Telegram ID lookup site?</summary><p>We don't recommend any. Telegram's FAQ advises treating any bot as a stranger, and a lookup service is a third party you would hand information to.</p></details></section>
+<section class="sources"><h2 id="sources">Sources</h2><ol><li><a href="https://core.telegram.org/api/peers" rel="noopener">Working with different peers (IDs)</a>, Telegram</li><li><a href="https://core.telegram.org/api/bots/ids" rel="noopener">Bot API dialog IDs</a>, Telegram</li><li><a href="https://core.telegram.org/bots/api" rel="noopener">Telegram Bot API: User and Chat objects</a>, Telegram</li><li><a href="https://core.telegram.org/widgets/login" rel="noopener">Telegram Login</a>, Telegram</li><li><a href="https://core.telegram.org/api/links" rel="noopener">Deep links</a>, Telegram</li><li><a href="https://telegram.org/faq" rel="noopener">Telegram FAQ: usernames, phone number, bots</a>, Telegram</li><li><a href="https://telegram.org/privacy" rel="noopener">Telegram Privacy Policy</a>, Telegram</li><li><a href="https://core.telegram.org/api/config" rel="noopener">Client configuration</a>, Telegram</li></ol></section>
+<p class="small how"><a href="/en/about/">How we write these pages</a></p>
+<section class="related"><h2 id="read-next">Read next</h2><ul class="entries"><li><a href="/en/how-to-hide-telegram-gifts/"><span class="entry-title">How to hide Telegram gifts on your profile</span><span class="entry-desc">Hide one gift from My Profile, Gifts by tapping it and choosing to hide it. To stop new gifts showing up, use Settings, Privacy &amp; Security, Gifts.</span></a><time datetime="2026-11-04">4 November 2026</time></li><li><a href="/en/what-are-telegram-stars/"><span class="entry-title">What are Telegram Stars and what are they used for?</span><span class="entry-desc">Telegram Stars are virtual items for paying for digital goods inside Telegram: gifts, bots, mini apps, paid posts and subscriptions. You buy them in the app.</span></a><time datetime="2026-11-06">6 November 2026</time></li><li><a href="/en/what-are-telegram-gifts/"><span class="entry-title">What are Telegram gifts and what are they used for?</span><span class="entry-desc">Telegram gifts are animated items bought with Stars. They are used to congratulate people and decorate profiles; collectibles can be worn, sold or sent on.</span></a><time datetime="2026-11-05">5 November 2026</time></li></ul><p class="more"><a href="/en/profile-and-chats/">All 5 articles in Profile and chats</a></p></section>
+</article><div class="wrap game-everywhere"><aside class="game" aria-labelledby="game-h"><div class="game-plate"><span class="age" aria-hidden="true">18+</span><h2 id="game-h">The game MergeVerse</h2>
+<p>A card game inside Telegram about gifts: collect cards and merge two identical ones into a card of the next level. The result is known in advance, nothing is left to chance.</p>
+<p><a class="button" href="https://t.me/mergeversebot?startapp=ref_eldar" rel="noopener" data-goatcounter-click="game">Open in Telegram</a></p>
+<p class="small">18+. The game is not affiliated with Telegram; taking part is subject to the game's rules.</p></div>
+</aside></div></main>
+<footer class="site"><div class="bar">
+<p>Telegram Gifts and Stars: how to sell, upgrade and manage them, step by step, with sources.</p>
+<p><a href="/en/about/">About these pages</a> · <a href="/en/feed.xml">Feed</a></p>
+<p class="small">We write these articles with help from an AI model. Every fact is checked against the sources listed under each article; anything we could not confirm is left out.</p>
+<p class="small">This site is not affiliated with Telegram. Telegram, Telegram Gifts and Telegram Stars are names of Telegram's services.</p>
+</div></footer>
+</body>
+</html>

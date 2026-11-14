@@ -322,6 +322,14 @@ footer.site .small{color:var(--on-plate-2)}
 .calc-chart td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .calc-chart kbd{font:500 .875em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;white-space:nowrap}
 .calc-chart code{white-space:nowrap}
+/* Tool «links» (config/tools.json → telegram-links): fields of the link builder. */
+.calc-field{margin:0 0 .9rem}
+.calc-field .small{margin:.3rem 0 0}
+.calc input[type=text],.calc select{display:block;width:100%;box-sizing:border-box;min-height:44px;font:400 1rem/1.5 var(--frame);color:var(--ink);background:var(--sheet);border:1px solid var(--ink-2);border-radius:6px;padding:8px 12px}
+/* WebKit keeps a native select about 25 px tall whatever min-height says, so the select is drawn by us: 44 px, with a grey caret that reads on both themes. */
+.calc select{-webkit-appearance:none;appearance:none;height:auto;padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%237f8aa8' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.calc input[type=text]:focus-visible,.calc select:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.calc-link{font:500 .9375rem/1.5 ui-monospace,"SF Mono",Menlo,Consolas,monospace;overflow-wrap:anywhere}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/#website","url":"https://blog.merge-verse.com/","name":"MergeVerse — блог","inLanguage":"ru","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"}]}</script>
 </head>
@@ -334,7 +342,7 @@ footer.site .small{color:var(--on-plate-2)}
 <script>(function(){var b=document.querySelector(".theme");if(!b)return;var r=document.documentElement,m=matchMedia("(prefers-color-scheme: dark)");function cur(){return r.dataset.theme||(m.matches?"dark":"light")}function show(){b.setAttribute("aria-pressed",cur()==="dark"?"true":"false")}b.hidden=false;show();m.addEventListener&&m.addEventListener("change",show);b.addEventListener("click",function(){var t=cur()==="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("theme",t)}catch(e){}show()})})();</script>
 
 <main id="main"><div class="sheet"><p>Возможно, в адресе опечатка или статья ещё не вышла. <a href="/">На главную</a>.</p><p lang="en">The address may be mistyped, or the article may not be out yet. <a href="/en/">Go to the home page</a>.</p><p lang="es">Puede que la dirección tenga un error o que el artículo aún no se haya publicado. <a href="/es/">Ir a la página de inicio</a>.</p><p lang="de">Vielleicht ist die Adresse falsch geschrieben, oder der Artikel ist noch nicht erschienen. <a href="/de/">Zur Startseite</a>.</p></div><div class="wrap game-everywhere"><aside class="game" aria-labelledby="game-h"><div class="game-plate"><span class="age" aria-hidden="true">18+</span><h2 id="game-h">Игра MergeVerse</h2>
-<p>Игра в Telegram вокруг подарков: собрать коллекцию карт, улучшать их крафтом без шансов.</p>
+<p>Карточная игра в Telegram о подарках: собирайте карты и объединяйте две одинаковые в карту следующего уровня. Результат известен заранее, случайности нет.</p>
 <p><a class="button" href="https://t.me/mergeversebot?startapp=ref_eldar" rel="noopener" data-goatcounter-click="game">Открыть в Telegram</a></p>
 <p class="small">18+. Игра не связана с Telegram, участие — по правилам игры.</p></div>
 </aside></div></main>

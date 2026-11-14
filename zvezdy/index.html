@@ -325,6 +325,14 @@ footer.site .small{color:var(--on-plate-2)}
 .calc-chart td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .calc-chart kbd{font:500 .875em/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;white-space:nowrap}
 .calc-chart code{white-space:nowrap}
+/* Tool «links» (config/tools.json → telegram-links): fields of the link builder. */
+.calc-field{margin:0 0 .9rem}
+.calc-field .small{margin:.3rem 0 0}
+.calc input[type=text],.calc select{display:block;width:100%;box-sizing:border-box;min-height:44px;font:400 1rem/1.5 var(--frame);color:var(--ink);background:var(--sheet);border:1px solid var(--ink-2);border-radius:6px;padding:8px 12px}
+/* WebKit keeps a native select about 25 px tall whatever min-height says, so the select is drawn by us: 44 px, with a grey caret that reads on both themes. */
+.calc select{-webkit-appearance:none;appearance:none;height:auto;padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%237f8aa8' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.calc input[type=text]:focus-visible,.calc select:focus-visible{outline:3px solid var(--link);outline-offset:2px}
+.calc-link{font:500 .9375rem/1.5 ui-monospace,"SF Mono",Menlo,Consolas,monospace;overflow-wrap:anywhere}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.merge-verse.com/#website","url":"https://blog.merge-verse.com/","name":"MergeVerse — блог","inLanguage":"ru","publisher":{"@id":"https://blog.merge-verse.com/#org"}},{"@type":"Organization","@id":"https://blog.merge-verse.com/#org","name":"MergeVerse — блог","url":"https://blog.merge-verse.com/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://blog.merge-verse.com/"},{"@type":"ListItem","position":2,"name":"Звёзды Telegram"}]},{"@type":"CollectionPage","name":"Звёзды Telegram","url":"https://blog.merge-verse.com/zvezdy/","inLanguage":"ru","hasPart":[{"@id":"https://blog.merge-verse.com/zvezdy-telegram/#article"},{"@id":"https://blog.merge-verse.com/kak-otpravit-zvezdy-tg/#article"},{"@id":"https://blog.merge-verse.com/kak-otmenit-tg-premium/#article"}]}]}</script>
 </head>
@@ -340,7 +348,7 @@ footer.site .small{color:var(--on-plate-2)}
 <section class="start" aria-labelledby="start-h"><h2 id="start-h">С чего начать</h2><ul class="entries"><li><a href="/zvezdy-telegram/"><span class="entry-title">Звезды телеграм: что это, для чего нужны и где купить</span><span class="entry-desc">Звёзды Telegram — внутренние единицы для оплаты цифрового в Telegram: подарков, ботов, мини-приложений, платных постов. Как купить, на что тратить, правила.</span></a><time datetime="2026-11-04">4 ноября 2026 г.</time></li></ul></section>
 <section><h2>Все статьи</h2><ul class="entries columns"><li><a href="/kak-otpravit-zvezdy-tg/"><span class="entry-title">Как отправить звезды в тг другу: подарок звёзд по шагам</span><span class="entry-desc">Звёзды дарят через «Настройки → Мои звёзды»: вы покупаете их на друга, и они приходят ему в чат. Перевести звёзды со своего баланса правила не дают.</span></a><time datetime="2026-11-10">10 ноября 2026 г.</time></li><li><a href="/kak-otmenit-tg-premium/"><span class="entry-title">Как отменить тг премиум: бот, Android и iPhone</span><span class="entry-desc">Premium отменяют там же, где оформляли: в @PremiumBot командой /stop, в Google Play или в настройках iPhone. Функции работают до конца оплаченного срока.</span></a><time datetime="2026-11-10">10 ноября 2026 г.</time></li></ul></section>
 </div><div class="wrap game-everywhere"><aside class="game" aria-labelledby="game-h"><div class="game-plate"><span class="age" aria-hidden="true">18+</span><h2 id="game-h">Игра MergeVerse</h2>
-<p>Игра в Telegram вокруг подарков: собрать коллекцию карт, улучшать их крафтом без шансов.</p>
+<p>Карточная игра в Telegram о подарках: собирайте карты и объединяйте две одинаковые в карту следующего уровня. Результат известен заранее, случайности нет.</p>
 <p><a class="button" href="https://t.me/mergeversebot?startapp=ref_eldar" rel="noopener" data-goatcounter-click="game">Открыть в Telegram</a></p>
 <p class="small">18+. Игра не связана с Telegram, участие — по правилам игры.</p></div>
 </aside></div></main>
